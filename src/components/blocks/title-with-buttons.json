@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_title_with_buttons",
+  "info": {
+    "displayName": "TitleWithButtons",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "blockName": {
+      "type": "string",
+      "required": true,
+      "default": "title-with-buttons"
+    },
+    "blockId": {
+      "type": "string",
+      "required": false
+    },
+    "data": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::title-with-buttons.title-with-buttons"
+    },
+    "animation": {
+      "type": "enumeration",
+      "enum": [
+        "from-bottom-to-top",
+        "from-top-to-bottom",
+        "from-left-to-right",
+        "from-right-to-left"
+      ],
+      "default": "from-bottom-to-top"
+    }
+  }
+}

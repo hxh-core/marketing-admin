@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_blocks_review_blocks",
+  "info": {
+    "displayName": "ReviewBlock",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.title",
+      "required": false
+    },
+    "reviews": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.review-card",
+      "required": true
+    },
+    "blockName": {
+      "type": "string",
+      "required": true,
+      "default": "reviews-block"
+    },
+    "blockId": {
+      "type": "string",
+      "required": false
+    },
+    "animation": {
+      "type": "enumeration",
+      "enum": [
+        "from-bottom-to-top",
+        "from-top-to-bottom",
+        "from-left-to-right",
+        "from-right-to-left"
+      ],
+      "default": "from-bottom-to-top"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_blocks_team_blocks",
+  "info": {
+    "displayName": "TeamBlock",
+    "icon": "emotionHappy"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.title",
+      "required": false
+    },
+    "data": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::team.team"
+    },
+    "blockName": {
+      "type": "string",
+      "required": true,
+      "default": "team-block"
+    },
+    "blockId": {
+      "type": "string",
+      "required": false
+    },
+    "animation": {
+      "type": "enumeration",
+      "enum": [
+        "from-bottom-to-top",
+        "from-top-to-bottom",
+        "from-left-to-right",
+        "from-right-to-left"
+      ],
+      "default": "from-bottom-to-top"
+    }
+  }
+}

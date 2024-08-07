@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_blocks_accordion_blocks",
+  "info": {
+    "displayName": "AccordionBlock",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "data": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::accordion.accordion"
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.title",
+      "required": false
+    },
+    "blockName": {
+      "type": "string",
+      "required": true,
+      "default": "accordion-block"
+    },
+    "blockId": {
+      "type": "string",
+      "required": false
+    },
+    "animation": {
+      "type": "enumeration",
+      "enum": [
+        "from-bottom-to-top",
+        "from-top-to-bottom",
+        "from-left-to-right",
+        "from-right-to-left"
+      ],
+      "default": "from-bottom-to-top"
+    }
+  }
+}
