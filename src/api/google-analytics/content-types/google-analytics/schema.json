@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "google_analyticss",
+  "info": {
+    "singularName": "google-analytics",
+    "pluralName": "google-analyticss",
+    "displayName": "Google Analytics",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gaId": {
+      "type": "string",
+      "required": true
+    },
+    "dataLayerName": {
+      "type": "string"
+    }
+  }
+}

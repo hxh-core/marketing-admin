@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "google_tag_managers",
+  "info": {
+    "singularName": "google-tag-manager",
+    "pluralName": "google-tag-managers",
+    "displayName": "Google Tag Manager"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gtmId": {
+      "type": "string",
+      "required": true
+    },
+    "auth": {
+      "type": "text"
+    },
+    "dataLayerName": {
+      "type": "string"
+    },
+    "preview": {
+      "type": "string"
+    }
+  }
+}

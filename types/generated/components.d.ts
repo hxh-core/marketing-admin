@@ -300,6 +300,24 @@ export interface UiAccordion extends Schema.Component {
   };
 }
 
+export interface MetaYandexMetrikaInitParameters extends Schema.Component {
+  collectionName: 'components_meta_yandex_metrika_init_parameters';
+  info: {
+    displayName: 'YandexMetrikaInitParameters';
+    icon: 'cog';
+  };
+  attributes: {
+    accurateTrackBounce: Attribute.Boolean & Attribute.DefaultTo<true>;
+    clickmap: Attribute.Boolean & Attribute.DefaultTo<true>;
+    trackLinks: Attribute.Boolean & Attribute.DefaultTo<true>;
+    webvisor: Attribute.Boolean & Attribute.DefaultTo<true>;
+    childIframe: Attribute.Boolean;
+    defer: Attribute.Boolean;
+    trackHash: Attribute.Boolean;
+    triggerEvent: Attribute.Boolean;
+  };
+}
+
 export interface MetaUserAgents extends Schema.Component {
   collectionName: 'components_meta_user_agents';
   info: {
@@ -387,7 +405,8 @@ export interface BlocksTeamBlock extends Schema.Component {
         'from-bottom-to-top',
         'from-top-to-bottom',
         'from-left-to-right',
-        'from-right-to-left'
+        'from-right-to-left',
+        'none'
       ]
     > &
       Attribute.DefaultTo<'from-bottom-to-top'>;
@@ -416,7 +435,8 @@ export interface BlocksServiceBlock extends Schema.Component {
         'from-bottom-to-top',
         'from-top-to-bottom',
         'from-left-to-right',
-        'from-right-to-left'
+        'from-right-to-left',
+        'none'
       ]
     > &
       Attribute.Required &
@@ -442,7 +462,8 @@ export interface BlocksReviewBlock extends Schema.Component {
         'from-bottom-to-top',
         'from-top-to-bottom',
         'from-left-to-right',
-        'from-right-to-left'
+        'from-right-to-left',
+        'none'
       ]
     > &
       Attribute.DefaultTo<'from-bottom-to-top'>;
@@ -466,7 +487,8 @@ export interface BlocksFormBlock extends Schema.Component {
         'from-bottom-to-top',
         'from-top-to-bottom',
         'from-left-to-right',
-        'from-right-to-left'
+        'from-right-to-left',
+        'none'
       ]
     > &
       Attribute.DefaultTo<'from-bottom-to-top'>;
@@ -497,7 +519,8 @@ export interface BlocksAccordionBlock extends Schema.Component {
         'from-bottom-to-top',
         'from-top-to-bottom',
         'from-left-to-right',
-        'from-right-to-left'
+        'from-right-to-left',
+        'none'
       ]
     > &
       Attribute.DefaultTo<'from-bottom-to-top'>;
@@ -523,6 +546,7 @@ declare module '@strapi/types' {
       'ui.custom-button': UiCustomButton;
       'ui.contact-link': UiContactLink;
       'ui.accordion': UiAccordion;
+      'meta.yandex-metrika-init-parameters': MetaYandexMetrikaInitParameters;
       'meta.user-agents': MetaUserAgents;
       'meta.page-path': MetaPagePath;
       'meta.meta': MetaMeta;

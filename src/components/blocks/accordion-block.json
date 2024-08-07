@@ -33,7 +33,8 @@
         "from-bottom-to-top",
         "from-top-to-bottom",
         "from-left-to-right",
-        "from-right-to-left"
+        "from-right-to-left",
+        "none"
       ],
       "default": "from-bottom-to-top"
     }

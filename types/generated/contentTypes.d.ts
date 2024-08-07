@@ -991,6 +991,71 @@ export interface ApiFormForm extends Schema.CollectionType {
   };
 }
 
+export interface ApiGoogleAnalyticsGoogleAnalytics extends Schema.SingleType {
+  collectionName: 'google_analyticss';
+  info: {
+    singularName: 'google-analytics';
+    pluralName: 'google-analyticss';
+    displayName: 'Google Analytics';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    gaId: Attribute.String & Attribute.Required;
+    dataLayerName: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::google-analytics.google-analytics',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::google-analytics.google-analytics',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGoogleTagManagerGoogleTagManager extends Schema.SingleType {
+  collectionName: 'google_tag_managers';
+  info: {
+    singularName: 'google-tag-manager';
+    pluralName: 'google-tag-managers';
+    displayName: 'Google Tag Manager';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    gtmId: Attribute.String & Attribute.Required;
+    auth: Attribute.Text;
+    dataLayerName: Attribute.String;
+    preview: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::google-tag-manager.google-tag-manager',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::google-tag-manager.google-tag-manager',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiNavigationNavigation extends Schema.SingleType {
   collectionName: 'navigations';
   info: {
@@ -1552,6 +1617,39 @@ export interface ApiTitleWithButtonsTitleWithButtons
   };
 }
 
+export interface ApiYandexMetrikaYandexMetrika extends Schema.SingleType {
+  collectionName: 'yandex_metrikas';
+  info: {
+    singularName: 'yandex-metrika';
+    pluralName: 'yandex-metrikas';
+    displayName: 'Yandex-metrika';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    tagID: Attribute.BigInteger & Attribute.Required;
+    initParameters: Attribute.Component<'meta.yandex-metrika-init-parameters'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::yandex-metrika.yandex-metrika',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::yandex-metrika.yandex-metrika',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1573,6 +1671,8 @@ declare module '@strapi/types' {
       'api::accordion.accordion': ApiAccordionAccordion;
       'api::footer.footer': ApiFooterFooter;
       'api::form.form': ApiFormForm;
+      'api::google-analytics.google-analytics': ApiGoogleAnalyticsGoogleAnalytics;
+      'api::google-tag-manager.google-tag-manager': ApiGoogleTagManagerGoogleTagManager;
       'api::navigation.navigation': ApiNavigationNavigation;
       'api::news-message.news-message': ApiNewsMessageNewsMessage;
       'api::page.page': ApiPagePage;
@@ -1581,6 +1681,7 @@ declare module '@strapi/types' {
       'api::service.service': ApiServiceService;
       'api::team.team': ApiTeamTeam;
       'api::title-with-buttons.title-with-buttons': ApiTitleWithButtonsTitleWithButtons;
+      'api::yandex-metrika.yandex-metrika': ApiYandexMetrikaYandexMetrika;
     }
   }
 }

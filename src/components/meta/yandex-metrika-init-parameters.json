@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_meta_yandex_metrika_init_parameters",
+  "info": {
+    "displayName": "YandexMetrikaInitParameters",
+    "icon": "cog"
+  },
+  "options": {},
+  "attributes": {
+    "accurateTrackBounce": {
+      "type": "boolean",
+      "default": true
+    },
+    "clickmap": {
+      "type": "boolean",
+      "default": true
+    },
+    "trackLinks": {
+      "type": "boolean",
+      "default": true
+    },
+    "webvisor": {
+      "type": "boolean",
+      "default": true
+    },
+    "childIframe": {
+      "type": "boolean"
+    },
+    "defer": {
+      "type": "boolean"
+    },
+    "trackHash": {
+      "type": "boolean"
+    },
+    "triggerEvent": {
+      "type": "boolean"
+    }
+  }
+}
