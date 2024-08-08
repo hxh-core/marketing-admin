@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_blocks_advantages_blocks",
+  "info": {
+    "displayName": "AdvantagesBlock",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "blockName": {
+      "type": "string",
+      "required": true,
+      "default": "advantages-block"
+    },
+    "blockId": {
+      "type": "string"
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.title",
+      "required": false
+    },
+    "animation": {
+      "type": "enumeration",
+      "enum": [
+        "from-bottom-to-top",
+        "from-top-to-bottom",
+        "from-left-to-right",
+        "from-right-to-left",
+        "none"
+      ],
+      "default": "from-bottom-to-top"
+    },
+    "data": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.advantage",
+      "required": true
+    }
+  }
+}

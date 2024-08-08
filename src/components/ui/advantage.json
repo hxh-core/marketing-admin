@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_ui_advantages",
+  "info": {
+    "displayName": "Advantage",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "isSelected": {
+      "type": "boolean",
+      "default": false
+    },
+    "isBig": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -843,6 +843,154 @@ export interface ApiAccordionAccordion extends Schema.CollectionType {
   };
 }
 
+export interface ApiCollectLinkLargeCollectLinkLarge
+  extends Schema.CollectionType {
+  collectionName: 'collect_links_large';
+  info: {
+    singularName: 'collect-link-large';
+    pluralName: 'collect-links-large';
+    displayName: 'Collect Links Large';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    button: Attribute.Component<'ui.custom-link'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    uniqueBlockName: Attribute.String &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::collect-link-large.collect-link-large',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::collect-link-large.collect-link-large',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::collect-link-large.collect-link-large',
+      'oneToMany',
+      'api::collect-link-large.collect-link-large'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiCollectLinkMiniCollectLinkMini
+  extends Schema.CollectionType {
+  collectionName: 'collect_links_mini';
+  info: {
+    singularName: 'collect-link-mini';
+    pluralName: 'collect-links-mini';
+    displayName: 'Collect Links Mini';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    button: Attribute.Component<'ui.custom-link'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    uniqueBlockName: Attribute.String &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    infinityBar: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::collect-link-mini.collect-link-mini',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::collect-link-mini.collect-link-mini',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::collect-link-mini.collect-link-mini',
+      'oneToMany',
+      'api::collect-link-mini.collect-link-mini'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.SingleType {
   collectionName: 'footers';
   info: {
@@ -1189,7 +1337,12 @@ export interface ApiPagePage extends Schema.CollectionType {
         'blocks.team-block',
         'blocks.title-with-buttons',
         'blocks.form-block',
-        'blocks.service-block'
+        'blocks.service-block',
+        'blocks.works-mini',
+        'blocks.works-large',
+        'blocks.collect-link-mini',
+        'blocks.collect-link-large',
+        'blocks.advantages-block'
       ]
     > &
       Attribute.Required &
@@ -1383,6 +1536,7 @@ export interface ApiServiceService extends Schema.CollectionType {
     singularName: 'service';
     pluralName: 'services';
     displayName: 'Service';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1408,7 +1562,6 @@ export interface ApiServiceService extends Schema.CollectionType {
         };
       }>;
     slug: Attribute.String &
-      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1440,7 +1593,12 @@ export interface ApiServiceService extends Schema.CollectionType {
         'Habr',
         'Website',
         'Arrow',
-        'Send'
+        'Send',
+        'Pen',
+        'Robot',
+        'CheckMark',
+        'Info',
+        'Yandex'
       ]
     > &
       Attribute.Required &
@@ -1449,6 +1607,27 @@ export interface ApiServiceService extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    oldPrice: Attribute.Component<'ui.price'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    color: Attribute.Enumeration<['primary', 'secondary']> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'secondary'>;
+    hoverTransition: Attribute.Boolean &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1617,6 +1796,143 @@ export interface ApiTitleWithButtonsTitleWithButtons
   };
 }
 
+export interface ApiWorkLargeWorkLarge extends Schema.CollectionType {
+  collectionName: 'works_large';
+  info: {
+    singularName: 'work-large';
+    pluralName: 'works-large';
+    displayName: 'WorksLarge';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    image: Attribute.Media<'images'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    link: Attribute.Component<'ui.custom-link'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::work-large.work-large',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::work-large.work-large',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::work-large.work-large',
+      'oneToMany',
+      'api::work-large.work-large'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiWorkMiniWorkMini extends Schema.CollectionType {
+  collectionName: 'works_mini';
+  info: {
+    singularName: 'work-mini';
+    pluralName: 'works-mini';
+    displayName: 'WorksMini';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    tag: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    link: Attribute.Component<'ui.link'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    image: Attribute.Media<'images'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::work-mini.work-mini',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::work-mini.work-mini',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::work-mini.work-mini',
+      'oneToMany',
+      'api::work-mini.work-mini'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiYandexMetrikaYandexMetrika extends Schema.SingleType {
   collectionName: 'yandex_metrikas';
   info: {
@@ -1669,6 +1985,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::accordion.accordion': ApiAccordionAccordion;
+      'api::collect-link-large.collect-link-large': ApiCollectLinkLargeCollectLinkLarge;
+      'api::collect-link-mini.collect-link-mini': ApiCollectLinkMiniCollectLinkMini;
       'api::footer.footer': ApiFooterFooter;
       'api::form.form': ApiFormForm;
       'api::google-analytics.google-analytics': ApiGoogleAnalyticsGoogleAnalytics;
@@ -1681,6 +1999,8 @@ declare module '@strapi/types' {
       'api::service.service': ApiServiceService;
       'api::team.team': ApiTeamTeam;
       'api::title-with-buttons.title-with-buttons': ApiTitleWithButtonsTitleWithButtons;
+      'api::work-large.work-large': ApiWorkLargeWorkLarge;
+      'api::work-mini.work-mini': ApiWorkMiniWorkMini;
       'api::yandex-metrika.yandex-metrika': ApiYandexMetrikaYandexMetrika;
     }
   }

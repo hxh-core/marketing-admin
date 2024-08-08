@@ -72,6 +72,7 @@ export interface UiPrice extends Schema.Component {
   info: {
     displayName: 'Price';
     icon: 'write';
+    description: '';
   };
   attributes: {
     amount: Attribute.Integer;
@@ -211,7 +212,13 @@ export interface UiCustomLink extends Schema.Component {
         'Habr',
         'Website',
         'Arrow',
-        'Send'
+        'Send',
+        'Yandex',
+        'Dzen',
+        'CheckMark',
+        'Pen',
+        'Robot',
+        'Info'
       ]
     >;
   };
@@ -257,7 +264,13 @@ export interface UiCustomButton extends Schema.Component {
         'Habr',
         'Website',
         'Arrow',
-        'Send'
+        'Send',
+        'Yandex',
+        'Dzen',
+        'CheckMark',
+        'Pen',
+        'Robot',
+        'Info'
       ]
     >;
   };
@@ -268,6 +281,7 @@ export interface UiContactLink extends Schema.Component {
   info: {
     displayName: 'ContactLink';
     icon: 'attachment';
+    description: '';
   };
   attributes: {
     socialNetwork: Attribute.Enumeration<
@@ -280,11 +294,28 @@ export interface UiContactLink extends Schema.Component {
         'OK',
         'GitHub',
         'Habr',
-        'Website'
+        'Website',
+        'Yandex',
+        'Dzen'
       ]
     > &
       Attribute.Required;
     href: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface UiAdvantage extends Schema.Component {
+  collectionName: 'components_ui_advantages';
+  info: {
+    displayName: 'Advantage';
+    icon: 'briefcase';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.RichText & Attribute.Required;
+    isSelected: Attribute.Boolean & Attribute.DefaultTo<false>;
+    isBig: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 
@@ -354,6 +385,66 @@ export interface MetaMeta extends Schema.Component {
   };
 }
 
+export interface BlocksWorksMini extends Schema.Component {
+  collectionName: 'components_blocks_works_minis';
+  info: {
+    displayName: 'WorksMini';
+    icon: 'apps';
+  };
+  attributes: {
+    blockName: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'works-mini-block'>;
+    blockId: Attribute.String;
+    title: Attribute.Component<'ui.title'>;
+    animation: Attribute.Enumeration<
+      [
+        'from-bottom-to-top',
+        'from-top-to-bottom',
+        'from-left-to-right',
+        'from-right-to-left',
+        'none'
+      ]
+    > &
+      Attribute.DefaultTo<'from-bottom-to-top'>;
+    data: Attribute.Relation<
+      'blocks.works-mini',
+      'oneToMany',
+      'api::work-mini.work-mini'
+    >;
+  };
+}
+
+export interface BlocksWorksLarge extends Schema.Component {
+  collectionName: 'components_blocks_works_larges';
+  info: {
+    displayName: 'WorksLarge';
+    icon: 'apps';
+  };
+  attributes: {
+    blockName: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'works-large-block'>;
+    blockId: Attribute.String;
+    title: Attribute.Component<'ui.title'>;
+    animation: Attribute.Enumeration<
+      [
+        'from-bottom-to-top',
+        'from-top-to-bottom',
+        'from-left-to-right',
+        'from-right-to-left',
+        'none'
+      ]
+    > &
+      Attribute.DefaultTo<'from-bottom-to-top'>;
+    data: Attribute.Relation<
+      'blocks.works-large',
+      'oneToMany',
+      'api::work-large.work-large'
+    >;
+  };
+}
+
 export interface BlocksTitleWithButtons extends Schema.Component {
   collectionName: 'components_blocks_title_with_buttons';
   info: {
@@ -376,7 +467,8 @@ export interface BlocksTitleWithButtons extends Schema.Component {
         'from-bottom-to-top',
         'from-top-to-bottom',
         'from-left-to-right',
-        'from-right-to-left'
+        'from-right-to-left',
+        'none'
       ]
     > &
       Attribute.DefaultTo<'from-bottom-to-top'>;
@@ -496,6 +588,90 @@ export interface BlocksFormBlock extends Schema.Component {
   };
 }
 
+export interface BlocksCollectLinkMini extends Schema.Component {
+  collectionName: 'components_blocks_collect_link_minis';
+  info: {
+    displayName: 'CollectLinkMini';
+    icon: 'cursor';
+  };
+  attributes: {
+    blockName: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'collect-link-mini'>;
+    blockId: Attribute.String;
+    animation: Attribute.Enumeration<
+      [
+        'from-bottom-to-top',
+        'from-top-to-bottom',
+        'from-left-to-right',
+        'from-right-to-left',
+        'none'
+      ]
+    > &
+      Attribute.DefaultTo<'from-bottom-to-top'>;
+    data: Attribute.Relation<
+      'blocks.collect-link-mini',
+      'oneToOne',
+      'api::collect-link-mini.collect-link-mini'
+    >;
+  };
+}
+
+export interface BlocksCollectLinkLarge extends Schema.Component {
+  collectionName: 'components_blocks_collect_link_larges';
+  info: {
+    displayName: 'CollectLinkLarge';
+    icon: 'cursor';
+  };
+  attributes: {
+    blockName: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'collect-link-large'>;
+    blockId: Attribute.String;
+    animation: Attribute.Enumeration<
+      [
+        'from-bottom-to-top',
+        'from-top-to-bottom',
+        'from-left-to-right',
+        'from-right-to-left',
+        'none'
+      ]
+    > &
+      Attribute.DefaultTo<'from-bottom-to-top'>;
+    data: Attribute.Relation<
+      'blocks.collect-link-large',
+      'oneToOne',
+      'api::collect-link-large.collect-link-large'
+    >;
+  };
+}
+
+export interface BlocksAdvantagesBlock extends Schema.Component {
+  collectionName: 'components_blocks_advantages_blocks';
+  info: {
+    displayName: 'AdvantagesBlock';
+    icon: 'apps';
+  };
+  attributes: {
+    blockName: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'advantages-block'>;
+    blockId: Attribute.String;
+    title: Attribute.Component<'ui.title'>;
+    animation: Attribute.Enumeration<
+      [
+        'from-bottom-to-top',
+        'from-top-to-bottom',
+        'from-left-to-right',
+        'from-right-to-left',
+        'none'
+      ]
+    > &
+      Attribute.DefaultTo<'from-bottom-to-top'>;
+    data: Attribute.Component<'ui.advantage', true> & Attribute.Required;
+  };
+}
+
 export interface BlocksAccordionBlock extends Schema.Component {
   collectionName: 'components_blocks_accordion_blocks';
   info: {
@@ -545,16 +721,22 @@ declare module '@strapi/types' {
       'ui.custom-input': UiCustomInput;
       'ui.custom-button': UiCustomButton;
       'ui.contact-link': UiContactLink;
+      'ui.advantage': UiAdvantage;
       'ui.accordion': UiAccordion;
       'meta.yandex-metrika-init-parameters': MetaYandexMetrikaInitParameters;
       'meta.user-agents': MetaUserAgents;
       'meta.page-path': MetaPagePath;
       'meta.meta': MetaMeta;
+      'blocks.works-mini': BlocksWorksMini;
+      'blocks.works-large': BlocksWorksLarge;
       'blocks.title-with-buttons': BlocksTitleWithButtons;
       'blocks.team-block': BlocksTeamBlock;
       'blocks.service-block': BlocksServiceBlock;
       'blocks.review-block': BlocksReviewBlock;
       'blocks.form-block': BlocksFormBlock;
+      'blocks.collect-link-mini': BlocksCollectLinkMini;
+      'blocks.collect-link-large': BlocksCollectLinkLarge;
+      'blocks.advantages-block': BlocksAdvantagesBlock;
       'blocks.accordion-block': BlocksAccordionBlock;
     }
   }

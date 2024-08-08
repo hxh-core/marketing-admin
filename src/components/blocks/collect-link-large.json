@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_blocks_collect_link_larges",
+  "info": {
+    "displayName": "CollectLinkLarge",
+    "icon": "cursor"
+  },
+  "options": {},
+  "attributes": {
+    "blockName": {
+      "type": "string",
+      "default": "collect-link-large",
+      "required": true
+    },
+    "blockId": {
+      "type": "string"
+    },
+    "animation": {
+      "type": "enumeration",
+      "enum": [
+        "from-bottom-to-top",
+        "from-top-to-bottom",
+        "from-left-to-right",
+        "from-right-to-left",
+        "none"
+      ],
+      "default": "from-bottom-to-top"
+    },
+    "data": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::collect-link-large.collect-link-large"
+    }
+  }
+}

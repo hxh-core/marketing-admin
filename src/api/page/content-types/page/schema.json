@@ -29,7 +29,12 @@
         "blocks.team-block",
         "blocks.title-with-buttons",
         "blocks.form-block",
-        "blocks.service-block"
+        "blocks.service-block",
+        "blocks.works-mini",
+        "blocks.works-large",
+        "blocks.collect-link-mini",
+        "blocks.collect-link-large",
+        "blocks.advantages-block"
       ],
       "required": true
     },

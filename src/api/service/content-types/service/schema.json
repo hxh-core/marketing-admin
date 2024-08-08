@@ -4,7 +4,8 @@
   "info": {
     "singularName": "service",
     "pluralName": "services",
-    "displayName": "Service"
+    "displayName": "Service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -40,7 +41,7 @@
         }
       },
       "type": "string",
-      "required": true
+      "required": false
     },
     "price": {
       "type": "component",
@@ -82,9 +83,47 @@
         "Habr",
         "Website",
         "Arrow",
-        "Send"
+        "Send",
+        "Pen",
+        "Robot",
+        "CheckMark",
+        "Info",
+        "Yandex"
       ],
       "required": true
+    },
+    "oldPrice": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ui.price"
+    },
+    "color": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary"
+      ],
+      "default": "secondary",
+      "required": true
+    },
+    "hoverTransition": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": true
     }
   }
 }

@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_blocks_works_minis",
+  "info": {
+    "displayName": "WorksMini",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "blockName": {
+      "type": "string",
+      "required": true,
+      "default": "works-mini-block"
+    },
+    "blockId": {
+      "type": "string"
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.title"
+    },
+    "animation": {
+      "type": "enumeration",
+      "enum": [
+        "from-bottom-to-top",
+        "from-top-to-bottom",
+        "from-left-to-right",
+        "from-right-to-left",
+        "none"
+      ],
+      "default": "from-bottom-to-top",
+      "required": false
+    },
+    "data": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::work-mini.work-mini"
+    }
+  }
+}
