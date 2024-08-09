@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-08-08T17:46:30.545Z"
+    "x-generation-date": "2024-08-09T20:44:29.447Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3075,6 +3075,9 @@
                 "type": "string"
               }
             }
+          },
+          "mask": {
+            "type": "string"
           }
         }
       },
@@ -6694,7 +6697,65 @@
                           }
                         },
                         "contactLink": {
-                          "type": "string"
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "children": {
+                              "type": "string"
+                            },
+                            "href": {
+                              "type": "string"
+                            },
+                            "target": {
+                              "type": "string",
+                              "enum": [
+                                "_blank",
+                                "_self",
+                                "_parent",
+                                "_top"
+                              ]
+                            },
+                            "color": {
+                              "type": "string",
+                              "enum": [
+                                "primary",
+                                "secondary",
+                                "transparent"
+                              ]
+                            },
+                            "size": {
+                              "type": "string",
+                              "enum": [
+                                "small",
+                                "medium",
+                                "large"
+                              ]
+                            },
+                            "icon": {
+                              "type": "string",
+                              "enum": [
+                                "VK",
+                                "Behance",
+                                "Instagram",
+                                "WhatsApp",
+                                "Telegram",
+                                "GitHub",
+                                "OK",
+                                "Habr",
+                                "Website",
+                                "Arrow",
+                                "Send",
+                                "Yandex",
+                                "Dzen",
+                                "CheckMark",
+                                "Pen",
+                                "Robot",
+                                "Info"
+                              ]
+                            }
+                          }
                         },
                         "createdAt": {
                           "type": "string",
@@ -7062,6 +7123,9 @@
                                   "type": "string"
                                 }
                               }
+                            },
+                            "mask": {
+                              "type": "string"
                             }
                           }
                         }
@@ -9991,7 +10055,7 @@
             }
           },
           "contactLink": {
-            "type": "string"
+            "$ref": "#/components/schemas/UiCustomLinkComponent"
           },
           "locale": {
             "type": "string"
@@ -10045,7 +10109,7 @@
                 }
               },
               "contactLink": {
-                "type": "string"
+                "$ref": "#/components/schemas/UiCustomLinkComponent"
               },
               "locale": {
                 "type": "string"
@@ -10820,7 +10884,7 @@
             }
           },
           "contactLink": {
-            "type": "string"
+            "$ref": "#/components/schemas/UiCustomLinkComponent"
           },
           "createdAt": {
             "type": "string",

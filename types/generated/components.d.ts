@@ -229,10 +229,12 @@ export interface UiCustomInput extends Schema.Component {
   info: {
     displayName: 'CustomInput';
     icon: 'pencil';
+    description: '';
   };
   attributes: {
     label: Attribute.String;
     inputProps: Attribute.Component<'ui.input-props'>;
+    mask: Attribute.String;
   };
 }
 

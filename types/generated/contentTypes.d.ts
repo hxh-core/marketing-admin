@@ -1704,7 +1704,7 @@ export interface ApiTeamTeam extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    contactLink: Attribute.String &
+    contactLink: Attribute.Component<'ui.custom-link'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
