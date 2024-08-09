@@ -793,7 +793,7 @@ export interface ApiAccordionAccordion extends Schema.CollectionType {
   info: {
     singularName: 'accordion';
     pluralName: 'accordions';
-    displayName: 'Accordions';
+    displayName: '\u0410\u043A\u043A\u043E\u0440\u0434\u0435\u043E\u043D\u044B';
   };
   options: {
     draftAndPublish: true;

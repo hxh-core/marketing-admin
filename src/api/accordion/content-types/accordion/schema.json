@@ -4,7 +4,7 @@
   "info": {
     "singularName": "accordion",
     "pluralName": "accordions",
-    "displayName": "Accordions"
+    "displayName": "Аккордеоны"
   },
   "options": {
     "draftAndPublish": true
