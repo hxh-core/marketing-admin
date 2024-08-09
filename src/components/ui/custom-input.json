@@ -14,9 +14,6 @@
       "type": "component",
       "repeatable": false,
       "component": "ui.input-props"
-    },
-    "mask": {
-      "type": "string"
     }
   }
 }
