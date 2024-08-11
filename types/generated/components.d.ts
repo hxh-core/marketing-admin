@@ -9,7 +9,14 @@ export interface UiTitle extends Schema.Component {
   };
   attributes: {
     link: Attribute.Component<'ui.link'>;
-    label: Attribute.RichText & Attribute.Required;
+    label: Attribute.String &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::bold-title-editor.title',
+        {
+          output: 'html';
+        }
+      >;
   };
 }
 
@@ -213,12 +220,11 @@ export interface UiCustomLink extends Schema.Component {
         'Website',
         'Arrow',
         'Send',
-        'Yandex',
-        'Dzen',
-        'CheckMark',
         'Pen',
         'Robot',
-        'Info'
+        'CheckMark',
+        'Info',
+        'Yandex'
       ]
     >;
   };
@@ -267,12 +273,11 @@ export interface UiCustomButton extends Schema.Component {
         'Website',
         'Arrow',
         'Send',
-        'Yandex',
-        'Dzen',
-        'CheckMark',
         'Pen',
         'Robot',
-        'Info'
+        'CheckMark',
+        'Info',
+        'Yandex'
       ]
     >;
   };
@@ -286,6 +291,8 @@ export interface UiContactLink extends Schema.Component {
     description: '';
   };
   attributes: {
+    href: Attribute.String & Attribute.Required;
+    label: Attribute.String & Attribute.Required;
     socialNetwork: Attribute.Enumeration<
       [
         'Instagram',
@@ -302,7 +309,6 @@ export interface UiContactLink extends Schema.Component {
       ]
     > &
       Attribute.Required;
-    href: Attribute.String & Attribute.Required;
   };
 }
 
@@ -326,10 +332,11 @@ export interface UiAccordion extends Schema.Component {
   info: {
     displayName: 'Accordion';
     icon: 'bulletList';
+    description: '';
   };
   attributes: {
     ask: Attribute.String & Attribute.Required;
-    answer: Attribute.Text & Attribute.Required;
+    answer: Attribute.RichText & Attribute.Required;
   };
 }
 

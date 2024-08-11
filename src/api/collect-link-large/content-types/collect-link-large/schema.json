@@ -4,7 +4,7 @@
   "info": {
     "singularName": "collect-link-large",
     "pluralName": "collect-links-large",
-    "displayName": "Collect Links Large",
+    "displayName": "Формы перехода (большие)",
     "description": ""
   },
   "options": {
@@ -16,23 +16,26 @@
     }
   },
   "attributes": {
-    "title": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true
+    "_softDeletedAt": {
+      "type": "datetime",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
     },
-    "description": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text",
-      "required": true
+    "_softDeletedById": {
+      "type": "integer",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
+    "_softDeletedByType": {
+      "type": "string",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
     },
     "button": {
       "type": "component",
@@ -54,6 +57,27 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "customField",
+      "options": {
+        "output": "html"
+      },
+      "required": true,
+      "customField": "plugin::bold-title-editor.title"
+    },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }

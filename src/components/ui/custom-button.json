@@ -56,12 +56,11 @@
         "Website",
         "Arrow",
         "Send",
-        "Yandex",
-        "Dzen",
-        "CheckMark",
         "Pen",
         "Robot",
-        "Info"
+        "CheckMark",
+        "Info",
+        "Yandex"
       ]
     }
   }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "work-large",
     "pluralName": "works-large",
-    "displayName": "WorksLarge"
+    "displayName": "Работы (больше)",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,18 +16,39 @@
     }
   },
   "attributes": {
+    "_softDeletedAt": {
+      "type": "datetime",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
+    "_softDeletedById": {
+      "type": "integer",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
+    "_softDeletedByType": {
+      "type": "string",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "required": true
+      }
     },
     "title": {
       "pluginOptions": {

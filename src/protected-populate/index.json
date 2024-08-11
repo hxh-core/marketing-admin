@@ -1,0 +1,224 @@
+{
+   "GET /api/pages": {
+      "content-type": "api::page.page",
+      "populate": {
+         "localizations": {},
+         "metaImage": {},
+         "blocks": {
+            "on": {
+               "blocks.review-block": {
+                  "populate": {
+                     "title": {
+                        "populate": {
+                           "link": {
+                              "fields": [
+                                 "label",
+                                 "href",
+                                 "target"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "label"
+                        ]
+                     },
+                     "reviews": {
+                        "fields": [
+                           "projectName",
+                           "content"
+                        ],
+                        "populate": {
+                           "author": {
+                              "fields": [
+                                 "name",
+                                 "job"
+                              ],
+                              "populate": {
+                                 "avatar": {
+                                    "fields": [
+                                       "name",
+                                       "alternativeText",
+                                       "caption",
+                                       "width",
+                                       "height",
+                                       "formats",
+                                       "hash",
+                                       "ext",
+                                       "mime",
+                                       "size",
+                                       "url",
+                                       "previewUrl",
+                                       "provider",
+                                       "createdAt",
+                                       "updatedAt",
+                                       "id",
+                                       "folderPath"
+                                    ],
+                                    "populate": {}
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  },
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ]
+               },
+               "blocks.accordion-block": {
+                  "populate": {
+                     "data": {
+                        "fields": [
+                           "uniqueBlockName",
+                           "createdAt",
+                           "updatedAt",
+                           "id",
+                           "publishedAt",
+                           "locale"
+                        ],
+                        "populate": {
+                           "data": {
+                              "fields": [
+                                 "ask",
+                                 "answer"
+                              ]
+                           },
+                           "localizations": {
+                              "fields": [
+                                 "uniqueBlockName",
+                                 "createdAt",
+                                 "updatedAt",
+                                 "id",
+                                 "publishedAt",
+                                 "locale"
+                              ],
+                              "populate": {
+                                 "data": {
+                                    "fields": [
+                                       "ask",
+                                       "answer"
+                                    ]
+                                 }
+                              }
+                           }
+                        }
+                     },
+                     "title": {
+                        "populate": {
+                           "link": {
+                              "fields": [
+                                 "label",
+                                 "href",
+                                 "target"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "label"
+                        ]
+                     }
+                  },
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ]
+               },
+               "blocks.team-block": {
+                  "populate": {
+                     "title": {
+                        "populate": {
+                           "link": {
+                              "fields": [
+                                 "label",
+                                 "href",
+                                 "target"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "label"
+                        ]
+                     },
+                     "data": {
+                        "populate": {
+                           "image": {
+                              "fields": [
+                                 "name",
+                                 "alternativeText",
+                                 "caption",
+                                 "width",
+                                 "height",
+                                 "formats",
+                                 "hash",
+                                 "ext",
+                                 "mime",
+                                 "size",
+                                 "url",
+                                 "previewUrl",
+                                 "provider",
+                                 "folderPath",
+                                 "createdAt",
+                                 "updatedAt",
+                                 "id"
+                              ]
+                           },
+                           "info": {
+                              "fields": [
+                                 "label",
+                                 "value"
+                              ]
+                           },
+                           "contacts": {
+                              "fields": [
+                                 "href",
+                                 "label",
+                                 "icon"
+                              ]
+                           },
+                           "contactLink": {
+                              "fields": [
+                                 "children",
+                                 "href",
+                                 "target",
+                                 "color",
+                                 "size",
+                                 "icon"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "name",
+                           "job",
+                           "createdAt",
+                           "updatedAt",
+                           "id",
+                           "publishedAt",
+                           "locale"
+                        ]
+                     }
+                  },
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ]
+               }
+            }
+         }
+      },
+      "fields": [
+         "locale",
+         "publishedAt",
+         "id",
+         "updatedAt",
+         "createdAt",
+         "path",
+         "metaKeywords",
+         "metaDescription",
+         "metaTitle"
+      ]
+   }
+}

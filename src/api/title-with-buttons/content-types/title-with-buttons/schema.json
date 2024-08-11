@@ -4,7 +4,7 @@
   "info": {
     "singularName": "title-with-buttons",
     "pluralName": "titles-with-buttons",
-    "displayName": "TitlesWithButtons",
+    "displayName": "Заголовок с кнопками",
     "description": ""
   },
   "options": {
@@ -16,6 +16,27 @@
     }
   },
   "attributes": {
+    "_softDeletedAt": {
+      "type": "datetime",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
+    "_softDeletedById": {
+      "type": "integer",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
+    "_softDeletedByType": {
+      "type": "string",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
     "title": {
       "pluginOptions": {
         "i18n": {

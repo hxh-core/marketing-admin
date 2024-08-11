@@ -788,12 +788,54 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface PluginPublisherAction extends Schema.CollectionType {
+  collectionName: 'actions';
+  info: {
+    singularName: 'action';
+    pluralName: 'actions';
+    displayName: 'actions';
+  };
+  options: {
+    draftAndPublish: false;
+    comment: '';
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    executeAt: Attribute.DateTime;
+    mode: Attribute.String;
+    entityId: Attribute.Integer;
+    entitySlug: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'plugin::publisher.action',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'plugin::publisher.action',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiAccordionAccordion extends Schema.CollectionType {
   collectionName: 'accordions';
   info: {
     singularName: 'accordion';
     pluralName: 'accordions';
     displayName: '\u0410\u043A\u043A\u043E\u0440\u0434\u0435\u043E\u043D\u044B';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -834,6 +876,9 @@ export interface ApiAccordionAccordion extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     localizations: Attribute.Relation<
       'api::accordion.accordion',
       'oneToMany',
@@ -849,7 +894,7 @@ export interface ApiCollectLinkLargeCollectLinkLarge
   info: {
     singularName: 'collect-link-large';
     pluralName: 'collect-links-large';
-    displayName: 'Collect Links Large';
+    displayName: '\u0424\u043E\u0440\u043C\u044B \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0430 (\u0431\u043E\u043B\u044C\u0448\u0438\u0435)';
     description: '';
   };
   options: {
@@ -861,20 +906,9 @@ export interface ApiCollectLinkLargeCollectLinkLarge
     };
   };
   attributes: {
-    title: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    description: Attribute.Text &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     button: Attribute.Component<'ui.custom-link'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -885,6 +919,25 @@ export interface ApiCollectLinkLargeCollectLinkLarge
     uniqueBlockName: Attribute.String &
       Attribute.Required &
       Attribute.Unique &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::bold-title-editor.title',
+        {
+          output: 'html';
+        }
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.RichText &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -920,7 +973,7 @@ export interface ApiCollectLinkMiniCollectLinkMini
   info: {
     singularName: 'collect-link-mini';
     pluralName: 'collect-links-mini';
-    displayName: 'Collect Links Mini';
+    displayName: '\u0424\u043E\u0440\u043C\u044B \u043F\u0435\u0440\u0435\u0445\u043E\u0434\u0430 (\u043C\u0438\u043D\u0438)';
     description: '';
   };
   options: {
@@ -932,20 +985,9 @@ export interface ApiCollectLinkMiniCollectLinkMini
     };
   };
   attributes: {
-    title: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    description: Attribute.Text &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     button: Attribute.Component<'ui.custom-link'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -962,6 +1004,26 @@ export interface ApiCollectLinkMiniCollectLinkMini
         };
       }>;
     infinityBar: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::bold-title-editor.title',
+        {
+          output: 'html';
+        }
+      > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.RichText &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1054,6 +1116,9 @@ export interface ApiFooterFooter extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     localizations: Attribute.Relation<
       'api::footer.footer',
       'oneToMany',
@@ -1068,7 +1133,7 @@ export interface ApiFormForm extends Schema.CollectionType {
   info: {
     singularName: 'form';
     pluralName: 'forms';
-    displayName: 'Forms';
+    displayName: '\u0424\u043E\u0440\u043C\u044B';
     description: '';
   };
   options: {
@@ -1080,14 +1145,11 @@ export interface ApiFormForm extends Schema.CollectionType {
     };
   };
   attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     title: Attribute.String &
       Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    description: Attribute.Text &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1118,6 +1180,13 @@ export interface ApiFormForm extends Schema.CollectionType {
     uniqueBlockName: Attribute.String &
       Attribute.Required &
       Attribute.Unique &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.RichText &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1168,6 +1237,9 @@ export interface ApiGoogleAnalyticsGoogleAnalytics extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
   };
 }
 
@@ -1201,6 +1273,9 @@ export interface ApiGoogleTagManagerGoogleTagManager extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
   };
 }
 
@@ -1249,6 +1324,9 @@ export interface ApiNavigationNavigation extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     localizations: Attribute.Relation<
       'api::navigation.navigation',
       'oneToMany',
@@ -1263,7 +1341,7 @@ export interface ApiNewsMessageNewsMessage extends Schema.SingleType {
   info: {
     singularName: 'news-message';
     pluralName: 'news-messages';
-    displayName: 'NewsMessage';
+    displayName: '\u041D\u043E\u0432\u043E\u0441\u0442\u043D\u044B\u0435 \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u044F';
     description: '';
   };
   options: {
@@ -1275,6 +1353,9 @@ export interface ApiNewsMessageNewsMessage extends Schema.SingleType {
     };
   };
   attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     messages: Attribute.Component<'ui.news-message', true> &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1318,7 +1399,7 @@ export interface ApiPagePage extends Schema.CollectionType {
   info: {
     singularName: 'page';
     pluralName: 'pages';
-    displayName: 'Pages';
+    displayName: '\u0421\u0442\u0440\u0430\u043D\u0438\u0446\u044B';
     description: '';
   };
   options: {
@@ -1330,6 +1411,9 @@ export interface ApiPagePage extends Schema.CollectionType {
     };
   };
   attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     blocks: Attribute.DynamicZone<
       [
         'blocks.review-block',
@@ -1452,6 +1536,9 @@ export interface ApiReviewReview extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     localizations: Attribute.Relation<
       'api::review.review',
       'oneToMany',
@@ -1466,7 +1553,7 @@ export interface ApiRobotRobot extends Schema.CollectionType {
   info: {
     singularName: 'robot';
     pluralName: 'robots';
-    displayName: 'Robots';
+    displayName: 'Robots txt';
     description: '';
   };
   options: {
@@ -1478,6 +1565,9 @@ export interface ApiRobotRobot extends Schema.CollectionType {
     };
   };
   attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     name: Attribute.String &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -1535,7 +1625,7 @@ export interface ApiServiceService extends Schema.CollectionType {
   info: {
     singularName: 'service';
     pluralName: 'services';
-    displayName: 'Service';
+    displayName: '\u0423\u0441\u043B\u0443\u0433\u0438';
     description: '';
   };
   options: {
@@ -1547,14 +1637,10 @@ export interface ApiServiceService extends Schema.CollectionType {
     };
   };
   attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     title: Attribute.String &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    description: Attribute.Text &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1628,6 +1714,13 @@ export interface ApiServiceService extends Schema.CollectionType {
         };
       }> &
       Attribute.DefaultTo<true>;
+    description: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1657,7 +1750,7 @@ export interface ApiTeamTeam extends Schema.CollectionType {
   info: {
     singularName: 'team';
     pluralName: 'teams';
-    displayName: 'Team';
+    displayName: '\u041A\u043E\u043C\u0430\u043D\u0434\u0430';
     description: '';
   };
   options: {
@@ -1669,6 +1762,9 @@ export interface ApiTeamTeam extends Schema.CollectionType {
     };
   };
   attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     image: Attribute.Media<'images'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -1733,7 +1829,7 @@ export interface ApiTitleWithButtonsTitleWithButtons
   info: {
     singularName: 'title-with-buttons';
     pluralName: 'titles-with-buttons';
-    displayName: 'TitlesWithButtons';
+    displayName: '\u0417\u0430\u0433\u043E\u043B\u043E\u0432\u043E\u043A \u0441 \u043A\u043D\u043E\u043F\u043A\u0430\u043C\u0438';
     description: '';
   };
   options: {
@@ -1745,6 +1841,9 @@ export interface ApiTitleWithButtonsTitleWithButtons
     };
   };
   attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     title: Attribute.String &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -1801,7 +1900,8 @@ export interface ApiWorkLargeWorkLarge extends Schema.CollectionType {
   info: {
     singularName: 'work-large';
     pluralName: 'works-large';
-    displayName: 'WorksLarge';
+    displayName: '\u0420\u0430\u0431\u043E\u0442\u044B (\u0431\u043E\u043B\u044C\u0448\u0435)';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1812,6 +1912,9 @@ export interface ApiWorkLargeWorkLarge extends Schema.CollectionType {
     };
   };
   attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     image: Attribute.Media<'images'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -1869,7 +1972,7 @@ export interface ApiWorkMiniWorkMini extends Schema.CollectionType {
   info: {
     singularName: 'work-mini';
     pluralName: 'works-mini';
-    displayName: 'WorksMini';
+    displayName: '\u0420\u0430\u0431\u043E\u0442\u044B (\u043C\u0438\u043D\u0438)';
     description: '';
   };
   options: {
@@ -1881,6 +1984,9 @@ export interface ApiWorkMiniWorkMini extends Schema.CollectionType {
     };
   };
   attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     title: Attribute.String &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -1963,6 +2069,9 @@ export interface ApiYandexMetrikaYandexMetrika extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
   };
 }
 
@@ -1984,6 +2093,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'plugin::publisher.action': PluginPublisherAction;
       'api::accordion.accordion': ApiAccordionAccordion;
       'api::collect-link-large.collect-link-large': ApiCollectLinkLargeCollectLinkLarge;
       'api::collect-link-mini.collect-link-mini': ApiCollectLinkMiniCollectLinkMini;

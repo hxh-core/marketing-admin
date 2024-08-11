@@ -13,8 +13,12 @@
       "component": "ui.link"
     },
     "label": {
-      "type": "richtext",
-      "required": true
+      "type": "customField",
+      "options": {
+        "output": "html"
+      },
+      "required": true,
+      "customField": "plugin::bold-title-editor.title"
     }
   }
 }

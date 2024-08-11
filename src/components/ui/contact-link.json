@@ -7,6 +7,14 @@
   },
   "options": {},
   "attributes": {
+    "href": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
     "socialNetwork": {
       "type": "enumeration",
       "enum": [
@@ -22,10 +30,6 @@
         "Yandex",
         "Dzen"
       ],
-      "required": true
-    },
-    "href": {
-      "type": "string",
       "required": true
     }
   }

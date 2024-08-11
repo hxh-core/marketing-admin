@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-08-09T20:58:08.490Z"
+    "x-generation-date": "2024-08-11T13:25:52.014Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -103,6 +103,16 @@
               "$ref": "#/components/schemas/UiAccordionComponent"
             }
           },
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -129,6 +139,16 @@
                 "items": {
                   "$ref": "#/components/schemas/UiAccordionComponent"
                 }
+              },
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -565,6 +585,16 @@
               }
             }
           },
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "localizations": {
             "type": "object",
             "properties": {
@@ -619,24 +649,33 @@
       },
       "CollectLinkLargeLocalizationRequest": {
         "required": [
-          "title",
-          "description",
           "button",
           "uniqueBlockName",
+          "title",
           "locale"
         ],
         "type": "object",
         "properties": {
-          "title": {
-            "type": "string"
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
           },
-          "description": {
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
             "type": "string"
           },
           "button": {
             "$ref": "#/components/schemas/UiCustomLinkComponent"
           },
           "uniqueBlockName": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "locale": {
@@ -652,23 +691,32 @@
         "properties": {
           "data": {
             "required": [
-              "title",
-              "description",
               "button",
-              "uniqueBlockName"
+              "uniqueBlockName",
+              "title"
             ],
             "type": "object",
             "properties": {
-              "title": {
-                "type": "string"
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
               },
-              "description": {
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
                 "type": "string"
               },
               "button": {
                 "$ref": "#/components/schemas/UiCustomLinkComponent"
               },
               "uniqueBlockName": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
                 "type": "string"
               },
               "locale": {
@@ -795,22 +843,31 @@
       "CollectLinkLarge": {
         "type": "object",
         "required": [
-          "title",
-          "description",
           "button",
-          "uniqueBlockName"
+          "uniqueBlockName",
+          "title"
         ],
         "properties": {
-          "title": {
-            "type": "string"
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
           },
-          "description": {
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
             "type": "string"
           },
           "button": {
             "$ref": "#/components/schemas/UiCustomLinkComponent"
           },
           "uniqueBlockName": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "createdAt": {
@@ -1200,30 +1257,33 @@
               "Website",
               "Arrow",
               "Send",
-              "Yandex",
-              "Dzen",
-              "CheckMark",
               "Pen",
               "Robot",
-              "Info"
+              "CheckMark",
+              "Info",
+              "Yandex"
             ]
           }
         }
       },
       "CollectLinkMiniLocalizationRequest": {
         "required": [
-          "title",
-          "description",
           "button",
           "uniqueBlockName",
+          "title",
+          "description",
           "locale"
         ],
         "type": "object",
         "properties": {
-          "title": {
-            "type": "string"
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
           },
-          "description": {
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
             "type": "string"
           },
           "button": {
@@ -1233,6 +1293,12 @@
             "type": "string"
           },
           "infinityBar": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "locale": {
@@ -1248,17 +1314,21 @@
         "properties": {
           "data": {
             "required": [
-              "title",
-              "description",
               "button",
-              "uniqueBlockName"
+              "uniqueBlockName",
+              "title",
+              "description"
             ],
             "type": "object",
             "properties": {
-              "title": {
-                "type": "string"
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
               },
-              "description": {
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
                 "type": "string"
               },
               "button": {
@@ -1268,6 +1338,12 @@
                 "type": "string"
               },
               "infinityBar": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
                 "type": "string"
               },
               "locale": {
@@ -1394,16 +1470,20 @@
       "CollectLinkMini": {
         "type": "object",
         "required": [
-          "title",
-          "description",
           "button",
-          "uniqueBlockName"
+          "uniqueBlockName",
+          "title",
+          "description"
         ],
         "properties": {
-          "title": {
-            "type": "string"
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
           },
-          "description": {
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
             "type": "string"
           },
           "button": {
@@ -1413,6 +1493,12 @@
             "type": "string"
           },
           "infinityBar": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "createdAt": {
@@ -1781,6 +1867,16 @@
               "$ref": "#/components/schemas/UiContactLinkComponent"
             }
           },
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -1820,6 +1916,16 @@
                 "items": {
                   "$ref": "#/components/schemas/UiContactLinkComponent"
                 }
+              },
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -2265,6 +2371,16 @@
               }
             }
           },
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "localizations": {
             "type": "object",
             "properties": {
@@ -2407,12 +2523,11 @@
                   "Website",
                   "Arrow",
                   "Send",
-                  "Yandex",
-                  "Dzen",
-                  "CheckMark",
                   "Pen",
                   "Robot",
-                  "Info"
+                  "CheckMark",
+                  "Info",
+                  "Yandex"
                 ]
               }
             }
@@ -2424,6 +2539,12 @@
         "properties": {
           "id": {
             "type": "number"
+          },
+          "href": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
           },
           "socialNetwork": {
             "type": "string",
@@ -2440,9 +2561,6 @@
               "Yandex",
               "Dzen"
             ]
-          },
-          "href": {
-            "type": "string"
           }
         }
       },
@@ -2453,14 +2571,22 @@
           "inputs",
           "button",
           "uniqueBlockName",
+          "description",
           "locale"
         ],
         "type": "object",
         "properties": {
-          "title": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
             "type": "string"
           },
-          "description": {
+          "title": {
             "type": "string"
           },
           "contentPosition": {
@@ -2482,6 +2608,9 @@
           "uniqueBlockName": {
             "type": "string"
           },
+          "description": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -2499,14 +2628,22 @@
               "contentPosition",
               "inputs",
               "button",
-              "uniqueBlockName"
+              "uniqueBlockName",
+              "description"
             ],
             "type": "object",
             "properties": {
-              "title": {
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
                 "type": "string"
               },
-              "description": {
+              "title": {
                 "type": "string"
               },
               "contentPosition": {
@@ -2526,6 +2663,9 @@
                 "$ref": "#/components/schemas/UiCustomButtonComponent"
               },
               "uniqueBlockName": {
+                "type": "string"
+              },
+              "description": {
                 "type": "string"
               },
               "locale": {
@@ -2656,13 +2796,21 @@
           "contentPosition",
           "inputs",
           "button",
-          "uniqueBlockName"
+          "uniqueBlockName",
+          "description"
         ],
         "properties": {
-          "title": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
             "type": "string"
           },
-          "description": {
+          "title": {
             "type": "string"
           },
           "contentPosition": {
@@ -2682,6 +2830,9 @@
             "$ref": "#/components/schemas/UiCustomButtonComponent"
           },
           "uniqueBlockName": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "createdAt": {
@@ -3131,12 +3282,11 @@
               "Website",
               "Arrow",
               "Send",
-              "Yandex",
-              "Dzen",
-              "CheckMark",
               "Pen",
               "Robot",
-              "Info"
+              "CheckMark",
+              "Info",
+              "Yandex"
             ]
           }
         }
@@ -3157,6 +3307,16 @@
                 "type": "string"
               },
               "dataLayerName": {
+                "type": "string"
+              },
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
                 "type": "string"
               }
             }
@@ -3518,6 +3678,16 @@
                 }
               }
             }
+          },
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
           }
         }
       },
@@ -3565,6 +3735,16 @@
                 "type": "string"
               },
               "preview": {
+                "type": "string"
+              },
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
                 "type": "string"
               }
             }
@@ -3932,6 +4112,16 @@
                 }
               }
             }
+          },
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
           }
         }
       },
@@ -3974,6 +4164,16 @@
               "$ref": "#/components/schemas/UiLinkComponent"
             }
           },
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -4000,6 +4200,16 @@
                 "items": {
                   "$ref": "#/components/schemas/UiLinkComponent"
                 }
+              },
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -4432,6 +4642,16 @@
               }
             }
           },
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "localizations": {
             "type": "object",
             "properties": {
@@ -4477,6 +4697,16 @@
         ],
         "type": "object",
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "messages": {
             "type": "array",
             "items": {
@@ -4503,6 +4733,16 @@
             ],
             "type": "object",
             "properties": {
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
+                "type": "string"
+              },
               "messages": {
                 "type": "array",
                 "items": {
@@ -4639,6 +4879,16 @@
           "delay"
         ],
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "messages": {
             "type": "array",
             "items": {
@@ -5044,12 +5294,11 @@
                   "Website",
                   "Arrow",
                   "Send",
-                  "Yandex",
-                  "Dzen",
-                  "CheckMark",
                   "Pen",
                   "Robot",
-                  "Info"
+                  "CheckMark",
+                  "Info",
+                  "Yandex"
                 ]
               }
             }
@@ -5074,6 +5323,16 @@
         ],
         "type": "object",
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "blocks": {
             "type": "array",
             "items": {
@@ -5159,6 +5418,16 @@
             ],
             "type": "object",
             "properties": {
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
+                "type": "string"
+              },
               "blocks": {
                 "type": "array",
                 "items": {
@@ -5354,6 +5623,16 @@
           "path"
         ],
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "blocks": {
             "type": "array",
             "items": {
@@ -6439,6 +6718,16 @@
                           }
                         }
                       },
+                      "_softDeletedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "_softDeletedById": {
+                        "type": "integer"
+                      },
+                      "_softDeletedByType": {
+                        "type": "string"
+                      },
                       "localizations": {
                         "type": "object",
                         "properties": {
@@ -6504,6 +6793,16 @@
                     "attributes": {
                       "type": "object",
                       "properties": {
+                        "_softDeletedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "_softDeletedById": {
+                          "type": "integer"
+                        },
+                        "_softDeletedByType": {
+                          "type": "string"
+                        },
                         "image": {
                           "type": "object",
                           "properties": {
@@ -6674,6 +6973,12 @@
                               "id": {
                                 "type": "number"
                               },
+                              "href": {
+                                "type": "string"
+                              },
+                              "label": {
+                                "type": "string"
+                              },
                               "socialNetwork": {
                                 "type": "string",
                                 "enum": [
@@ -6689,9 +6994,6 @@
                                   "Yandex",
                                   "Dzen"
                                 ]
-                              },
-                              "href": {
-                                "type": "string"
                               }
                             }
                           }
@@ -6747,12 +7049,11 @@
                                 "Website",
                                 "Arrow",
                                 "Send",
-                                "Yandex",
-                                "Dzen",
-                                "CheckMark",
                                 "Pen",
                                 "Robot",
-                                "Info"
+                                "CheckMark",
+                                "Info",
+                                "Yandex"
                               ]
                             }
                           }
@@ -6867,6 +7168,16 @@
                   "attributes": {
                     "type": "object",
                     "properties": {
+                      "_softDeletedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "_softDeletedById": {
+                        "type": "integer"
+                      },
+                      "_softDeletedByType": {
+                        "type": "string"
+                      },
                       "title": {
                         "type": "string"
                       },
@@ -6926,12 +7237,11 @@
                                 "Website",
                                 "Arrow",
                                 "Send",
-                                "Yandex",
-                                "Dzen",
-                                "CheckMark",
                                 "Pen",
                                 "Robot",
-                                "Info"
+                                "CheckMark",
+                                "Info",
+                                "Yandex"
                               ]
                             }
                           }
@@ -7053,10 +7363,17 @@
                   "attributes": {
                     "type": "object",
                     "properties": {
-                      "title": {
+                      "_softDeletedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "_softDeletedById": {
+                        "type": "integer"
+                      },
+                      "_softDeletedByType": {
                         "type": "string"
                       },
-                      "description": {
+                      "title": {
                         "type": "string"
                       },
                       "contentPosition": {
@@ -7180,17 +7497,19 @@
                               "Website",
                               "Arrow",
                               "Send",
-                              "Yandex",
-                              "Dzen",
-                              "CheckMark",
                               "Pen",
                               "Robot",
-                              "Info"
+                              "CheckMark",
+                              "Info",
+                              "Yandex"
                             ]
                           }
                         }
                       },
                       "uniqueBlockName": {
+                        "type": "string"
+                      },
+                      "description": {
                         "type": "string"
                       },
                       "createdAt": {
@@ -7282,10 +7601,17 @@
                     "attributes": {
                       "type": "object",
                       "properties": {
-                        "title": {
+                        "_softDeletedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "_softDeletedById": {
+                          "type": "integer"
+                        },
+                        "_softDeletedByType": {
                           "type": "string"
                         },
-                        "description": {
+                        "title": {
                           "type": "string"
                         },
                         "slug": {
@@ -7364,12 +7690,11 @@
                                 "Website",
                                 "Arrow",
                                 "Send",
-                                "Yandex",
-                                "Dzen",
-                                "CheckMark",
                                 "Pen",
                                 "Robot",
-                                "Info"
+                                "CheckMark",
+                                "Info",
+                                "Yandex"
                               ]
                             }
                           }
@@ -7426,6 +7751,9 @@
                         },
                         "hoverTransition": {
                           "type": "boolean"
+                        },
+                        "description": {
+                          "type": "string"
                         },
                         "createdAt": {
                           "type": "string",
@@ -7555,6 +7883,16 @@
                     "attributes": {
                       "type": "object",
                       "properties": {
+                        "_softDeletedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "_softDeletedById": {
+                          "type": "integer"
+                        },
+                        "_softDeletedByType": {
+                          "type": "string"
+                        },
                         "title": {
                           "type": "string"
                         },
@@ -7832,6 +8170,16 @@
                     "attributes": {
                       "type": "object",
                       "properties": {
+                        "_softDeletedAt": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "_softDeletedById": {
+                          "type": "integer"
+                        },
+                        "_softDeletedByType": {
+                          "type": "string"
+                        },
                         "image": {
                           "type": "object",
                           "properties": {
@@ -8028,12 +8376,11 @@
                                 "Website",
                                 "Arrow",
                                 "Send",
-                                "Yandex",
-                                "Dzen",
-                                "CheckMark",
                                 "Pen",
                                 "Robot",
-                                "Info"
+                                "CheckMark",
+                                "Info",
+                                "Yandex"
                               ]
                             }
                           }
@@ -8142,10 +8489,14 @@
                   "attributes": {
                     "type": "object",
                     "properties": {
-                      "title": {
-                        "type": "string"
+                      "_softDeletedAt": {
+                        "type": "string",
+                        "format": "date-time"
                       },
-                      "description": {
+                      "_softDeletedById": {
+                        "type": "integer"
+                      },
+                      "_softDeletedByType": {
                         "type": "string"
                       },
                       "button": {
@@ -8199,12 +8550,11 @@
                               "Website",
                               "Arrow",
                               "Send",
-                              "Yandex",
-                              "Dzen",
-                              "CheckMark",
                               "Pen",
                               "Robot",
-                              "Info"
+                              "CheckMark",
+                              "Info",
+                              "Yandex"
                             ]
                           }
                         }
@@ -8213,6 +8563,12 @@
                         "type": "string"
                       },
                       "infinityBar": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "description": {
                         "type": "string"
                       },
                       "createdAt": {
@@ -8318,10 +8674,14 @@
                   "attributes": {
                     "type": "object",
                     "properties": {
-                      "title": {
-                        "type": "string"
+                      "_softDeletedAt": {
+                        "type": "string",
+                        "format": "date-time"
                       },
-                      "description": {
+                      "_softDeletedById": {
+                        "type": "integer"
+                      },
+                      "_softDeletedByType": {
                         "type": "string"
                       },
                       "button": {
@@ -8375,17 +8735,22 @@
                               "Website",
                               "Arrow",
                               "Send",
-                              "Yandex",
-                              "Dzen",
-                              "CheckMark",
                               "Pen",
                               "Robot",
-                              "Info"
+                              "CheckMark",
+                              "Info",
+                              "Yandex"
                             ]
                           }
                         }
                       },
                       "uniqueBlockName": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "description": {
                         "type": "string"
                       },
                       "createdAt": {
@@ -8530,6 +8895,16 @@
           "uniqueBlockName": {
             "type": "string"
           },
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -8558,6 +8933,16 @@
                 }
               },
               "uniqueBlockName": {
+                "type": "string"
+              },
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
                 "type": "string"
               },
               "locale": {
@@ -8746,6 +9131,16 @@
               }
             }
           },
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "localizations": {
             "type": "object",
             "properties": {
@@ -8793,6 +9188,16 @@
         ],
         "type": "object",
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "name": {
             "type": "string"
           },
@@ -8830,6 +9235,16 @@
             ],
             "type": "object",
             "properties": {
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
+                "type": "string"
+              },
               "name": {
                 "type": "string"
               },
@@ -8977,6 +9392,16 @@
           "userAgent"
         ],
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "name": {
             "type": "string"
           },
@@ -9345,19 +9770,26 @@
       "ServiceLocalizationRequest": {
         "required": [
           "title",
-          "description",
           "price",
           "button",
           "icon",
           "color",
+          "description",
           "locale"
         ],
         "type": "object",
         "properties": {
-          "title": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
             "type": "string"
           },
-          "description": {
+          "title": {
             "type": "string"
           },
           "slug": {
@@ -9403,6 +9835,9 @@
           "hoverTransition": {
             "type": "boolean"
           },
+          "description": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -9417,18 +9852,25 @@
           "data": {
             "required": [
               "title",
-              "description",
               "price",
               "button",
               "icon",
-              "color"
+              "color",
+              "description"
             ],
             "type": "object",
             "properties": {
-              "title": {
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
                 "type": "string"
               },
-              "description": {
+              "title": {
                 "type": "string"
               },
               "slug": {
@@ -9473,6 +9915,9 @@
               },
               "hoverTransition": {
                 "type": "boolean"
+              },
+              "description": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -9599,17 +10044,24 @@
         "type": "object",
         "required": [
           "title",
-          "description",
           "price",
           "button",
           "icon",
-          "color"
+          "color",
+          "description"
         ],
         "properties": {
-          "title": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
             "type": "string"
           },
-          "description": {
+          "title": {
             "type": "string"
           },
           "slug": {
@@ -9654,6 +10106,9 @@
           },
           "hoverTransition": {
             "type": "boolean"
+          },
+          "description": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -10025,6 +10480,16 @@
         ],
         "type": "object",
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "image": {
             "oneOf": [
               {
@@ -10079,6 +10544,16 @@
             ],
             "type": "object",
             "properties": {
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
+                "type": "string"
+              },
               "image": {
                 "oneOf": [
                   {
@@ -10243,6 +10718,16 @@
           "contactLink"
         ],
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "image": {
             "type": "object",
             "properties": {
@@ -10992,6 +11477,16 @@
         ],
         "type": "object",
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "title": {
             "type": "string"
           },
@@ -11025,6 +11520,16 @@
             ],
             "type": "object",
             "properties": {
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
+                "type": "string"
+              },
               "title": {
                 "type": "string"
               },
@@ -11168,6 +11673,16 @@
           "uniqueBlockName"
         ],
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "title": {
             "type": "string"
           },
@@ -11529,6 +12044,16 @@
         ],
         "type": "object",
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "image": {
             "oneOf": [
               {
@@ -11569,6 +12094,16 @@
             ],
             "type": "object",
             "properties": {
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
+                "type": "string"
+              },
               "image": {
                 "oneOf": [
                   {
@@ -11719,6 +12254,16 @@
           "link"
         ],
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "image": {
             "type": "object",
             "properties": {
@@ -12444,6 +12989,16 @@
         ],
         "type": "object",
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "title": {
             "type": "string"
           },
@@ -12484,6 +13039,16 @@
             ],
             "type": "object",
             "properties": {
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
+                "type": "string"
+              },
               "title": {
                 "type": "string"
               },
@@ -12634,6 +13199,16 @@
           "image"
         ],
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "title": {
             "type": "string"
           },
@@ -13369,6 +13944,16 @@
               },
               "initParameters": {
                 "$ref": "#/components/schemas/MetaYandexMetrikaInitParametersComponent"
+              },
+              "_softDeletedAt": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "_softDeletedById": {
+                "type": "integer"
+              },
+              "_softDeletedByType": {
+                "type": "string"
               }
             }
           }
@@ -13732,6 +14317,16 @@
                 }
               }
             }
+          },
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
           }
         }
       },
