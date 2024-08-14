@@ -2,8 +2,27 @@
    "GET /api/pages": {
       "content-type": "api::page.page",
       "populate": {
-         "localizations": {},
-         "metaImage": {},
+         "metaImage": {
+            "fields": [
+               "name",
+               "alternativeText",
+               "caption",
+               "width",
+               "height",
+               "hash",
+               "ext",
+               "mime",
+               "size",
+               "url",
+               "formats",
+               "previewUrl",
+               "provider",
+               "folderPath",
+               "createdAt",
+               "updatedAt",
+               "id"
+            ]
+         },
          "blocks": {
             "on": {
                "blocks.review-block": {
@@ -162,8 +181,10 @@
                                  "folderPath",
                                  "createdAt",
                                  "updatedAt",
-                                 "id"
-                              ]
+                                 "id",
+                                 "provider_metadata"
+                              ],
+                              "populate": {}
                            },
                            "info": {
                               "fields": [
@@ -175,7 +196,8 @@
                               "fields": [
                                  "href",
                                  "label",
-                                 "icon"
+                                 "icon",
+                                 "socialNetwork"
                               ]
                            },
                            "contactLink": {
@@ -205,6 +227,439 @@
                      "blockId",
                      "animation"
                   ]
+               },
+               "blocks.works-mini": {
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ],
+                  "populate": {
+                     "title": {
+                        "populate": {
+                           "link": {
+                              "fields": [
+                                 "label",
+                                 "href",
+                                 "target"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "label"
+                        ]
+                     },
+                     "data": {
+                        "fields": [
+                           "title",
+                           "tag",
+                           "createdAt",
+                           "updatedAt",
+                           "id",
+                           "publishedAt",
+                           "locale"
+                        ],
+                        "populate": {
+                           "link": {
+                              "fields": [
+                                 "label",
+                                 "href",
+                                 "target"
+                              ]
+                           },
+                           "image": {
+                              "fields": [
+                                 "name",
+                                 "alternativeText",
+                                 "caption",
+                                 "width",
+                                 "height",
+                                 "formats",
+                                 "hash",
+                                 "ext",
+                                 "mime",
+                                 "size",
+                                 "url",
+                                 "previewUrl",
+                                 "provider",
+                                 "provider_metadata",
+                                 "folderPath",
+                                 "createdAt",
+                                 "updatedAt",
+                                 "id"
+                              ],
+                              "populate": {
+                                 "folder": {
+                                    "fields": [
+                                       "name",
+                                       "pathId",
+                                       "path",
+                                       "createdAt",
+                                       "updatedAt",
+                                       "id"
+                                    ],
+                                    "populate": {}
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  }
+               },
+               "blocks.form-block": {
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ],
+                  "populate": {
+                     "data": {
+                        "fields": [
+                           "title",
+                           "contentPosition",
+                           "uniqueBlockName",
+                           "description",
+                           "createdAt",
+                           "updatedAt",
+                           "id",
+                           "publishedAt",
+                           "locale"
+                        ],
+                        "populate": {
+                           "inputs": {
+                              "fields": [
+                                 "label",
+                                 "mask"
+                              ],
+                              "populate": {
+                                 "inputProps": {
+                                    "fields": [
+                                       "required",
+                                       "type",
+                                       "placeholder",
+                                       "name",
+                                       "autoComplete"
+                                    ]
+                                 }
+                              }
+                           },
+                           "button": {
+                              "fields": [
+                                 "children",
+                                 "disabled",
+                                 "type",
+                                 "color",
+                                 "size",
+                                 "icon"
+                              ]
+                           }
+                        }
+                     }
+                  }
+               },
+               "blocks.service-block": {
+                  "populate": {
+                     "data": {
+                        "fields": [
+                           "title",
+                           "slug",
+                           "icon",
+                           "color",
+                           "hoverTransition",
+                           "description",
+                           "createdAt",
+                           "updatedAt",
+                           "id",
+                           "publishedAt",
+                           "locale"
+                        ],
+                        "populate": {
+                           "price": {
+                              "fields": [
+                                 "amount",
+                                 "currency",
+                                 "state"
+                              ]
+                           },
+                           "button": {
+                              "fields": [
+                                 "children",
+                                 "href",
+                                 "target",
+                                 "color",
+                                 "size",
+                                 "icon"
+                              ]
+                           },
+                           "oldPrice": {
+                              "fields": [
+                                 "amount",
+                                 "currency",
+                                 "state"
+                              ]
+                           },
+                           "localizations": {
+                              "fields": [
+                                 "title",
+                                 "slug",
+                                 "icon",
+                                 "color",
+                                 "hoverTransition",
+                                 "description",
+                                 "createdAt",
+                                 "updatedAt",
+                                 "id",
+                                 "publishedAt",
+                                 "locale"
+                              ],
+                              "populate": {
+                                 "price": {
+                                    "fields": [
+                                       "amount",
+                                       "currency",
+                                       "state"
+                                    ]
+                                 },
+                                 "button": {
+                                    "fields": [
+                                       "children",
+                                       "href",
+                                       "target",
+                                       "color",
+                                       "size",
+                                       "icon"
+                                    ]
+                                 },
+                                 "oldPrice": {
+                                    "fields": [
+                                       "amount",
+                                       "currency",
+                                       "state"
+                                    ]
+                                 }
+                              }
+                           }
+                        }
+                     },
+                     "title": {
+                        "populate": {
+                           "link": {
+                              "fields": [
+                                 "label",
+                                 "href",
+                                 "target"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "label"
+                        ]
+                     }
+                  },
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ]
+               },
+               "blocks.title-with-buttons": {
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ],
+                  "populate": {
+                     "data": {
+                        "fields": [
+                           "title",
+                           "subtitle",
+                           "uniqueBlockName",
+                           "createdAt",
+                           "updatedAt",
+                           "id",
+                           "publishedAt",
+                           "locale"
+                        ],
+                        "populate": {
+                           "buttons": {
+                              "fields": [
+                                 "children",
+                                 "href",
+                                 "target",
+                                 "color",
+                                 "size",
+                                 "icon"
+                              ]
+                           }
+                        }
+                     }
+                  }
+               },
+               "blocks.works-large": {
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ],
+                  "populate": {
+                     "title": {
+                        "populate": {
+                           "link": {
+                              "fields": [
+                                 "label",
+                                 "href",
+                                 "target"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "label"
+                        ]
+                     },
+                     "data": {
+                        "populate": {
+                           "image": {
+                              "fields": [
+                                 "name",
+                                 "alternativeText",
+                                 "caption",
+                                 "width",
+                                 "height",
+                                 "formats",
+                                 "hash",
+                                 "ext",
+                                 "mime",
+                                 "size",
+                                 "url",
+                                 "previewUrl",
+                                 "provider",
+                                 "provider_metadata",
+                                 "folderPath",
+                                 "createdAt",
+                                 "updatedAt",
+                                 "id"
+                              ]
+                           },
+                           "link": {
+                              "fields": [
+                                 "children",
+                                 "href",
+                                 "target",
+                                 "color",
+                                 "size",
+                                 "icon"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "title",
+                           "description",
+                           "createdAt",
+                           "updatedAt",
+                           "id",
+                           "publishedAt",
+                           "locale"
+                        ]
+                     }
+                  }
+               },
+               "blocks.collect-link-mini": {
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ],
+                  "populate": {
+                     "data": {
+                        "populate": {
+                           "button": {
+                              "fields": [
+                                 "children",
+                                 "size",
+                                 "href",
+                                 "target",
+                                 "color",
+                                 "icon"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "uniqueBlockName",
+                           "infinityBar",
+                           "title",
+                           "description",
+                           "createdAt",
+                           "updatedAt",
+                           "id",
+                           "publishedAt",
+                           "locale"
+                        ]
+                     }
+                  }
+               },
+               "blocks.collect-link-large": {
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ],
+                  "populate": {
+                     "data": {
+                        "populate": {
+                           "button": {
+                              "fields": [
+                                 "children",
+                                 "href",
+                                 "target",
+                                 "color",
+                                 "size",
+                                 "icon"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "uniqueBlockName",
+                           "title",
+                           "description",
+                           "createdAt",
+                           "updatedAt",
+                           "id",
+                           "publishedAt",
+                           "locale"
+                        ]
+                     }
+                  }
+               },
+               "blocks.advantages-block": {
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ],
+                  "populate": {
+                     "title": {
+                        "populate": {
+                           "link": {
+                              "fields": [
+                                 "label",
+                                 "href",
+                                 "target"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "label"
+                        ]
+                     },
+                     "data": {
+                        "fields": [
+                           "title",
+                           "description",
+                           "isSelected",
+                           "isBig"
+                        ]
+                     }
+                  }
                }
             }
          }
@@ -220,5 +675,60 @@
          "metaDescription",
          "metaTitle"
       ]
+   },
+   "GET /api/pages/:id": {
+      "content-type": "api::page.page",
+      "populate": {
+         "blocks": {
+            "on": {}
+         }
+      }
+   },
+   "GET /api/robots": {
+      "content-type": "api::robot.robot",
+      "fields": [
+         "name",
+         "userAgent",
+         "createdAt",
+         "updatedAt",
+         "id",
+         "publishedAt",
+         "locale"
+      ],
+      "populate": {
+         "allow": {
+            "fields": [
+               "path"
+            ]
+         },
+         "disallow": {
+            "fields": [
+               "path"
+            ]
+         },
+         "localizations": {
+            "fields": [
+               "name",
+               "userAgent",
+               "createdAt",
+               "updatedAt",
+               "id",
+               "publishedAt",
+               "locale"
+            ],
+            "populate": {
+               "allow": {
+                  "fields": [
+                     "path"
+                  ]
+               },
+               "disallow": {
+                  "fields": [
+                     "path"
+                  ]
+               }
+            }
+         }
+      }
    }
 }
