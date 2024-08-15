@@ -48,6 +48,22 @@ export interface UiTeamPerson extends Schema.Component {
   };
 }
 
+export interface UiStep extends Schema.Component {
+  collectionName: 'components_ui_steps';
+  info: {
+    displayName: 'Step';
+    icon: 'puzzle';
+  };
+  attributes: {
+    label: Attribute.String & Attribute.Required;
+    value: Attribute.RichText & Attribute.Required;
+    color: Attribute.Enumeration<['primary', 'secondary']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'primary'>;
+    helpText: Attribute.RichText;
+  };
+}
+
 export interface UiReviewPerson extends Schema.Component {
   collectionName: 'components_ui_review_people';
   info: {
@@ -397,7 +413,7 @@ export interface MetaMeta extends Schema.Component {
 export interface BlocksWorksMini extends Schema.Component {
   collectionName: 'components_blocks_works_minis';
   info: {
-    displayName: 'WorksMini';
+    displayName: '\u0411\u043B\u043E\u043A \u0440\u0430\u0431\u043E\u0442\u044B (\u043C\u0438\u043D\u0438)';
     icon: 'apps';
   };
   attributes: {
@@ -427,7 +443,7 @@ export interface BlocksWorksMini extends Schema.Component {
 export interface BlocksWorksLarge extends Schema.Component {
   collectionName: 'components_blocks_works_larges';
   info: {
-    displayName: 'WorksLarge';
+    displayName: '\u0411\u043B\u043E\u043A \u0440\u0430\u0431\u043E\u0442\u044B (\u0431\u043E\u043B\u044C\u0448\u0438\u0435)';
     icon: 'apps';
   };
   attributes: {
@@ -457,7 +473,7 @@ export interface BlocksWorksLarge extends Schema.Component {
 export interface BlocksTitleWithButtons extends Schema.Component {
   collectionName: 'components_blocks_title_with_buttons';
   info: {
-    displayName: 'TitleWithButtons';
+    displayName: '\u0417\u0430\u0433\u043E\u043B\u043E\u0432\u043E\u043A \u0441 \u043A\u043D\u043E\u043F\u043A\u0430\u043C\u0438';
     icon: 'apps';
     description: '';
   };
@@ -487,7 +503,7 @@ export interface BlocksTitleWithButtons extends Schema.Component {
 export interface BlocksTeamBlock extends Schema.Component {
   collectionName: 'components_blocks_team_blocks';
   info: {
-    displayName: 'TeamBlock';
+    displayName: '\u0411\u043B\u043E\u043A \u043A\u043E\u043C\u0430\u043D\u0434\u0430';
     icon: 'emotionHappy';
   };
   attributes: {
@@ -514,10 +530,41 @@ export interface BlocksTeamBlock extends Schema.Component {
   };
 }
 
+export interface BlocksStepsBlock extends Schema.Component {
+  collectionName: 'components_blocks_steps_blocks';
+  info: {
+    displayName: '\u0411\u043B\u043E\u043A \u0448\u0430\u0433\u043E\u0432';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    blockName: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'work-steps'>;
+    blockId: Attribute.String;
+    animation: Attribute.Enumeration<
+      [
+        'from-bottom-to-top',
+        'from-top-to-bottom',
+        'from-left-to-right',
+        'from-right-to-left',
+        'none'
+      ]
+    > &
+      Attribute.DefaultTo<'from-bottom-to-top'>;
+    title: Attribute.Component<'ui.title'>;
+    data: Attribute.Relation<
+      'blocks.steps-block',
+      'oneToOne',
+      'api::step.step'
+    >;
+  };
+}
+
 export interface BlocksServiceBlock extends Schema.Component {
   collectionName: 'components_blocks_service_blocks';
   info: {
-    displayName: 'ServiceBlock';
+    displayName: '\u0411\u043B\u043E\u043A \u0443\u0441\u043B\u0443\u0433';
     icon: 'grid';
   };
   attributes: {
@@ -548,7 +595,7 @@ export interface BlocksServiceBlock extends Schema.Component {
 export interface BlocksReviewBlock extends Schema.Component {
   collectionName: 'components_blocks_review_blocks';
   info: {
-    displayName: 'ReviewBlock';
+    displayName: '\u0411\u043B\u043E\u043A \u043E\u0442\u0437\u044B\u0432\u043E\u0432';
     icon: 'apps';
   };
   attributes: {
@@ -574,7 +621,7 @@ export interface BlocksReviewBlock extends Schema.Component {
 export interface BlocksFormBlock extends Schema.Component {
   collectionName: 'components_blocks_form_blocks';
   info: {
-    displayName: 'FormBlock';
+    displayName: '\u0411\u043B\u043E\u043A \u0441 \u0444\u043E\u0440\u043C\u043E\u0439';
     icon: 'bulletList';
     description: '';
   };
@@ -600,7 +647,7 @@ export interface BlocksFormBlock extends Schema.Component {
 export interface BlocksCollectLinkMini extends Schema.Component {
   collectionName: 'components_blocks_collect_link_minis';
   info: {
-    displayName: 'CollectLinkMini';
+    displayName: '\u041E\u0444\u0444\u0435\u0440 \u0441 \u0441\u0441\u044B\u043B\u043A\u043E\u0439 (\u0431\u043E\u043B\u044C\u0448\u043E\u0439)';
     icon: 'cursor';
   };
   attributes: {
@@ -629,7 +676,7 @@ export interface BlocksCollectLinkMini extends Schema.Component {
 export interface BlocksCollectLinkLarge extends Schema.Component {
   collectionName: 'components_blocks_collect_link_larges';
   info: {
-    displayName: 'CollectLinkLarge';
+    displayName: '\u041E\u0444\u0444\u0435\u0440 \u0441 \u0441\u0441\u044B\u043B\u043A\u043E\u0439 (\u043C\u0438\u043D\u0438)';
     icon: 'cursor';
   };
   attributes: {
@@ -658,7 +705,7 @@ export interface BlocksCollectLinkLarge extends Schema.Component {
 export interface BlocksAdvantagesBlock extends Schema.Component {
   collectionName: 'components_blocks_advantages_blocks';
   info: {
-    displayName: 'AdvantagesBlock';
+    displayName: '\u0411\u043B\u043E\u043A \u043F\u0440\u0435\u0438\u043C\u0443\u0449\u0435\u0441\u0442\u0432';
     icon: 'apps';
   };
   attributes: {
@@ -684,7 +731,7 @@ export interface BlocksAdvantagesBlock extends Schema.Component {
 export interface BlocksAccordionBlock extends Schema.Component {
   collectionName: 'components_blocks_accordion_blocks';
   info: {
-    displayName: 'AccordionBlock';
+    displayName: '\u0411\u043B\u043E\u043A \u0430\u043A\u043A\u043E\u0440\u0434\u0435\u043E\u043D\u043E\u0432';
     icon: 'bulletList';
     description: '';
   };
@@ -718,6 +765,7 @@ declare module '@strapi/types' {
       'ui.title': UiTitle;
       'ui.text-with-link': UiTextWithLink;
       'ui.team-person': UiTeamPerson;
+      'ui.step': UiStep;
       'ui.review-person': UiReviewPerson;
       'ui.review-card': UiReviewCard;
       'ui.price': UiPrice;
@@ -740,6 +788,7 @@ declare module '@strapi/types' {
       'blocks.works-large': BlocksWorksLarge;
       'blocks.title-with-buttons': BlocksTitleWithButtons;
       'blocks.team-block': BlocksTeamBlock;
+      'blocks.steps-block': BlocksStepsBlock;
       'blocks.service-block': BlocksServiceBlock;
       'blocks.review-block': BlocksReviewBlock;
       'blocks.form-block': BlocksFormBlock;

@@ -1,7 +1,7 @@
 {
   "collectionName": "components_blocks_review_blocks",
   "info": {
-    "displayName": "ReviewBlock",
+    "displayName": "Блок отзывов",
     "icon": "apps"
   },
   "options": {},

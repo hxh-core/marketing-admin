@@ -660,6 +660,49 @@
                         ]
                      }
                   }
+               },
+               "blocks.steps-block": {
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ],
+                  "populate": {
+                     "title": {
+                        "populate": {
+                           "link": {
+                              "fields": [
+                                 "label",
+                                 "href",
+                                 "target"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "label"
+                        ]
+                     },
+                     "data": {
+                        "fields": [
+                           "uniqueBlockName",
+                           "createdAt",
+                           "updatedAt",
+                           "id",
+                           "publishedAt",
+                           "locale"
+                        ],
+                        "populate": {
+                           "data": {
+                              "fields": [
+                                 "label",
+                                 "value",
+                                 "color",
+                                 "helpText"
+                              ]
+                           }
+                        }
+                     }
+                  }
                }
             }
          }

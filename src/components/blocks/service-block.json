@@ -1,7 +1,7 @@
 {
   "collectionName": "components_blocks_service_blocks",
   "info": {
-    "displayName": "ServiceBlock",
+    "displayName": "Блок услуг",
     "icon": "grid"
   },
   "options": {},

@@ -1053,6 +1053,76 @@ export interface ApiCollectLinkMiniCollectLinkMini
   };
 }
 
+export interface ApiCookieCookie extends Schema.SingleType {
+  collectionName: 'cookies';
+  info: {
+    singularName: 'cookie';
+    pluralName: 'cookies';
+    displayName: 'Cookie';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
+    cookieName: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    infoButton: Attribute.Component<'ui.custom-link'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    closeButton: Attribute.Component<'ui.custom-button'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    text: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cookie.cookie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::cookie.cookie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::cookie.cookie',
+      'oneToMany',
+      'api::cookie.cookie'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.SingleType {
   collectionName: 'footers';
   info: {
@@ -1426,7 +1496,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'blocks.works-large',
         'blocks.collect-link-mini',
         'blocks.collect-link-large',
-        'blocks.advantages-block'
+        'blocks.advantages-block',
+        'blocks.steps-block'
       ]
     > &
       Attribute.Required &
@@ -1740,6 +1811,56 @@ export interface ApiServiceService extends Schema.CollectionType {
       'api::service.service',
       'oneToMany',
       'api::service.service'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiStepStep extends Schema.CollectionType {
+  collectionName: 'steps';
+  info: {
+    singularName: 'step';
+    pluralName: 'steps';
+    displayName: '\u0428\u0430\u0433\u0438';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
+    uniqueBlockName: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    data: Attribute.Component<'ui.step', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::step.step', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::step.step', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::step.step',
+      'oneToMany',
+      'api::step.step'
     >;
     locale: Attribute.String;
   };
@@ -2097,6 +2218,7 @@ declare module '@strapi/types' {
       'api::accordion.accordion': ApiAccordionAccordion;
       'api::collect-link-large.collect-link-large': ApiCollectLinkLargeCollectLinkLarge;
       'api::collect-link-mini.collect-link-mini': ApiCollectLinkMiniCollectLinkMini;
+      'api::cookie.cookie': ApiCookieCookie;
       'api::footer.footer': ApiFooterFooter;
       'api::form.form': ApiFormForm;
       'api::google-analytics.google-analytics': ApiGoogleAnalyticsGoogleAnalytics;
@@ -2107,6 +2229,7 @@ declare module '@strapi/types' {
       'api::review.review': ApiReviewReview;
       'api::robot.robot': ApiRobotRobot;
       'api::service.service': ApiServiceService;
+      'api::step.step': ApiStepStep;
       'api::team.team': ApiTeamTeam;
       'api::title-with-buttons.title-with-buttons': ApiTitleWithButtonsTitleWithButtons;
       'api::work-large.work-large': ApiWorkLargeWorkLarge;

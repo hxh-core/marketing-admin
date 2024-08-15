@@ -1,23 +1,19 @@
 {
-  "collectionName": "components_blocks_works_minis",
+  "collectionName": "components_blocks_steps_blocks",
   "info": {
-    "displayName": "Блок работы (мини)",
-    "icon": "apps"
+    "displayName": "Блок шагов",
+    "icon": "bulletList",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "blockName": {
       "type": "string",
       "required": true,
-      "default": "works-mini-block"
+      "default": "work-steps"
     },
     "blockId": {
       "type": "string"
-    },
-    "title": {
-      "type": "component",
-      "repeatable": false,
-      "component": "ui.title"
     },
     "animation": {
       "type": "enumeration",
@@ -28,13 +24,18 @@
         "from-right-to-left",
         "none"
       ],
-      "default": "from-bottom-to-top",
+      "default": "from-bottom-to-top"
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.title",
       "required": false
     },
     "data": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::work-mini.work-mini"
+      "relation": "oneToOne",
+      "target": "api::step.step"
     }
   }
 }
