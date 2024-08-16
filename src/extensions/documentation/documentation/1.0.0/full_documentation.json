@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-08-16T15:01:17.154Z"
+    "x-generation-date": "2024-08-16T19:43:33.886Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8206,9 +8206,6 @@
                         "title": {
                           "type": "string"
                         },
-                        "slug": {
-                          "type": "string"
-                        },
                         "price": {
                           "type": "object",
                           "properties": {
@@ -8346,6 +8343,29 @@
                         },
                         "description": {
                           "type": "string"
+                        },
+                        "slug": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "label": {
+                              "type": "string"
+                            },
+                            "href": {
+                              "type": "string"
+                            },
+                            "target": {
+                              "type": "string",
+                              "enum": [
+                                "_blank",
+                                "_self",
+                                "_parent",
+                                "_top"
+                              ]
+                            }
+                          }
                         },
                         "createdAt": {
                           "type": "string",
@@ -10656,9 +10676,6 @@
           "title": {
             "type": "string"
           },
-          "slug": {
-            "type": "string"
-          },
           "price": {
             "$ref": "#/components/schemas/UiPriceComponent"
           },
@@ -10702,6 +10719,9 @@
           "description": {
             "type": "string"
           },
+          "slug": {
+            "$ref": "#/components/schemas/UiLinkComponent"
+          },
           "locale": {
             "type": "string"
           }
@@ -10735,9 +10755,6 @@
                 "type": "string"
               },
               "title": {
-                "type": "string"
-              },
-              "slug": {
                 "type": "string"
               },
               "price": {
@@ -10782,6 +10799,9 @@
               },
               "description": {
                 "type": "string"
+              },
+              "slug": {
+                "$ref": "#/components/schemas/UiLinkComponent"
               },
               "locale": {
                 "type": "string"
@@ -10928,9 +10948,6 @@
           "title": {
             "type": "string"
           },
-          "slug": {
-            "type": "string"
-          },
           "price": {
             "$ref": "#/components/schemas/UiPriceComponent"
           },
@@ -10973,6 +10990,9 @@
           },
           "description": {
             "type": "string"
+          },
+          "slug": {
+            "$ref": "#/components/schemas/UiLinkComponent"
           },
           "createdAt": {
             "type": "string",

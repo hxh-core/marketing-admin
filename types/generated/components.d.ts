@@ -678,7 +678,7 @@ export interface BlocksFormBlock extends Schema.Component {
 export interface BlocksCollectLinkMini extends Schema.Component {
   collectionName: 'components_blocks_collect_link_minis';
   info: {
-    displayName: '\u041E\u0444\u0444\u0435\u0440 \u0441 \u0441\u0441\u044B\u043B\u043A\u043E\u0439 (\u0431\u043E\u043B\u044C\u0448\u043E\u0439)';
+    displayName: '\u041E\u0444\u0444\u0435\u0440 \u0441 \u0441\u0441\u044B\u043B\u043A\u043E\u0439 (\u043C\u0438\u043D\u0438)';
     icon: 'cursor';
   };
   attributes: {
@@ -707,7 +707,7 @@ export interface BlocksCollectLinkMini extends Schema.Component {
 export interface BlocksCollectLinkLarge extends Schema.Component {
   collectionName: 'components_blocks_collect_link_larges';
   info: {
-    displayName: '\u041E\u0444\u0444\u0435\u0440 \u0441 \u0441\u0441\u044B\u043B\u043A\u043E\u0439 (\u043C\u0438\u043D\u0438)';
+    displayName: '\u041E\u0444\u0444\u0435\u0440 \u0441 \u0441\u0441\u044B\u043B\u043A\u043E\u0439 (\u0431\u043E\u043B\u044C\u0448\u043E\u0439)';
     icon: 'cursor';
   };
   attributes: {

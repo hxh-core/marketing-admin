@@ -1726,12 +1726,6 @@ export interface ApiServiceService extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    slug: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     price: Attribute.Component<'ui.price'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -1795,6 +1789,12 @@ export interface ApiServiceService extends Schema.CollectionType {
       Attribute.DefaultTo<true>;
     description: Attribute.RichText &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Attribute.Component<'ui.link'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

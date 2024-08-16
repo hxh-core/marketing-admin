@@ -46,15 +46,6 @@
       "type": "string",
       "required": true
     },
-    "slug": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": false
-    },
     "price": {
       "type": "component",
       "repeatable": false,
@@ -145,6 +136,17 @@
       },
       "type": "richtext",
       "required": true
+    },
+    "slug": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "ui.link",
+      "required": false
     }
   }
 }

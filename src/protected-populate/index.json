@@ -436,8 +436,22 @@
                                        "currency",
                                        "state"
                                     ]
+                                 },
+                                 "slug": {
+                                    "fields": [
+                                       "label",
+                                       "href",
+                                       "target"
+                                    ]
                                  }
                               }
+                           },
+                           "slug": {
+                              "fields": [
+                                 "label",
+                                 "href",
+                                 "target"
+                              ]
                            }
                         }
                      },
