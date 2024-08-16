@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_blocks_tekstovyj_blok_bolshoj_s",
+  "info": {
+    "displayName": "Текстовый блок (большой)",
+    "icon": "italic",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.title",
+      "required": true
+    },
+    "blockName": {
+      "type": "string",
+      "required": true,
+      "default": "text-content-big-block"
+    },
+    "blockId": {
+      "type": "string"
+    },
+    "animation": {
+      "type": "enumeration",
+      "enum": [
+        "from-bottom-to-top",
+        "from-top-to-bottom",
+        "from-left-to-right",
+        "from-right-to-left",
+        "none"
+      ],
+      "default": "from-bottom-to-top"
+    },
+    "data": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::text-content-big.text-content-big"
+    }
+  }
+}

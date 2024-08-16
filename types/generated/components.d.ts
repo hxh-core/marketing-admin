@@ -500,6 +500,37 @@ export interface BlocksTitleWithButtons extends Schema.Component {
   };
 }
 
+export interface BlocksTekstovyjBlokBolshoj extends Schema.Component {
+  collectionName: 'components_blocks_tekstovyj_blok_bolshoj_s';
+  info: {
+    displayName: '\u0422\u0435\u043A\u0441\u0442\u043E\u0432\u044B\u0439 \u0431\u043B\u043E\u043A (\u0431\u043E\u043B\u044C\u0448\u043E\u0439)';
+    icon: 'italic';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.Component<'ui.title'> & Attribute.Required;
+    blockName: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'text-content-big-block'>;
+    blockId: Attribute.String;
+    animation: Attribute.Enumeration<
+      [
+        'from-bottom-to-top',
+        'from-top-to-bottom',
+        'from-left-to-right',
+        'from-right-to-left',
+        'none'
+      ]
+    > &
+      Attribute.DefaultTo<'from-bottom-to-top'>;
+    data: Attribute.Relation<
+      'blocks.tekstovyj-blok-bolshoj',
+      'oneToOne',
+      'api::text-content-big.text-content-big'
+    >;
+  };
+}
+
 export interface BlocksTeamBlock extends Schema.Component {
   collectionName: 'components_blocks_team_blocks';
   info: {
@@ -787,6 +818,7 @@ declare module '@strapi/types' {
       'blocks.works-mini': BlocksWorksMini;
       'blocks.works-large': BlocksWorksLarge;
       'blocks.title-with-buttons': BlocksTitleWithButtons;
+      'blocks.tekstovyj-blok-bolshoj': BlocksTekstovyjBlokBolshoj;
       'blocks.team-block': BlocksTeamBlock;
       'blocks.steps-block': BlocksStepsBlock;
       'blocks.service-block': BlocksServiceBlock;

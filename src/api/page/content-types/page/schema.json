@@ -56,7 +56,8 @@
         "blocks.collect-link-mini",
         "blocks.collect-link-large",
         "blocks.advantages-block",
-        "blocks.steps-block"
+        "blocks.steps-block",
+        "blocks.tekstovyj-blok-bolshoj"
       ],
       "required": true
     },

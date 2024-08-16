@@ -703,6 +703,54 @@
                         }
                      }
                   }
+               },
+               "blocks.tekstovyj-blok-bolshoj": {
+                  "populate": {
+                     "title": {
+                        "populate": {
+                           "link": {
+                              "fields": [
+                                 "label",
+                                 "href",
+                                 "target"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "label"
+                        ]
+                     },
+                     "data": {
+                        "fields": [
+                           "publishDate",
+                           "content",
+                           "createdAt",
+                           "updatedAt",
+                           "id",
+                           "publishedAt",
+                           "locale"
+                        ],
+                        "populate": {
+                           "localizations": {
+                              "fields": [
+                                 "publishDate",
+                                 "content",
+                                 "createdAt",
+                                 "updatedAt",
+                                 "id",
+                                 "publishedAt",
+                                 "locale",
+                                 "uniqueBlockName"
+                              ]
+                           }
+                        }
+                     }
+                  },
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ]
                }
             }
          }

@@ -1129,6 +1129,7 @@ export interface ApiFooterFooter extends Schema.SingleType {
     singularName: 'footer';
     pluralName: 'footers';
     displayName: 'Footer';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -1139,6 +1140,9 @@ export interface ApiFooterFooter extends Schema.SingleType {
     };
   };
   attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     logo: Attribute.Component<'ui.logo'> &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1172,6 +1176,12 @@ export interface ApiFooterFooter extends Schema.SingleType {
           localized: true;
         };
       }>;
+    moreLinks: Attribute.Component<'ui.link', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1186,9 +1196,6 @@ export interface ApiFooterFooter extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
-    _softDeletedAt: Attribute.DateTime & Attribute.Private;
-    _softDeletedById: Attribute.Integer & Attribute.Private;
-    _softDeletedByType: Attribute.String & Attribute.Private;
     localizations: Attribute.Relation<
       'api::footer.footer',
       'oneToMany',
@@ -1497,7 +1504,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'blocks.collect-link-mini',
         'blocks.collect-link-large',
         'blocks.advantages-block',
-        'blocks.steps-block'
+        'blocks.steps-block',
+        'blocks.tekstovyj-blok-bolshoj'
       ]
     > &
       Attribute.Required &
@@ -1944,6 +1952,71 @@ export interface ApiTeamTeam extends Schema.CollectionType {
   };
 }
 
+export interface ApiTextContentBigTextContentBig extends Schema.CollectionType {
+  collectionName: 'text_contents_big';
+  info: {
+    singularName: 'text-content-big';
+    pluralName: 'text-contents-big';
+    displayName: '\u0422\u0435\u043A\u0441\u0442\u043E\u0432\u044B\u0439 \u043A\u043E\u043D\u0442\u0435\u043D\u0442 (\u0431\u043E\u043B\u044C\u0448\u043E\u0439)';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
+    publishDate: Attribute.Date &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    content: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    uniqueBlockName: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::text-content-big.text-content-big',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::text-content-big.text-content-big',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::text-content-big.text-content-big',
+      'oneToMany',
+      'api::text-content-big.text-content-big'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiTitleWithButtonsTitleWithButtons
   extends Schema.CollectionType {
   collectionName: 'titles_with_buttons';
@@ -2231,6 +2304,7 @@ declare module '@strapi/types' {
       'api::service.service': ApiServiceService;
       'api::step.step': ApiStepStep;
       'api::team.team': ApiTeamTeam;
+      'api::text-content-big.text-content-big': ApiTextContentBigTextContentBig;
       'api::title-with-buttons.title-with-buttons': ApiTitleWithButtonsTitleWithButtons;
       'api::work-large.work-large': ApiWorkLargeWorkLarge;
       'api::work-mini.work-mini': ApiWorkMiniWorkMini;
