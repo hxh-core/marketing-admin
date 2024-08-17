@@ -1,8 +1,42 @@
-# 🚀 Getting started with Strapi
+# HxH Agency Admin panel
+
+## Project stack:
+
+<div>
+<a href="https://strapi.io/">
+    <img src="https://img.shields.io/badge/Strapi-strapi?logo=Strapi&logoColor=white&color=purple&style=for-the-badge" alt="Prettier"/>
+  </a>
+  <a href="https://www.typescriptlang.org">
+    <img src="https://img.shields.io/badge/TypeScript-ts?logo=TypeScript&logoColor=white&color=blue&style=for-the-badge" alt="TypeScript"/>
+  </a>
+    <a href="https://nodejs.org/en">
+    <img src="https://img.shields.io/badge/node.js-green?&logo=nodedotjs&logoColor=black&style=for-the-badge" alt="Node.JS"/>
+  </a>
+  <a href="https://react.dev">
+    <img src="https://img.shields.io/badge/React_JS-react?logo=React&logoColor=white&color=blue&style=for-the-badge" alt="React JS"/>
+  </a>
+  <a href="https://www.postgresql.org/">
+    <img src="https://img.shields.io/badge/PostgreSQL-postgresql?logo=Postgresql&logoColor=white&color=blue&style=for-the-badge" alt="MongoDB"/>
+  </a>
+  <a href="https://eslint.org">
+    <img src="https://img.shields.io/badge/ESLint-eslint?logo=ESLint&logoColor=white&color=purple&style=for-the-badge" alt="ESLint"/>
+  </a>
+  <a href="https://prettier.io">
+    <img src="https://img.shields.io/badge/Prettier-prettier?logo=Prettier&logoColor=white&color=purple&style=for-the-badge" alt="Prettier"/>
+  </a>
+</div>
+
+## About application
+
+Application - admin panel for the [site](https://github.com/hxh-core/marketing-website). The ability to customize the layout for the site is implemented: cookie widget, navigation, footer.
+
+It is also possible to dynamically create new pages, edit meta information and dynamically add, delete and change blocks on them.
+
+## Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
-### `develop`
+#### `develop`
 
 Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
 
@@ -12,7 +46,7 @@ npm run develop
 yarn develop
 ```
 
-### `start`
+#### `start`
 
 Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
 
@@ -22,40 +56,14 @@ npm run start
 yarn start
 ```
 
-### `build`
+#### `build`
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+## About us
 
-```
-npm run build
-# or
-yarn build
-```
+GitHub organization: **[HxH Marketing](https://github.com/hxh-core)**
 
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+VK Group: **[HxH Marketing](https://vk.com/hxh_marketing)**
 
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+Developer: **[Kirill Kireev](https://t.me/ker4ik13)**

@@ -13,7 +13,8 @@
     "inputProps": {
       "type": "component",
       "repeatable": false,
-      "component": "ui.input-props"
+      "component": "ui.input-props",
+      "required": true
     },
     "mask": {
       "type": "string"

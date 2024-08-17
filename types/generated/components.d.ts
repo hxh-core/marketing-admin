@@ -255,7 +255,7 @@ export interface UiCustomInput extends Schema.Component {
   };
   attributes: {
     label: Attribute.String;
-    inputProps: Attribute.Component<'ui.input-props'>;
+    inputProps: Attribute.Component<'ui.input-props'> & Attribute.Required;
     mask: Attribute.String;
   };
 }
