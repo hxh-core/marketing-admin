@@ -1546,6 +1546,28 @@ export interface ApiPagePage extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    type: Attribute.Enumeration<
+      [
+        'website',
+        'article',
+        'book',
+        'profile',
+        'music.song',
+        'music.album',
+        'music.playlist',
+        'music.radio_station',
+        'video.movie',
+        'video.episode',
+        'video.tv_show',
+        'video.other'
+      ]
+    > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'website'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

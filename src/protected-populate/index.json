@@ -778,7 +778,8 @@
          "path",
          "metaKeywords",
          "metaDescription",
-         "metaTitle"
+         "metaTitle",
+         "type"
       ]
    },
    "GET /api/pages/:id": {

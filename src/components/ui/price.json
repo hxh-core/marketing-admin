@@ -11,7 +11,8 @@
       "type": "integer"
     },
     "currency": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "state": {
       "type": "enumeration",

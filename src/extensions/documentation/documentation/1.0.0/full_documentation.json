@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-08-17T11:21:38.413Z"
+    "x-generation-date": "2024-08-18T20:22:27.181Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5979,6 +5979,23 @@
               "example": "string or id"
             }
           },
+          "type": {
+            "type": "string",
+            "enum": [
+              "website",
+              "article",
+              "book",
+              "profile",
+              "music.song",
+              "music.album",
+              "music.playlist",
+              "music.radio_station",
+              "video.movie",
+              "video.episode",
+              "video.tv_show",
+              "video.other"
+            ]
+          },
           "locale": {
             "type": "string"
           }
@@ -6079,6 +6096,23 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "website",
+                  "article",
+                  "book",
+                  "profile",
+                  "music.song",
+                  "music.album",
+                  "music.playlist",
+                  "music.radio_station",
+                  "video.movie",
+                  "video.episode",
+                  "video.tv_show",
+                  "video.other"
+                ]
               },
               "locale": {
                 "type": "string"
@@ -6418,6 +6452,23 @@
                 }
               }
             }
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "website",
+              "article",
+              "book",
+              "profile",
+              "music.song",
+              "music.album",
+              "music.playlist",
+              "music.radio_station",
+              "video.movie",
+              "video.episode",
+              "video.tv_show",
+              "video.other"
+            ]
           },
           "createdAt": {
             "type": "string",
