@@ -1,59 +1,5 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface MetaYandexMetrikaInitParameters extends Schema.Component {
-  collectionName: 'components_meta_yandex_metrika_init_parameters';
-  info: {
-    displayName: 'YandexMetrikaInitParameters';
-    icon: 'cog';
-  };
-  attributes: {
-    accurateTrackBounce: Attribute.Boolean & Attribute.DefaultTo<true>;
-    clickmap: Attribute.Boolean & Attribute.DefaultTo<true>;
-    trackLinks: Attribute.Boolean & Attribute.DefaultTo<true>;
-    webvisor: Attribute.Boolean & Attribute.DefaultTo<true>;
-    childIframe: Attribute.Boolean;
-    defer: Attribute.Boolean;
-    trackHash: Attribute.Boolean;
-    triggerEvent: Attribute.Boolean;
-  };
-}
-
-export interface MetaUserAgents extends Schema.Component {
-  collectionName: 'components_meta_user_agents';
-  info: {
-    displayName: 'User Agents';
-    icon: 'shield';
-  };
-  attributes: {
-    userAgent: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface MetaPagePath extends Schema.Component {
-  collectionName: 'components_meta_page_paths';
-  info: {
-    displayName: 'PagePath';
-    icon: 'attachment';
-    description: '';
-  };
-  attributes: {
-    path: Attribute.String & Attribute.Required;
-  };
-}
-
-export interface MetaMeta extends Schema.Component {
-  collectionName: 'components_meta_metas';
-  info: {
-    displayName: 'Robots SEO';
-    icon: 'write';
-    description: '';
-  };
-  attributes: {
-    pages: Attribute.Component<'meta.page-path', true> & Attribute.Required;
-    userAgent: Attribute.String & Attribute.Required & Attribute.DefaultTo<'*'>;
-  };
-}
-
 export interface UiTitle extends Schema.Component {
   collectionName: 'components_ui_titles';
   info: {
@@ -186,13 +132,14 @@ export interface UiLogo extends Schema.Component {
   info: {
     displayName: 'Logo';
     icon: 'medium';
+    description: '';
   };
   attributes: {
-    name: Attribute.String & Attribute.Required;
     color: Attribute.Enumeration<['primary', 'secondary']> &
       Attribute.Required &
       Attribute.DefaultTo<'primary'>;
     description: Attribute.String;
+    logo: Attribute.String & Attribute.Required;
   };
 }
 
@@ -407,6 +354,60 @@ export interface UiAccordion extends Schema.Component {
   attributes: {
     ask: Attribute.String & Attribute.Required;
     answer: Attribute.RichText & Attribute.Required;
+  };
+}
+
+export interface MetaYandexMetrikaInitParameters extends Schema.Component {
+  collectionName: 'components_meta_yandex_metrika_init_parameters';
+  info: {
+    displayName: 'YandexMetrikaInitParameters';
+    icon: 'cog';
+  };
+  attributes: {
+    accurateTrackBounce: Attribute.Boolean & Attribute.DefaultTo<true>;
+    clickmap: Attribute.Boolean & Attribute.DefaultTo<true>;
+    trackLinks: Attribute.Boolean & Attribute.DefaultTo<true>;
+    webvisor: Attribute.Boolean & Attribute.DefaultTo<true>;
+    childIframe: Attribute.Boolean;
+    defer: Attribute.Boolean;
+    trackHash: Attribute.Boolean;
+    triggerEvent: Attribute.Boolean;
+  };
+}
+
+export interface MetaUserAgents extends Schema.Component {
+  collectionName: 'components_meta_user_agents';
+  info: {
+    displayName: 'User Agents';
+    icon: 'shield';
+  };
+  attributes: {
+    userAgent: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface MetaPagePath extends Schema.Component {
+  collectionName: 'components_meta_page_paths';
+  info: {
+    displayName: 'PagePath';
+    icon: 'attachment';
+    description: '';
+  };
+  attributes: {
+    path: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface MetaMeta extends Schema.Component {
+  collectionName: 'components_meta_metas';
+  info: {
+    displayName: 'Robots SEO';
+    icon: 'write';
+    description: '';
+  };
+  attributes: {
+    pages: Attribute.Component<'meta.page-path', true> & Attribute.Required;
+    userAgent: Attribute.String & Attribute.Required & Attribute.DefaultTo<'*'>;
   };
 }
 
@@ -793,10 +794,6 @@ export interface BlocksAccordionBlock extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'meta.yandex-metrika-init-parameters': MetaYandexMetrikaInitParameters;
-      'meta.user-agents': MetaUserAgents;
-      'meta.page-path': MetaPagePath;
-      'meta.meta': MetaMeta;
       'ui.title': UiTitle;
       'ui.text-with-link': UiTextWithLink;
       'ui.team-person': UiTeamPerson;
@@ -815,6 +812,10 @@ declare module '@strapi/types' {
       'ui.contact-link': UiContactLink;
       'ui.advantage': UiAdvantage;
       'ui.accordion': UiAccordion;
+      'meta.yandex-metrika-init-parameters': MetaYandexMetrikaInitParameters;
+      'meta.user-agents': MetaUserAgents;
+      'meta.page-path': MetaPagePath;
+      'meta.meta': MetaMeta;
       'blocks.works-mini': BlocksWorksMini;
       'blocks.works-large': BlocksWorksLarge;
       'blocks.title-with-buttons': BlocksTitleWithButtons;

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-08-18T20:22:27.181Z"
+    "x-generation-date": "2024-08-21T17:57:43.381Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3058,9 +3058,6 @@
           "id": {
             "type": "number"
           },
-          "name": {
-            "type": "string"
-          },
           "color": {
             "type": "string",
             "enum": [
@@ -3069,6 +3066,9 @@
             ]
           },
           "description": {
+            "type": "string"
+          },
+          "logo": {
             "type": "string"
           }
         }
@@ -4723,21 +4723,12 @@
       },
       "NavigationLocalizationRequest": {
         "required": [
-          "logo",
           "links",
+          "logo",
           "locale"
         ],
         "type": "object",
         "properties": {
-          "logo": {
-            "type": "string"
-          },
-          "links": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/UiLinkComponent"
-            }
-          },
           "_softDeletedAt": {
             "type": "string",
             "format": "date-time"
@@ -4746,6 +4737,15 @@
             "type": "integer"
           },
           "_softDeletedByType": {
+            "type": "string"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UiLinkComponent"
+            }
+          },
+          "logo": {
             "type": "string"
           },
           "locale": {
@@ -4761,20 +4761,11 @@
         "properties": {
           "data": {
             "required": [
-              "logo",
-              "links"
+              "links",
+              "logo"
             ],
             "type": "object",
             "properties": {
-              "logo": {
-                "type": "string"
-              },
-              "links": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/UiLinkComponent"
-                }
-              },
               "_softDeletedAt": {
                 "type": "string",
                 "format": "date-time"
@@ -4783,6 +4774,15 @@
                 "type": "integer"
               },
               "_softDeletedByType": {
+                "type": "string"
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/UiLinkComponent"
+                }
+              },
+              "logo": {
                 "type": "string"
               },
               "locale": {
@@ -4909,11 +4909,18 @@
       "Navigation": {
         "type": "object",
         "required": [
-          "logo",
-          "links"
+          "links",
+          "logo"
         ],
         "properties": {
-          "logo": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
             "type": "string"
           },
           "links": {
@@ -4921,6 +4928,9 @@
             "items": {
               "$ref": "#/components/schemas/UiLinkComponent"
             }
+          },
+          "logo": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -5215,16 +5225,6 @@
                 }
               }
             }
-          },
-          "_softDeletedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "_softDeletedById": {
-            "type": "integer"
-          },
-          "_softDeletedByType": {
-            "type": "string"
           },
           "localizations": {
             "type": "object",

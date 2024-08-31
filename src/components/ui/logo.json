@@ -2,14 +2,11 @@
   "collectionName": "components_ui_logos",
   "info": {
     "displayName": "Logo",
-    "icon": "medium"
+    "icon": "medium",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
     "color": {
       "type": "enumeration",
       "enum": [
@@ -21,6 +18,10 @@
     },
     "description": {
       "type": "string"
+    },
+    "logo": {
+      "type": "string",
+      "required": true
     }
   }
 }

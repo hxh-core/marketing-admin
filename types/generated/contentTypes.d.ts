@@ -1373,14 +1373,17 @@ export interface ApiNavigationNavigation extends Schema.SingleType {
     };
   };
   attributes: {
-    logo: Attribute.String &
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
+    links: Attribute.Component<'ui.link', true> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    links: Attribute.Component<'ui.link', true> &
+    logo: Attribute.String &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1401,9 +1404,6 @@ export interface ApiNavigationNavigation extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
-    _softDeletedAt: Attribute.DateTime & Attribute.Private;
-    _softDeletedById: Attribute.Integer & Attribute.Private;
-    _softDeletedByType: Attribute.String & Attribute.Private;
     localizations: Attribute.Relation<
       'api::navigation.navigation',
       'oneToMany',

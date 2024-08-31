@@ -767,6 +767,21 @@
                   ]
                }
             }
+         },
+         "localizations": {
+            "populate": {},
+            "fields": [
+               "metaTitle",
+               "metaDescription",
+               "metaKeywords",
+               "path",
+               "type",
+               "createdAt",
+               "updatedAt",
+               "id",
+               "publishedAt",
+               "locale"
+            ]
          }
       },
       "fields": [
@@ -834,6 +849,190 @@
                   ]
                }
             }
+         }
+      }
+   },
+   "GET /api/footer": {
+      "content-type": "api::footer.footer",
+      "populate": {
+         "logo": {
+            "fields": [
+               "name",
+               "color",
+               "description",
+               "logo"
+            ],
+            "populate": {
+               "logo": {
+                  "fields": [
+                     "label",
+                     "href",
+                     "target"
+                  ]
+               }
+            }
+         },
+         "pages": {
+            "fields": [
+               "label",
+               "href",
+               "target"
+            ]
+         },
+         "text": {
+            "fields": [
+               "label"
+            ],
+            "populate": {
+               "link": {
+                  "fields": [
+                     "children",
+                     "href",
+                     "target",
+                     "color",
+                     "size",
+                     "icon"
+                  ]
+               }
+            }
+         },
+         "contacts": {
+            "fields": [
+               "href",
+               "label",
+               "socialNetwork"
+            ]
+         },
+         "moreLinks": {
+            "fields": [
+               "label",
+               "href",
+               "target"
+            ]
+         },
+         "localizations": {
+            "populate": {
+               "pages": {
+                  "fields": [
+                     "label",
+                     "href",
+                     "target"
+                  ]
+               },
+               "logo": {
+                  "fields": [
+                     "name",
+                     "color",
+                     "description",
+                     "logo"
+                  ],
+                  "populate": {
+                     "logo": {
+                        "fields": [
+                           "label",
+                           "href",
+                           "target"
+                        ]
+                     }
+                  }
+               },
+               "text": {
+                  "fields": [
+                     "label"
+                  ],
+                  "populate": {
+                     "link": {
+                        "fields": [
+                           "children",
+                           "href",
+                           "target",
+                           "color",
+                           "size",
+                           "icon"
+                        ]
+                     }
+                  }
+               },
+               "contacts": {
+                  "fields": [
+                     "href",
+                     "label",
+                     "socialNetwork"
+                  ]
+               },
+               "moreLinks": {
+                  "fields": [
+                     "label",
+                     "href",
+                     "target"
+                  ]
+               }
+            },
+            "fields": [
+               "locale",
+               "copyrightText",
+               "createdAt",
+               "updatedAt",
+               "id"
+            ]
+         }
+      },
+      "fields": [
+         "copyrightText",
+         "createdAt",
+         "updatedAt",
+         "id",
+         "locale"
+      ]
+   },
+   "GET /api/navigation": {
+      "content-type": "api::navigation.navigation",
+      "fields": [
+         "logo",
+         "createdAt",
+         "updatedAt",
+         "id",
+         "locale"
+      ],
+      "populate": {
+         "links": {
+            "fields": [
+               "label",
+               "href",
+               "target"
+            ]
+         },
+         "localizations": {
+            "fields": [
+               "logo",
+               "createdAt",
+               "updatedAt",
+               "id",
+               "locale"
+            ],
+            "populate": {
+               "links": {
+                  "fields": [
+                     "label",
+                     "href",
+                     "target"
+                  ]
+               },
+               "logo": {
+                  "fields": [
+                     "label",
+                     "href",
+                     "target"
+                  ]
+               }
+            }
+         },
+         "logo": {
+            "fields": [
+               "label",
+               "href",
+               "target"
+            ]
          }
       }
    }

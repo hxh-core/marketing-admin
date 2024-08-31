@@ -16,14 +16,26 @@
     }
   },
   "attributes": {
-    "logo": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
+    "_softDeletedAt": {
+      "type": "datetime",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
+    "_softDeletedById": {
+      "type": "integer",
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
+    },
+    "_softDeletedByType": {
       "type": "string",
-      "required": true
+      "configurable": false,
+      "writable": false,
+      "visible": false,
+      "private": true
     },
     "links": {
       "type": "component",
@@ -34,6 +46,15 @@
         }
       },
       "component": "ui.link",
+      "required": true
+    },
+    "logo": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
       "required": true
     }
   }
