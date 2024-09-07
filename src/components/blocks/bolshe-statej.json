@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_blocks_bolshe_statej",
+  "info": {
+    "displayName": "Больше статей",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "blockName": {
+      "type": "string",
+      "required": true,
+      "default": "more-articles-block"
+    },
+    "blockId": {
+      "type": "string"
+    },
+    "animation": {
+      "type": "enumeration",
+      "enum": [
+        "from-bottom-to-top",
+        "from-top-to-bottom",
+        "from-left-to-right",
+        "from-right-to-left",
+        "none"
+      ],
+      "default": "from-bottom-to-top"
+    },
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.more-articles-options",
+      "required": true
+    },
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.title"
+    }
+  }
+}

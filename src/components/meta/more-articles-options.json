@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_meta_more_articles_options",
+  "info": {
+    "displayName": "MoreArticlesOptions",
+    "icon": "filter",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sort": {
+      "type": "enumeration",
+      "enum": [
+        "asc",
+        "desc"
+      ],
+      "required": true,
+      "default": "desc"
+    },
+    "sortField": {
+      "type": "enumeration",
+      "enum": [
+        "id",
+        "type",
+        "publishedAt"
+      ],
+      "required": true,
+      "default": "id"
+    },
+    "limit": {
+      "type": "integer",
+      "required": true,
+      "default": 10
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}

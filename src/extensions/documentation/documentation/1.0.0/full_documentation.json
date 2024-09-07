@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-09-07T07:55:58.495Z"
+    "x-generation-date": "2024-09-07T16:55:03.731Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -649,12 +649,12 @@
       },
       "ArticlesLocalizationRequest": {
         "required": [
-          "viewsCount",
           "preview",
           "content",
           "type",
           "title",
           "readingTime",
+          "description",
           "locale"
         ],
         "type": "object",
@@ -668,9 +668,6 @@
           },
           "_softDeletedByType": {
             "type": "string"
-          },
-          "viewsCount": {
-            "type": "integer"
           },
           "preview": {
             "oneOf": [
@@ -717,6 +714,9 @@
           "readingTime": {
             "type": "string"
           },
+          "description": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -730,12 +730,12 @@
         "properties": {
           "data": {
             "required": [
-              "viewsCount",
               "preview",
               "content",
               "type",
               "title",
-              "readingTime"
+              "readingTime",
+              "description"
             ],
             "type": "object",
             "properties": {
@@ -748,9 +748,6 @@
               },
               "_softDeletedByType": {
                 "type": "string"
-              },
-              "viewsCount": {
-                "type": "integer"
               },
               "preview": {
                 "oneOf": [
@@ -795,6 +792,9 @@
                 "type": "string"
               },
               "readingTime": {
+                "type": "string"
+              },
+              "description": {
                 "type": "string"
               },
               "locale": {
@@ -921,12 +921,12 @@
       "Articles": {
         "type": "object",
         "required": [
-          "viewsCount",
           "preview",
           "content",
           "type",
           "title",
-          "readingTime"
+          "readingTime",
+          "description"
         ],
         "properties": {
           "_softDeletedAt": {
@@ -938,9 +938,6 @@
           },
           "_softDeletedByType": {
             "type": "string"
-          },
-          "viewsCount": {
-            "type": "integer"
           },
           "preview": {
             "type": "object",
@@ -4706,9 +4703,6 @@
                                             "_softDeletedByType": {
                                               "type": "string"
                                             },
-                                            "viewsCount": {
-                                              "type": "integer"
-                                            },
                                             "preview": {
                                               "type": "object",
                                               "properties": {
@@ -5128,6 +5122,9 @@
                                             "readingTime": {
                                               "type": "string"
                                             },
+                                            "description": {
+                                              "type": "string"
+                                            },
                                             "createdAt": {
                                               "type": "string",
                                               "format": "date-time"
@@ -5189,6 +5186,96 @@
                                           }
                                         }
                                       }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "number"
+                                },
+                                "__component": {
+                                  "type": "string"
+                                },
+                                "blockName": {
+                                  "type": "string"
+                                },
+                                "blockId": {
+                                  "type": "string"
+                                },
+                                "animation": {
+                                  "type": "string",
+                                  "enum": [
+                                    "from-bottom-to-top",
+                                    "from-top-to-bottom",
+                                    "from-left-to-right",
+                                    "from-right-to-left",
+                                    "none"
+                                  ]
+                                },
+                                "data": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "sort": {
+                                      "type": "string",
+                                      "enum": [
+                                        "asc",
+                                        "desc"
+                                      ]
+                                    },
+                                    "sortField": {
+                                      "type": "string",
+                                      "enum": [
+                                        "id",
+                                        "type",
+                                        "publishedAt"
+                                      ]
+                                    },
+                                    "limit": {
+                                      "type": "integer"
+                                    },
+                                    "type": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "title": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "link": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "number"
+                                        },
+                                        "label": {
+                                          "type": "string"
+                                        },
+                                        "href": {
+                                          "type": "string"
+                                        },
+                                        "target": {
+                                          "type": "string",
+                                          "enum": [
+                                            "_blank",
+                                            "_self",
+                                            "_parent",
+                                            "_top"
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    "label": {
+                                      "type": "string"
                                     }
                                   }
                                 }
@@ -5453,6 +5540,9 @@
             "type": "string"
           },
           "readingTime": {
+            "type": "string"
+          },
+          "description": {
             "type": "string"
           },
           "createdAt": {
@@ -6439,9 +6529,6 @@
                         },
                         "_softDeletedByType": {
                           "type": "string"
-                        },
-                        "viewsCount": {
-                          "type": "integer"
                         },
                         "preview": {
                           "type": "object",
@@ -9720,6 +9807,96 @@
                                                 }
                                               }
                                             }
+                                          },
+                                          {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "number"
+                                              },
+                                              "__component": {
+                                                "type": "string"
+                                              },
+                                              "blockName": {
+                                                "type": "string"
+                                              },
+                                              "blockId": {
+                                                "type": "string"
+                                              },
+                                              "animation": {
+                                                "type": "string",
+                                                "enum": [
+                                                  "from-bottom-to-top",
+                                                  "from-top-to-bottom",
+                                                  "from-left-to-right",
+                                                  "from-right-to-left",
+                                                  "none"
+                                                ]
+                                              },
+                                              "data": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "id": {
+                                                    "type": "number"
+                                                  },
+                                                  "sort": {
+                                                    "type": "string",
+                                                    "enum": [
+                                                      "asc",
+                                                      "desc"
+                                                    ]
+                                                  },
+                                                  "sortField": {
+                                                    "type": "string",
+                                                    "enum": [
+                                                      "id",
+                                                      "type",
+                                                      "publishedAt"
+                                                    ]
+                                                  },
+                                                  "limit": {
+                                                    "type": "integer"
+                                                  },
+                                                  "type": {
+                                                    "type": "string"
+                                                  }
+                                                }
+                                              },
+                                              "title": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "id": {
+                                                    "type": "number"
+                                                  },
+                                                  "link": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "id": {
+                                                        "type": "number"
+                                                      },
+                                                      "label": {
+                                                        "type": "string"
+                                                      },
+                                                      "href": {
+                                                        "type": "string"
+                                                      },
+                                                      "target": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "_blank",
+                                                          "_self",
+                                                          "_parent",
+                                                          "_top"
+                                                        ]
+                                                      }
+                                                    }
+                                                  },
+                                                  "label": {
+                                                    "type": "string"
+                                                  }
+                                                }
+                                              }
+                                            }
                                           }
                                         ]
                                       }
@@ -10214,6 +10391,9 @@
                           "type": "string"
                         },
                         "readingTime": {
+                          "type": "string"
+                        },
+                        "description": {
                           "type": "string"
                         },
                         "createdAt": {
@@ -15700,6 +15880,9 @@
                 },
                 {
                   "$ref": "#/components/schemas/BlocksArticleBlockComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/BlocksBolsheStatejComponent"
                 }
               ]
             }
@@ -15821,6 +16004,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/BlocksArticleBlockComponent"
+                    },
+                    {
+                      "$ref": "#/components/schemas/BlocksBolsheStatejComponent"
                     }
                   ]
                 }
@@ -16052,6 +16238,9 @@
                 },
                 {
                   "$ref": "#/components/schemas/BlocksArticleBlockComponent"
+                },
+                {
+                  "$ref": "#/components/schemas/BlocksBolsheStatejComponent"
                 }
               ]
             }
@@ -19665,9 +19854,6 @@
                       "_softDeletedByType": {
                         "type": "string"
                       },
-                      "viewsCount": {
-                        "type": "integer"
-                      },
                       "preview": {
                         "type": "object",
                         "properties": {
@@ -20931,6 +21117,96 @@
                                               }
                                             }
                                           }
+                                        },
+                                        {
+                                          "type": "object",
+                                          "properties": {
+                                            "id": {
+                                              "type": "number"
+                                            },
+                                            "__component": {
+                                              "type": "string"
+                                            },
+                                            "blockName": {
+                                              "type": "string"
+                                            },
+                                            "blockId": {
+                                              "type": "string"
+                                            },
+                                            "animation": {
+                                              "type": "string",
+                                              "enum": [
+                                                "from-bottom-to-top",
+                                                "from-top-to-bottom",
+                                                "from-left-to-right",
+                                                "from-right-to-left",
+                                                "none"
+                                              ]
+                                            },
+                                            "data": {
+                                              "type": "object",
+                                              "properties": {
+                                                "id": {
+                                                  "type": "number"
+                                                },
+                                                "sort": {
+                                                  "type": "string",
+                                                  "enum": [
+                                                    "asc",
+                                                    "desc"
+                                                  ]
+                                                },
+                                                "sortField": {
+                                                  "type": "string",
+                                                  "enum": [
+                                                    "id",
+                                                    "type",
+                                                    "publishedAt"
+                                                  ]
+                                                },
+                                                "limit": {
+                                                  "type": "integer"
+                                                },
+                                                "type": {
+                                                  "type": "string"
+                                                }
+                                              }
+                                            },
+                                            "title": {
+                                              "type": "object",
+                                              "properties": {
+                                                "id": {
+                                                  "type": "number"
+                                                },
+                                                "link": {
+                                                  "type": "object",
+                                                  "properties": {
+                                                    "id": {
+                                                      "type": "number"
+                                                    },
+                                                    "label": {
+                                                      "type": "string"
+                                                    },
+                                                    "href": {
+                                                      "type": "string"
+                                                    },
+                                                    "target": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "_blank",
+                                                        "_self",
+                                                        "_parent",
+                                                        "_top"
+                                                      ]
+                                                    }
+                                                  }
+                                                },
+                                                "label": {
+                                                  "type": "string"
+                                                }
+                                              }
+                                            }
+                                          }
                                         }
                                       ]
                                     }
@@ -21427,6 +21703,9 @@
                       "readingTime": {
                         "type": "string"
                       },
+                      "description": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -21490,6 +21769,68 @@
                 }
               }
             }
+          }
+        }
+      },
+      "MetaMoreArticlesOptionsComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "sort": {
+            "type": "string",
+            "enum": [
+              "asc",
+              "desc"
+            ]
+          },
+          "sortField": {
+            "type": "string",
+            "enum": [
+              "id",
+              "type",
+              "publishedAt"
+            ]
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "BlocksBolsheStatejComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "__component": {
+            "type": "string"
+          },
+          "blockName": {
+            "type": "string"
+          },
+          "blockId": {
+            "type": "string"
+          },
+          "animation": {
+            "type": "string",
+            "enum": [
+              "from-bottom-to-top",
+              "from-top-to-bottom",
+              "from-left-to-right",
+              "from-right-to-left",
+              "none"
+            ]
+          },
+          "data": {
+            "$ref": "#/components/schemas/MetaMoreArticlesOptionsComponent"
+          },
+          "title": {
+            "$ref": "#/components/schemas/UiTitleComponent"
           }
         }
       },

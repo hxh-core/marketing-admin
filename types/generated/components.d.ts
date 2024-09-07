@@ -413,6 +413,25 @@ export interface MetaPagePath extends Schema.Component {
   };
 }
 
+export interface MetaMoreArticlesOptions extends Schema.Component {
+  collectionName: 'components_meta_more_articles_options';
+  info: {
+    displayName: 'MoreArticlesOptions';
+    icon: 'filter';
+    description: '';
+  };
+  attributes: {
+    sort: Attribute.Enumeration<['asc', 'desc']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'desc'>;
+    sortField: Attribute.Enumeration<['id', 'type', 'publishedAt']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'id'>;
+    limit: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<10>;
+    type: Attribute.String;
+  };
+}
+
 export interface MetaMeta extends Schema.Component {
   collectionName: 'components_meta_metas';
   info: {
@@ -749,6 +768,34 @@ export interface BlocksCollectLinkLarge extends Schema.Component {
   };
 }
 
+export interface BlocksBolsheStatej extends Schema.Component {
+  collectionName: 'components_blocks_bolshe_statej';
+  info: {
+    displayName: '\u0411\u043E\u043B\u044C\u0448\u0435 \u0441\u0442\u0430\u0442\u0435\u0439';
+    icon: 'dashboard';
+    description: '';
+  };
+  attributes: {
+    blockName: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'more-articles-block'>;
+    blockId: Attribute.String;
+    animation: Attribute.Enumeration<
+      [
+        'from-bottom-to-top',
+        'from-top-to-bottom',
+        'from-left-to-right',
+        'from-right-to-left',
+        'none'
+      ]
+    > &
+      Attribute.DefaultTo<'from-bottom-to-top'>;
+    data: Attribute.Component<'meta.more-articles-options'> &
+      Attribute.Required;
+    title: Attribute.Component<'ui.title'>;
+  };
+}
+
 export interface BlocksArticleBlock extends Schema.Component {
   collectionName: 'components_blocks_article_blocks';
   info: {
@@ -859,6 +906,7 @@ declare module '@strapi/types' {
       'meta.yandex-metrika-init-parameters': MetaYandexMetrikaInitParameters;
       'meta.user-agents': MetaUserAgents;
       'meta.page-path': MetaPagePath;
+      'meta.more-articles-options': MetaMoreArticlesOptions;
       'meta.meta': MetaMeta;
       'blocks.works-mini': BlocksWorksMini;
       'blocks.works-large': BlocksWorksLarge;
@@ -871,6 +919,7 @@ declare module '@strapi/types' {
       'blocks.form-block': BlocksFormBlock;
       'blocks.collect-link-mini': BlocksCollectLinkMini;
       'blocks.collect-link-large': BlocksCollectLinkLarge;
+      'blocks.bolshe-statej': BlocksBolsheStatej;
       'blocks.article-block': BlocksArticleBlock;
       'blocks.advantages-block': BlocksAdvantagesBlock;
       'blocks.accordion-block': BlocksAccordionBlock;

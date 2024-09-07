@@ -908,14 +908,6 @@ export interface ApiArticlesArticles extends Schema.CollectionType {
     _softDeletedAt: Attribute.DateTime & Attribute.Private;
     _softDeletedById: Attribute.Integer & Attribute.Private;
     _softDeletedByType: Attribute.String & Attribute.Private;
-    viewsCount: Attribute.Integer &
-      Attribute.Required &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }> &
-      Attribute.DefaultTo<73>;
     preview: Attribute.Media<'images'> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -955,6 +947,13 @@ export interface ApiArticlesArticles extends Schema.CollectionType {
         };
       }>;
     readingTime: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.Text &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1673,7 +1672,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'blocks.advantages-block',
         'blocks.steps-block',
         'blocks.tekstovyj-blok-bolshoj',
-        'blocks.article-block'
+        'blocks.article-block',
+        'blocks.bolshe-statej'
       ]
     > &
       Attribute.Required &

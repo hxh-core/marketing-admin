@@ -58,7 +58,8 @@
         "blocks.advantages-block",
         "blocks.steps-block",
         "blocks.tekstovyj-blok-bolshoj",
-        "blocks.article-block"
+        "blocks.article-block",
+        "blocks.bolshe-statej"
       ],
       "required": true
     },

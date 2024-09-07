@@ -786,7 +786,8 @@
                            "id",
                            "publishedAt",
                            "locale",
-                           "readingTime"
+                           "readingTime",
+                           "description"
                         ],
                         "populate": {
                            "preview": {
@@ -863,7 +864,8 @@
                                        "publishedAt",
                                        "createdAt",
                                        "updatedAt",
-                                       "readingTime"
+                                       "readingTime",
+                                       "description"
                                     ],
                                     "populate": {
                                        "page": {
@@ -875,7 +877,8 @@
                                              "publishedAt",
                                              "createdAt",
                                              "updatedAt",
-                                             "locale"
+                                             "locale",
+                                             "metaDescription"
                                           ]
                                        }
                                     }
@@ -883,6 +886,37 @@
                               }
                            }
                         }
+                     }
+                  }
+               },
+               "blocks.bolshe-statej": {
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ],
+                  "populate": {
+                     "data": {
+                        "fields": [
+                           "sort",
+                           "sortField",
+                           "limit",
+                           "type"
+                        ]
+                     },
+                     "title": {
+                        "populate": {
+                           "link": {
+                              "fields": [
+                                 "label",
+                                 "href",
+                                 "target"
+                              ]
+                           }
+                        },
+                        "fields": [
+                           "label"
+                        ]
                      }
                   }
                }
@@ -956,5 +990,114 @@
             }
          }
       }
+   },
+   "GET /api/article": {
+      "content-type": "api::articles.articles",
+      "populate": {
+         "preview": {
+            "fields": [
+               "alternativeText",
+               "name",
+               "caption",
+               "width",
+               "height",
+               "formats",
+               "hash",
+               "ext",
+               "mime",
+               "size",
+               "previewUrl",
+               "url",
+               "provider",
+               "createdAt",
+               "updatedAt",
+               "id"
+            ]
+         },
+         "page": {
+            "populate": {},
+            "fields": [
+               "metaTitle",
+               "path",
+               "type",
+               "createdAt",
+               "updatedAt",
+               "id",
+               "publishedAt",
+               "locale",
+               "metaDescription"
+            ]
+         },
+         "author": {
+            "fields": [
+               "name",
+               "job",
+               "createdAt",
+               "updatedAt",
+               "id",
+               "publishedAt"
+            ],
+            "populate": {
+               "photo": {
+                  "fields": [
+                     "name",
+                     "alternativeText",
+                     "caption",
+                     "width",
+                     "height",
+                     "formats",
+                     "hash",
+                     "size",
+                     "ext",
+                     "mime",
+                     "url",
+                     "previewUrl",
+                     "provider",
+                     "createdAt",
+                     "updatedAt",
+                     "id"
+                  ]
+               },
+               "articles": {
+                  "fields": [
+                     "content",
+                     "type",
+                     "title",
+                     "createdAt",
+                     "updatedAt",
+                     "id",
+                     "publishedAt",
+                     "description"
+                  ],
+                  "populate": {
+                     "page": {
+                        "fields": [
+                           "metaTitle",
+                           "path",
+                           "type",
+                           "createdAt",
+                           "updatedAt",
+                           "publishedAt",
+                           "id",
+                           "metaDescription"
+                        ]
+                     }
+                  }
+               }
+            }
+         }
+      },
+      "fields": [
+         "content",
+         "type",
+         "title",
+         "readingTime",
+         "createdAt",
+         "updatedAt",
+         "id",
+         "publishedAt",
+         "locale",
+         "description"
+      ]
    }
 }
