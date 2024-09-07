@@ -60,7 +60,14 @@
         "Robot",
         "CheckMark",
         "Info",
-        "Yandex"
+        "Yandex",
+        "Google",
+        "Chrome",
+        "Eye",
+        "Fire",
+        "Briefcase",
+        "Clock",
+        "Update"
       ]
     }
   }

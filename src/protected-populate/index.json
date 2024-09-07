@@ -765,6 +765,126 @@
                      "blockId",
                      "animation"
                   ]
+               },
+               "blocks.article-block": {
+                  "fields": [
+                     "blockName",
+                     "blockId",
+                     "animation"
+                  ],
+                  "populate": {
+                     "data": {
+                        "fields": [
+                           "title",
+                           "publishDate",
+                           "viewsCount",
+                           "content",
+                           "type",
+                           "slug",
+                           "createdAt",
+                           "updatedAt",
+                           "id",
+                           "publishedAt",
+                           "locale",
+                           "readingTime"
+                        ],
+                        "populate": {
+                           "preview": {
+                              "fields": [
+                                 "name",
+                                 "alternativeText",
+                                 "caption",
+                                 "width",
+                                 "height",
+                                 "formats",
+                                 "hash",
+                                 "ext",
+                                 "mime",
+                                 "size",
+                                 "url",
+                                 "previewUrl",
+                                 "provider",
+                                 "createdAt",
+                                 "updatedAt",
+                                 "id"
+                              ]
+                           },
+                           "page": {
+                              "fields": [
+                                 "path",
+                                 "id",
+                                 "publishedAt",
+                                 "createdAt",
+                                 "updatedAt",
+                                 "metaTitle",
+                                 "metaDescription",
+                                 "metaKeywords",
+                                 "locale"
+                              ]
+                           },
+                           "author": {
+                              "fields": [
+                                 "name",
+                                 "job",
+                                 "createdAt",
+                                 "updatedAt",
+                                 "id",
+                                 "publishedAt",
+                                 "locale"
+                              ],
+                              "populate": {
+                                 "photo": {
+                                    "fields": [
+                                       "name",
+                                       "alternativeText",
+                                       "caption",
+                                       "width",
+                                       "height",
+                                       "formats",
+                                       "hash",
+                                       "ext",
+                                       "mime",
+                                       "size",
+                                       "url",
+                                       "previewUrl",
+                                       "provider",
+                                       "createdAt",
+                                       "updatedAt",
+                                       "id"
+                                    ]
+                                 },
+                                 "articles": {
+                                    "fields": [
+                                       "title",
+                                       "publishDate",
+                                       "viewsCount",
+                                       "type",
+                                       "id",
+                                       "publishedAt",
+                                       "createdAt",
+                                       "updatedAt",
+                                       "readingTime"
+                                    ],
+                                    "populate": {
+                                       "page": {
+                                          "fields": [
+                                             "path",
+                                             "metaTitle",
+                                             "type",
+                                             "id",
+                                             "publishedAt",
+                                             "createdAt",
+                                             "updatedAt",
+                                             "locale"
+                                          ]
+                                       }
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  }
                }
             }
          }

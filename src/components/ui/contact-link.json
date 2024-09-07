@@ -28,7 +28,9 @@
         "Habr",
         "Website",
         "Yandex",
-        "Dzen"
+        "Dzen",
+        "Google",
+        "Chrome"
       ],
       "required": true
     }

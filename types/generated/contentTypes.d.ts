@@ -888,6 +888,173 @@ export interface ApiAccordionAccordion extends Schema.CollectionType {
   };
 }
 
+export interface ApiArticlesArticles extends Schema.CollectionType {
+  collectionName: 'article';
+  info: {
+    singularName: 'articles';
+    pluralName: 'article';
+    displayName: '\u0421\u0442\u0430\u0442\u044C\u0438';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
+    viewsCount: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<73>;
+    preview: Attribute.Media<'images'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    content: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    type: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    page: Attribute.Relation<
+      'api::articles.articles',
+      'oneToOne',
+      'api::page.page'
+    >;
+    author: Attribute.Relation<
+      'api::articles.articles',
+      'manyToOne',
+      'api::authors.authors'
+    >;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    readingTime: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::articles.articles',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::articles.articles',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::articles.articles',
+      'oneToMany',
+      'api::articles.articles'
+    >;
+    locale: Attribute.String;
+  };
+}
+
+export interface ApiAuthorsAuthors extends Schema.CollectionType {
+  collectionName: 'author';
+  info: {
+    singularName: 'authors';
+    pluralName: 'author';
+    displayName: '\u0410\u0432\u0442\u043E\u0440\u044B';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
+    name: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    job: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    photo: Attribute.Media<'images'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    articles: Attribute.Relation<
+      'api::authors.authors',
+      'oneToMany',
+      'api::articles.articles'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::authors.authors',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::authors.authors',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::authors.authors',
+      'oneToMany',
+      'api::authors.authors'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiCollectLinkLargeCollectLinkLarge
   extends Schema.CollectionType {
   collectionName: 'collect_links_large';
@@ -1505,7 +1672,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'blocks.collect-link-large',
         'blocks.advantages-block',
         'blocks.steps-block',
-        'blocks.tekstovyj-blok-bolshoj'
+        'blocks.tekstovyj-blok-bolshoj',
+        'blocks.article-block'
       ]
     > &
       Attribute.Required &
@@ -2311,6 +2479,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::publisher.action': PluginPublisherAction;
       'api::accordion.accordion': ApiAccordionAccordion;
+      'api::articles.articles': ApiArticlesArticles;
+      'api::authors.authors': ApiAuthorsAuthors;
       'api::collect-link-large.collect-link-large': ApiCollectLinkLargeCollectLinkLarge;
       'api::collect-link-mini.collect-link-mini': ApiCollectLinkMiniCollectLinkMini;
       'api::cookie.cookie': ApiCookieCookie;

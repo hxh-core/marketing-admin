@@ -1807,7 +1807,7 @@
     "@strapi/utils" "4.25.7"
     fs-extra "10.0.0"
 
-"@strapi/strapi@^4.0.0", "@strapi/strapi@^4.11.0", "@strapi/strapi@^4.15.1", "@strapi/strapi@^4.3.4", "@strapi/strapi@^4.4.0", "@strapi/strapi@^4.5.3", "@strapi/strapi@4.25.7":
+"@strapi/strapi@^4.0.0", "@strapi/strapi@^4.11.0", "@strapi/strapi@^4.15.1", "@strapi/strapi@^4.3.4", "@strapi/strapi@^4.4.0", "@strapi/strapi@^4.5.3", "@strapi/strapi@^4.6.1", "@strapi/strapi@4.25.7":
   version "4.25.7"
   resolved "https://registry.npmjs.org/@strapi/strapi/-/strapi-4.25.7.tgz"
   integrity sha512-6VlRnbhJyRLJqhzSPyMMeBMDetBzU/w9sVn20JvIUIUckavLD6s1s33YSB4nQRmXrErFOFUCaVv5lbITpFyjVA==
@@ -3983,6 +3983,11 @@ csstype@^3.0.2:
   version "3.1.3"
   resolved "https://registry.npmjs.org/csstype/-/csstype-3.1.3.tgz"
   integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
+
+custom-slug@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/custom-slug/-/custom-slug-2.1.1.tgz"
+  integrity sha512-GYrNQKAdvfQQSiH7tuiZJmrHEBvLEro9py10aAlOeEiLgyYFIERa8KFLyxVTC65QUKRCnIr80unc80UZHtldIA==
 
 date-fns-tz@2.0.0:
   version "2.0.0"
