@@ -233,6 +233,7 @@ export interface UiCustomLink extends Schema.Component {
         'GitHub',
         'OK',
         'Habr',
+        'Pinterest',
         'Website',
         'Arrow',
         'Send',
@@ -243,6 +244,7 @@ export interface UiCustomLink extends Schema.Component {
         'Yandex',
         'Google',
         'Chrome',
+        'VcRu',
         'Eye',
         'Fire',
         'Briefcase',
@@ -337,7 +339,9 @@ export interface UiContactLink extends Schema.Component {
         'Yandex',
         'Dzen',
         'Google',
-        'Chrome'
+        'Chrome',
+        'VcRu',
+        'Pinterest'
       ]
     > &
       Attribute.Required;
@@ -426,7 +430,7 @@ export interface MetaMoreArticlesOptions extends Schema.Component {
       Attribute.DefaultTo<'desc'>;
     sortField: Attribute.Enumeration<['id', 'type', 'publishedAt']> &
       Attribute.Required &
-      Attribute.DefaultTo<'id'>;
+      Attribute.DefaultTo<'publishedAt'>;
     limit: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<10>;
     type: Attribute.String;
   };

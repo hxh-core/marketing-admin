@@ -30,7 +30,9 @@
         "Yandex",
         "Dzen",
         "Google",
-        "Chrome"
+        "Chrome",
+        "VcRu",
+        "Pinterest"
       ],
       "required": true
     }

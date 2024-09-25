@@ -24,7 +24,7 @@
         "publishedAt"
       ],
       "required": true,
-      "default": "id"
+      "default": "publishedAt"
     },
     "limit": {
       "type": "integer",

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-09-07T16:55:03.731Z"
+    "x-generation-date": "2024-09-25T11:11:08.325Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2249,7 +2249,9 @@
                                                         "Yandex",
                                                         "Dzen",
                                                         "Google",
-                                                        "Chrome"
+                                                        "Chrome",
+                                                        "VcRu",
+                                                        "Pinterest"
                                                       ]
                                                     }
                                                   }
@@ -2303,6 +2305,7 @@
                                                       "GitHub",
                                                       "OK",
                                                       "Habr",
+                                                      "Pinterest",
                                                       "Website",
                                                       "Arrow",
                                                       "Send",
@@ -2313,6 +2316,7 @@
                                                       "Yandex",
                                                       "Google",
                                                       "Chrome",
+                                                      "VcRu",
                                                       "Eye",
                                                       "Fire",
                                                       "Briefcase",
@@ -2498,6 +2502,7 @@
                                                       "GitHub",
                                                       "OK",
                                                       "Habr",
+                                                      "Pinterest",
                                                       "Website",
                                                       "Arrow",
                                                       "Send",
@@ -2508,6 +2513,7 @@
                                                       "Yandex",
                                                       "Google",
                                                       "Chrome",
+                                                      "VcRu",
                                                       "Eye",
                                                       "Fire",
                                                       "Briefcase",
@@ -2962,6 +2968,7 @@
                                                       "GitHub",
                                                       "OK",
                                                       "Habr",
+                                                      "Pinterest",
                                                       "Website",
                                                       "Arrow",
                                                       "Send",
@@ -2972,6 +2979,7 @@
                                                       "Yandex",
                                                       "Google",
                                                       "Chrome",
+                                                      "VcRu",
                                                       "Eye",
                                                       "Fire",
                                                       "Briefcase",
@@ -3771,6 +3779,7 @@
                                                       "GitHub",
                                                       "OK",
                                                       "Habr",
+                                                      "Pinterest",
                                                       "Website",
                                                       "Arrow",
                                                       "Send",
@@ -3781,6 +3790,7 @@
                                                       "Yandex",
                                                       "Google",
                                                       "Chrome",
+                                                      "VcRu",
                                                       "Eye",
                                                       "Fire",
                                                       "Briefcase",
@@ -3952,6 +3962,7 @@
                                                     "GitHub",
                                                     "OK",
                                                     "Habr",
+                                                    "Pinterest",
                                                     "Website",
                                                     "Arrow",
                                                     "Send",
@@ -3962,6 +3973,7 @@
                                                     "Yandex",
                                                     "Google",
                                                     "Chrome",
+                                                    "VcRu",
                                                     "Eye",
                                                     "Fire",
                                                     "Briefcase",
@@ -4144,6 +4156,7 @@
                                                     "GitHub",
                                                     "OK",
                                                     "Habr",
+                                                    "Pinterest",
                                                     "Website",
                                                     "Arrow",
                                                     "Send",
@@ -4154,6 +4167,7 @@
                                                     "Yandex",
                                                     "Google",
                                                     "Chrome",
+                                                    "VcRu",
                                                     "Eye",
                                                     "Fire",
                                                     "Briefcase",
@@ -5293,9 +5307,6 @@
                       "metaKeywords": {
                         "type": "string"
                       },
-                      "path": {
-                        "type": "string"
-                      },
                       "metaImage": {
                         "type": "object",
                         "properties": {
@@ -5454,6 +5465,9 @@
                           "video.tv_show",
                           "video.other"
                         ]
+                      },
+                      "path": {
+                        "type": "string"
                       },
                       "createdAt": {
                         "type": "string",
@@ -7357,7 +7371,9 @@
                                                                       "Yandex",
                                                                       "Dzen",
                                                                       "Google",
-                                                                      "Chrome"
+                                                                      "Chrome",
+                                                                      "VcRu",
+                                                                      "Pinterest"
                                                                     ]
                                                                   }
                                                                 }
@@ -7411,6 +7427,7 @@
                                                                     "GitHub",
                                                                     "OK",
                                                                     "Habr",
+                                                                    "Pinterest",
                                                                     "Website",
                                                                     "Arrow",
                                                                     "Send",
@@ -7421,6 +7438,7 @@
                                                                     "Yandex",
                                                                     "Google",
                                                                     "Chrome",
+                                                                    "VcRu",
                                                                     "Eye",
                                                                     "Fire",
                                                                     "Briefcase",
@@ -7606,6 +7624,7 @@
                                                                     "GitHub",
                                                                     "OK",
                                                                     "Habr",
+                                                                    "Pinterest",
                                                                     "Website",
                                                                     "Arrow",
                                                                     "Send",
@@ -7616,6 +7635,7 @@
                                                                     "Yandex",
                                                                     "Google",
                                                                     "Chrome",
+                                                                    "VcRu",
                                                                     "Eye",
                                                                     "Fire",
                                                                     "Briefcase",
@@ -8070,6 +8090,7 @@
                                                                     "GitHub",
                                                                     "OK",
                                                                     "Habr",
+                                                                    "Pinterest",
                                                                     "Website",
                                                                     "Arrow",
                                                                     "Send",
@@ -8080,6 +8101,7 @@
                                                                     "Yandex",
                                                                     "Google",
                                                                     "Chrome",
+                                                                    "VcRu",
                                                                     "Eye",
                                                                     "Fire",
                                                                     "Briefcase",
@@ -8879,6 +8901,7 @@
                                                                     "GitHub",
                                                                     "OK",
                                                                     "Habr",
+                                                                    "Pinterest",
                                                                     "Website",
                                                                     "Arrow",
                                                                     "Send",
@@ -8889,6 +8912,7 @@
                                                                     "Yandex",
                                                                     "Google",
                                                                     "Chrome",
+                                                                    "VcRu",
                                                                     "Eye",
                                                                     "Fire",
                                                                     "Briefcase",
@@ -9060,6 +9084,7 @@
                                                                   "GitHub",
                                                                   "OK",
                                                                   "Habr",
+                                                                  "Pinterest",
                                                                   "Website",
                                                                   "Arrow",
                                                                   "Send",
@@ -9070,6 +9095,7 @@
                                                                   "Yandex",
                                                                   "Google",
                                                                   "Chrome",
+                                                                  "VcRu",
                                                                   "Eye",
                                                                   "Fire",
                                                                   "Briefcase",
@@ -9252,6 +9278,7 @@
                                                                   "GitHub",
                                                                   "OK",
                                                                   "Habr",
+                                                                  "Pinterest",
                                                                   "Website",
                                                                   "Arrow",
                                                                   "Send",
@@ -9262,6 +9289,7 @@
                                                                   "Yandex",
                                                                   "Google",
                                                                   "Chrome",
+                                                                  "VcRu",
                                                                   "Eye",
                                                                   "Fire",
                                                                   "Briefcase",
@@ -9910,9 +9938,6 @@
                                     "metaKeywords": {
                                       "type": "string"
                                     },
-                                    "path": {
-                                      "type": "string"
-                                    },
                                     "metaImage": {
                                       "type": "object",
                                       "properties": {
@@ -10071,6 +10096,9 @@
                                         "video.tv_show",
                                         "video.other"
                                       ]
+                                    },
+                                    "path": {
+                                      "type": "string"
                                     },
                                     "createdAt": {
                                       "type": "string",
@@ -11152,6 +11180,7 @@
               "GitHub",
               "OK",
               "Habr",
+              "Pinterest",
               "Website",
               "Arrow",
               "Send",
@@ -11162,6 +11191,7 @@
               "Yandex",
               "Google",
               "Chrome",
+              "VcRu",
               "Eye",
               "Fire",
               "Briefcase",
@@ -13065,6 +13095,7 @@
                   "GitHub",
                   "OK",
                   "Habr",
+                  "Pinterest",
                   "Website",
                   "Arrow",
                   "Send",
@@ -13075,6 +13106,7 @@
                   "Yandex",
                   "Google",
                   "Chrome",
+                  "VcRu",
                   "Eye",
                   "Fire",
                   "Briefcase",
@@ -13113,7 +13145,9 @@
               "Yandex",
               "Dzen",
               "Google",
-              "Chrome"
+              "Chrome",
+              "VcRu",
+              "Pinterest"
             ]
           }
         }
@@ -15786,6 +15820,7 @@
                   "GitHub",
                   "OK",
                   "Habr",
+                  "Pinterest",
                   "Website",
                   "Arrow",
                   "Send",
@@ -15796,6 +15831,7 @@
                   "Yandex",
                   "Google",
                   "Chrome",
+                  "VcRu",
                   "Eye",
                   "Fire",
                   "Briefcase",
@@ -15896,9 +15932,6 @@
           "metaKeywords": {
             "type": "string"
           },
-          "path": {
-            "type": "string"
-          },
           "metaImage": {
             "type": "array",
             "items": {
@@ -15929,6 +15962,9 @@
               "video.tv_show",
               "video.other"
             ]
+          },
+          "path": {
+            "type": "string"
           },
           "locale": {
             "type": "string"
@@ -16020,9 +16056,6 @@
               "metaKeywords": {
                 "type": "string"
               },
-              "path": {
-                "type": "string"
-              },
               "metaImage": {
                 "type": "array",
                 "items": {
@@ -16053,6 +16086,9 @@
                   "video.tv_show",
                   "video.other"
                 ]
+              },
+              "path": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -16254,9 +16290,6 @@
           "metaKeywords": {
             "type": "string"
           },
-          "path": {
-            "type": "string"
-          },
           "metaImage": {
             "type": "object",
             "properties": {
@@ -16415,6 +16448,9 @@
               "video.tv_show",
               "video.other"
             ]
+          },
+          "path": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -17583,7 +17619,9 @@
                                   "Yandex",
                                   "Dzen",
                                   "Google",
-                                  "Chrome"
+                                  "Chrome",
+                                  "VcRu",
+                                  "Pinterest"
                                 ]
                               }
                             }
@@ -17637,6 +17675,7 @@
                                 "GitHub",
                                 "OK",
                                 "Habr",
+                                "Pinterest",
                                 "Website",
                                 "Arrow",
                                 "Send",
@@ -17647,6 +17686,7 @@
                                 "Yandex",
                                 "Google",
                                 "Chrome",
+                                "VcRu",
                                 "Eye",
                                 "Fire",
                                 "Briefcase",
@@ -17832,6 +17872,7 @@
                                 "GitHub",
                                 "OK",
                                 "Habr",
+                                "Pinterest",
                                 "Website",
                                 "Arrow",
                                 "Send",
@@ -17842,6 +17883,7 @@
                                 "Yandex",
                                 "Google",
                                 "Chrome",
+                                "VcRu",
                                 "Eye",
                                 "Fire",
                                 "Briefcase",
@@ -18296,6 +18338,7 @@
                                 "GitHub",
                                 "OK",
                                 "Habr",
+                                "Pinterest",
                                 "Website",
                                 "Arrow",
                                 "Send",
@@ -18306,6 +18349,7 @@
                                 "Yandex",
                                 "Google",
                                 "Chrome",
+                                "VcRu",
                                 "Eye",
                                 "Fire",
                                 "Briefcase",
@@ -19012,6 +19056,7 @@
                                 "GitHub",
                                 "OK",
                                 "Habr",
+                                "Pinterest",
                                 "Website",
                                 "Arrow",
                                 "Send",
@@ -19022,6 +19067,7 @@
                                 "Yandex",
                                 "Google",
                                 "Chrome",
+                                "VcRu",
                                 "Eye",
                                 "Fire",
                                 "Briefcase",
@@ -19193,6 +19239,7 @@
                               "GitHub",
                               "OK",
                               "Habr",
+                              "Pinterest",
                               "Website",
                               "Arrow",
                               "Send",
@@ -19203,6 +19250,7 @@
                               "Yandex",
                               "Google",
                               "Chrome",
+                              "VcRu",
                               "Eye",
                               "Fire",
                               "Briefcase",
@@ -19385,6 +19433,7 @@
                               "GitHub",
                               "OK",
                               "Habr",
+                              "Pinterest",
                               "Website",
                               "Arrow",
                               "Send",
@@ -19395,6 +19444,7 @@
                               "Yandex",
                               "Google",
                               "Chrome",
+                              "VcRu",
                               "Eye",
                               "Fire",
                               "Briefcase",
@@ -21220,9 +21270,6 @@
                                   "metaKeywords": {
                                     "type": "string"
                                   },
-                                  "path": {
-                                    "type": "string"
-                                  },
                                   "metaImage": {
                                     "type": "object",
                                     "properties": {
@@ -21381,6 +21428,9 @@
                                       "video.tv_show",
                                       "video.other"
                                     ]
+                                  },
+                                  "path": {
+                                    "type": "string"
                                   },
                                   "createdAt": {
                                     "type": "string",

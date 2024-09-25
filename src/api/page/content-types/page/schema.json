@@ -88,15 +88,6 @@
       },
       "type": "text"
     },
-    "path": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string",
-      "required": true
-    },
     "metaImage": {
       "type": "media",
       "multiple": true,
@@ -132,6 +123,16 @@
         "video.other"
       ],
       "default": "website"
+    },
+    "path": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "metaTitle",
+      "required": true
     }
   }
 }
