@@ -130,9 +130,9 @@
           "localized": true
         }
       },
-      "type": "uid",
-      "targetField": "metaTitle",
-      "required": true
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }

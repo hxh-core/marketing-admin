@@ -1729,8 +1729,9 @@ export interface ApiPagePage extends Schema.CollectionType {
         };
       }> &
       Attribute.DefaultTo<'website'>;
-    path: Attribute.UID<'api::page.page', 'metaTitle'> &
+    path: Attribute.String &
       Attribute.Required &
+      Attribute.Unique &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
