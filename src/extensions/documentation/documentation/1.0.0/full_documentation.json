@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-09-29T16:40:41.933Z"
+    "x-generation-date": "2024-10-04T13:47:06.402Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3007,7 +3007,16 @@
                                                   "Robot",
                                                   "CheckMark",
                                                   "Info",
-                                                  "Yandex"
+                                                  "Yandex",
+                                                  "Google",
+                                                  "Chrome",
+                                                  "Eye",
+                                                  "Fire",
+                                                  "Briefcase",
+                                                  "Clock",
+                                                  "Update",
+                                                  "VcRu",
+                                                  "Pinterest"
                                                 ]
                                               },
                                               "oldPrice": {
@@ -8129,7 +8138,16 @@
                                                                 "Robot",
                                                                 "CheckMark",
                                                                 "Info",
-                                                                "Yandex"
+                                                                "Yandex",
+                                                                "Google",
+                                                                "Chrome",
+                                                                "Eye",
+                                                                "Fire",
+                                                                "Briefcase",
+                                                                "Clock",
+                                                                "Update",
+                                                                "VcRu",
+                                                                "Pinterest"
                                                               ]
                                                             },
                                                             "oldPrice": {
@@ -18377,7 +18395,16 @@
                             "Robot",
                             "CheckMark",
                             "Info",
-                            "Yandex"
+                            "Yandex",
+                            "Google",
+                            "Chrome",
+                            "Eye",
+                            "Fire",
+                            "Briefcase",
+                            "Clock",
+                            "Update",
+                            "VcRu",
+                            "Pinterest"
                           ]
                         },
                         "oldPrice": {
@@ -22779,7 +22806,6 @@
       "ServiceLocalizationRequest": {
         "required": [
           "title",
-          "price",
           "button",
           "icon",
           "color",
@@ -22825,7 +22851,16 @@
               "Robot",
               "CheckMark",
               "Info",
-              "Yandex"
+              "Yandex",
+              "Google",
+              "Chrome",
+              "Eye",
+              "Fire",
+              "Briefcase",
+              "Clock",
+              "Update",
+              "VcRu",
+              "Pinterest"
             ]
           },
           "oldPrice": {
@@ -22861,7 +22896,6 @@
           "data": {
             "required": [
               "title",
-              "price",
               "button",
               "icon",
               "color",
@@ -22906,7 +22940,16 @@
                   "Robot",
                   "CheckMark",
                   "Info",
-                  "Yandex"
+                  "Yandex",
+                  "Google",
+                  "Chrome",
+                  "Eye",
+                  "Fire",
+                  "Briefcase",
+                  "Clock",
+                  "Update",
+                  "VcRu",
+                  "Pinterest"
                 ]
               },
               "oldPrice": {
@@ -23053,7 +23096,6 @@
         "type": "object",
         "required": [
           "title",
-          "price",
           "button",
           "icon",
           "color",
@@ -23097,7 +23139,16 @@
               "Robot",
               "CheckMark",
               "Info",
-              "Yandex"
+              "Yandex",
+              "Google",
+              "Chrome",
+              "Eye",
+              "Fire",
+              "Briefcase",
+              "Clock",
+              "Update",
+              "VcRu",
+              "Pinterest"
             ]
           },
           "oldPrice": {
@@ -24055,7 +24106,6 @@
           "job",
           "info",
           "contacts",
-          "contactLink",
           "locale"
         ],
         "type": "object",
@@ -24119,8 +24169,7 @@
               "name",
               "job",
               "info",
-              "contacts",
-              "contactLink"
+              "contacts"
             ],
             "type": "object",
             "properties": {
@@ -24294,8 +24343,7 @@
           "name",
           "job",
           "info",
-          "contacts",
-          "contactLink"
+          "contacts"
         ],
         "properties": {
           "_softDeletedAt": {

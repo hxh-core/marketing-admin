@@ -55,7 +55,7 @@
         }
       },
       "component": "ui.price",
-      "required": true
+      "required": false
     },
     "button": {
       "type": "component",
@@ -91,7 +91,16 @@
         "Robot",
         "CheckMark",
         "Info",
-        "Yandex"
+        "Yandex",
+        "Google",
+        "Chrome",
+        "Eye",
+        "Fire",
+        "Briefcase",
+        "Clock",
+        "Update",
+        "VcRu",
+        "Pinterest"
       ],
       "required": true
     },

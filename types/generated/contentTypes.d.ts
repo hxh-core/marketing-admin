@@ -1918,7 +1918,6 @@ export interface ApiServiceService extends Schema.CollectionType {
         };
       }>;
     price: Attribute.Component<'ui.price'> &
-      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1948,7 +1947,16 @@ export interface ApiServiceService extends Schema.CollectionType {
         'Robot',
         'CheckMark',
         'Info',
-        'Yandex'
+        'Yandex',
+        'Google',
+        'Chrome',
+        'Eye',
+        'Fire',
+        'Briefcase',
+        'Clock',
+        'Update',
+        'VcRu',
+        'Pinterest'
       ]
     > &
       Attribute.Required &
@@ -2121,7 +2129,6 @@ export interface ApiTeamTeam extends Schema.CollectionType {
         };
       }>;
     contactLink: Attribute.Component<'ui.custom-link'> &
-      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

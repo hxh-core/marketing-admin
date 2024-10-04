@@ -99,7 +99,7 @@
         }
       },
       "component": "ui.custom-link",
-      "required": true
+      "required": false
     }
   }
 }
