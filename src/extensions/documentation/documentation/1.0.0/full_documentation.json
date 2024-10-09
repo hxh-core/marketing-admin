@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-10-09T19:04:08.209Z"
+    "x-generation-date": "2024-10-09T19:18:14.065Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2941,6 +2941,9 @@
                                               "type": "string"
                                             },
                                             "description": {
+                                              "type": "string"
+                                            },
+                                            "hrefAfterSuccess": {
                                               "type": "string"
                                             },
                                             "createdAt": {
@@ -8562,6 +8565,9 @@
                                                             "type": "string"
                                                           },
                                                           "description": {
+                                                            "type": "string"
+                                                          },
+                                                          "hrefAfterSuccess": {
                                                             "type": "string"
                                                           },
                                                           "createdAt": {
@@ -14197,6 +14203,9 @@
           "description": {
             "type": "string"
           },
+          "hrefAfterSuccess": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -14252,6 +14261,9 @@
                 "type": "string"
               },
               "description": {
+                "type": "string"
+              },
+              "hrefAfterSuccess": {
                 "type": "string"
               },
               "locale": {
@@ -14419,6 +14431,9 @@
             "type": "string"
           },
           "description": {
+            "type": "string"
+          },
+          "hrefAfterSuccess": {
             "type": "string"
           },
           "createdAt": {
@@ -19220,6 +19235,9 @@
                         "type": "string"
                       },
                       "description": {
+                        "type": "string"
+                      },
+                      "hrefAfterSuccess": {
                         "type": "string"
                       },
                       "createdAt": {

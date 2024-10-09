@@ -343,7 +343,8 @@
                            "updatedAt",
                            "id",
                            "publishedAt",
-                           "locale"
+                           "locale",
+                           "hrefAfterSuccess"
                         ],
                         "populate": {
                            "inputs": {
