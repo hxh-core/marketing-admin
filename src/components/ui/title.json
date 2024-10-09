@@ -10,7 +10,7 @@
     "link": {
       "type": "component",
       "repeatable": false,
-      "component": "ui.link"
+      "component": "ui.custom-link"
     },
     "label": {
       "type": "customField",
@@ -19,6 +19,9 @@
       },
       "required": true,
       "customField": "plugin::bold-title-editor.title"
+    },
+    "subtitle": {
+      "type": "richtext"
     }
   }
 }

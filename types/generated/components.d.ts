@@ -8,7 +8,7 @@ export interface UiTitle extends Schema.Component {
     description: '';
   };
   attributes: {
-    link: Attribute.Component<'ui.link'>;
+    link: Attribute.Component<'ui.custom-link'>;
     label: Attribute.String &
       Attribute.Required &
       Attribute.CustomField<
@@ -17,6 +17,7 @@ export interface UiTitle extends Schema.Component {
           output: 'html';
         }
       >;
+    subtitle: Attribute.RichText;
   };
 }
 

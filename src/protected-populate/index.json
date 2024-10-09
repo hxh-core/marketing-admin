@@ -33,12 +33,17 @@
                               "fields": [
                                  "label",
                                  "href",
-                                 "target"
+                                 "target",
+                                 "children",
+                                 "color",
+                                 "size",
+                                 "icon"
                               ]
                            }
                         },
                         "fields": [
-                           "label"
+                           "label",
+                           "subtitle"
                         ]
                      },
                      "reviews": {
@@ -130,12 +135,17 @@
                               "fields": [
                                  "label",
                                  "href",
-                                 "target"
+                                 "target",
+                                 "children",
+                                 "color",
+                                 "size",
+                                 "icon"
                               ]
                            }
                         },
                         "fields": [
-                           "label"
+                           "label",
+                           "subtitle"
                         ]
                      }
                   },
@@ -153,12 +163,17 @@
                               "fields": [
                                  "label",
                                  "href",
-                                 "target"
+                                 "target",
+                                 "children",
+                                 "color",
+                                 "size",
+                                 "icon"
                               ]
                            }
                         },
                         "fields": [
-                           "label"
+                           "label",
+                           "subtitle"
                         ]
                      },
                      "data": {
@@ -241,12 +256,17 @@
                               "fields": [
                                  "label",
                                  "href",
-                                 "target"
+                                 "target",
+                                 "children",
+                                 "color",
+                                 "size",
+                                 "icon"
                               ]
                            }
                         },
                         "fields": [
-                           "label"
+                           "label",
+                           "subtitle"
                         ]
                      },
                      "data": {
@@ -461,12 +481,17 @@
                               "fields": [
                                  "label",
                                  "href",
-                                 "target"
+                                 "target",
+                                 "children",
+                                 "color",
+                                 "size",
+                                 "icon"
                               ]
                            }
                         },
                         "fields": [
-                           "label"
+                           "label",
+                           "subtitle"
                         ]
                      }
                   },
@@ -522,12 +547,17 @@
                               "fields": [
                                  "label",
                                  "href",
-                                 "target"
+                                 "target",
+                                 "children",
+                                 "color",
+                                 "size",
+                                 "icon"
                               ]
                            }
                         },
                         "fields": [
-                           "label"
+                           "label",
+                           "subtitle"
                         ]
                      },
                      "data": {
@@ -657,12 +687,17 @@
                               "fields": [
                                  "label",
                                  "href",
-                                 "target"
+                                 "target",
+                                 "color",
+                                 "size",
+                                 "icon",
+                                 "children"
                               ]
                            }
                         },
                         "fields": [
-                           "label"
+                           "label",
+                           "subtitle"
                         ]
                      },
                      "data": {
@@ -688,12 +723,17 @@
                               "fields": [
                                  "label",
                                  "href",
-                                 "target"
+                                 "target",
+                                 "children",
+                                 "color",
+                                 "size",
+                                 "icon"
                               ]
                            }
                         },
                         "fields": [
-                           "label"
+                           "label",
+                           "subtitle"
                         ]
                      },
                      "data": {
@@ -726,12 +766,17 @@
                               "fields": [
                                  "label",
                                  "href",
-                                 "target"
+                                 "target",
+                                 "children",
+                                 "color",
+                                 "size",
+                                 "icon"
                               ]
                            }
                         },
                         "fields": [
-                           "label"
+                           "label",
+                           "subtitle"
                         ]
                      },
                      "data": {
@@ -910,12 +955,17 @@
                               "fields": [
                                  "label",
                                  "href",
-                                 "target"
+                                 "target",
+                                 "children",
+                                 "color",
+                                 "size",
+                                 "icon"
                               ]
                            }
                         },
                         "fields": [
-                           "label"
+                           "label",
+                           "subtitle"
                         ]
                      }
                   }

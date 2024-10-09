@@ -153,9 +153,9 @@
 
 ## О нас
 
-Организация в GitHub: **[HxH Marketing](https://github.com/hxh-core)**
+Организация в GitHub: **[HxH Agency](https://github.com/hxh-core)**
 
-VK группа: **[HxH Marketing](https://vk.com/hxh_marketing)**
+VK группа: **[HxH Agency](https://vk.com/hxh_marketing)**
 
 ---
 

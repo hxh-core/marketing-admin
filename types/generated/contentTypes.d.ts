@@ -1539,6 +1539,9 @@ export interface ApiNavigationNavigation extends Schema.SingleType {
     };
   };
   attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
     logo: Attribute.String &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -1548,6 +1551,12 @@ export interface ApiNavigationNavigation extends Schema.SingleType {
       }>;
     links: Attribute.Component<'ui.link', true> &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    contactButton: Attribute.Component<'ui.custom-link'> &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -1567,9 +1576,6 @@ export interface ApiNavigationNavigation extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
-    _softDeletedAt: Attribute.DateTime & Attribute.Private;
-    _softDeletedById: Attribute.Integer & Attribute.Private;
-    _softDeletedByType: Attribute.String & Attribute.Private;
     localizations: Attribute.Relation<
       'api::navigation.navigation',
       'oneToMany',

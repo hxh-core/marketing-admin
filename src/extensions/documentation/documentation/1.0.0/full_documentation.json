@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-10-04T13:47:06.402Z"
+    "x-generation-date": "2024-10-09T16:45:25.803Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1614,7 +1614,7 @@
                                         "id": {
                                           "type": "number"
                                         },
-                                        "label": {
+                                        "children": {
                                           "type": "string"
                                         },
                                         "href": {
@@ -1628,10 +1628,59 @@
                                             "_parent",
                                             "_top"
                                           ]
+                                        },
+                                        "color": {
+                                          "type": "string",
+                                          "enum": [
+                                            "primary",
+                                            "secondary",
+                                            "transparent"
+                                          ]
+                                        },
+                                        "size": {
+                                          "type": "string",
+                                          "enum": [
+                                            "small",
+                                            "medium",
+                                            "large"
+                                          ]
+                                        },
+                                        "icon": {
+                                          "type": "string",
+                                          "enum": [
+                                            "VK",
+                                            "Behance",
+                                            "Instagram",
+                                            "WhatsApp",
+                                            "Telegram",
+                                            "GitHub",
+                                            "OK",
+                                            "Habr",
+                                            "Pinterest",
+                                            "Website",
+                                            "Arrow",
+                                            "Send",
+                                            "Pen",
+                                            "Robot",
+                                            "CheckMark",
+                                            "Info",
+                                            "Yandex",
+                                            "Google",
+                                            "Chrome",
+                                            "VcRu",
+                                            "Eye",
+                                            "Fire",
+                                            "Briefcase",
+                                            "Clock",
+                                            "Update"
+                                          ]
                                         }
                                       }
                                     },
                                     "label": {
+                                      "type": "string"
+                                    },
+                                    "subtitle": {
                                       "type": "string"
                                     }
                                   }
@@ -1951,7 +2000,7 @@
                                         "id": {
                                           "type": "number"
                                         },
-                                        "label": {
+                                        "children": {
                                           "type": "string"
                                         },
                                         "href": {
@@ -1965,10 +2014,59 @@
                                             "_parent",
                                             "_top"
                                           ]
+                                        },
+                                        "color": {
+                                          "type": "string",
+                                          "enum": [
+                                            "primary",
+                                            "secondary",
+                                            "transparent"
+                                          ]
+                                        },
+                                        "size": {
+                                          "type": "string",
+                                          "enum": [
+                                            "small",
+                                            "medium",
+                                            "large"
+                                          ]
+                                        },
+                                        "icon": {
+                                          "type": "string",
+                                          "enum": [
+                                            "VK",
+                                            "Behance",
+                                            "Instagram",
+                                            "WhatsApp",
+                                            "Telegram",
+                                            "GitHub",
+                                            "OK",
+                                            "Habr",
+                                            "Pinterest",
+                                            "Website",
+                                            "Arrow",
+                                            "Send",
+                                            "Pen",
+                                            "Robot",
+                                            "CheckMark",
+                                            "Info",
+                                            "Yandex",
+                                            "Google",
+                                            "Chrome",
+                                            "VcRu",
+                                            "Eye",
+                                            "Fire",
+                                            "Briefcase",
+                                            "Clock",
+                                            "Update"
+                                          ]
                                         }
                                       }
                                     },
                                     "label": {
+                                      "type": "string"
+                                    },
+                                    "subtitle": {
                                       "type": "string"
                                     }
                                   }
@@ -2012,7 +2110,7 @@
                                         "id": {
                                           "type": "number"
                                         },
-                                        "label": {
+                                        "children": {
                                           "type": "string"
                                         },
                                         "href": {
@@ -2026,10 +2124,59 @@
                                             "_parent",
                                             "_top"
                                           ]
+                                        },
+                                        "color": {
+                                          "type": "string",
+                                          "enum": [
+                                            "primary",
+                                            "secondary",
+                                            "transparent"
+                                          ]
+                                        },
+                                        "size": {
+                                          "type": "string",
+                                          "enum": [
+                                            "small",
+                                            "medium",
+                                            "large"
+                                          ]
+                                        },
+                                        "icon": {
+                                          "type": "string",
+                                          "enum": [
+                                            "VK",
+                                            "Behance",
+                                            "Instagram",
+                                            "WhatsApp",
+                                            "Telegram",
+                                            "GitHub",
+                                            "OK",
+                                            "Habr",
+                                            "Pinterest",
+                                            "Website",
+                                            "Arrow",
+                                            "Send",
+                                            "Pen",
+                                            "Robot",
+                                            "CheckMark",
+                                            "Info",
+                                            "Yandex",
+                                            "Google",
+                                            "Chrome",
+                                            "VcRu",
+                                            "Eye",
+                                            "Fire",
+                                            "Briefcase",
+                                            "Clock",
+                                            "Update"
+                                          ]
                                         }
                                       }
                                     },
                                     "label": {
+                                      "type": "string"
+                                    },
+                                    "subtitle": {
                                       "type": "string"
                                     }
                                   }
@@ -3154,7 +3301,7 @@
                                         "id": {
                                           "type": "number"
                                         },
-                                        "label": {
+                                        "children": {
                                           "type": "string"
                                         },
                                         "href": {
@@ -3168,10 +3315,59 @@
                                             "_parent",
                                             "_top"
                                           ]
+                                        },
+                                        "color": {
+                                          "type": "string",
+                                          "enum": [
+                                            "primary",
+                                            "secondary",
+                                            "transparent"
+                                          ]
+                                        },
+                                        "size": {
+                                          "type": "string",
+                                          "enum": [
+                                            "small",
+                                            "medium",
+                                            "large"
+                                          ]
+                                        },
+                                        "icon": {
+                                          "type": "string",
+                                          "enum": [
+                                            "VK",
+                                            "Behance",
+                                            "Instagram",
+                                            "WhatsApp",
+                                            "Telegram",
+                                            "GitHub",
+                                            "OK",
+                                            "Habr",
+                                            "Pinterest",
+                                            "Website",
+                                            "Arrow",
+                                            "Send",
+                                            "Pen",
+                                            "Robot",
+                                            "CheckMark",
+                                            "Info",
+                                            "Yandex",
+                                            "Google",
+                                            "Chrome",
+                                            "VcRu",
+                                            "Eye",
+                                            "Fire",
+                                            "Briefcase",
+                                            "Clock",
+                                            "Update"
+                                          ]
                                         }
                                       }
                                     },
                                     "label": {
+                                      "type": "string"
+                                    },
+                                    "subtitle": {
                                       "type": "string"
                                     }
                                   }
@@ -3221,7 +3417,7 @@
                                         "id": {
                                           "type": "number"
                                         },
-                                        "label": {
+                                        "children": {
                                           "type": "string"
                                         },
                                         "href": {
@@ -3235,10 +3431,59 @@
                                             "_parent",
                                             "_top"
                                           ]
+                                        },
+                                        "color": {
+                                          "type": "string",
+                                          "enum": [
+                                            "primary",
+                                            "secondary",
+                                            "transparent"
+                                          ]
+                                        },
+                                        "size": {
+                                          "type": "string",
+                                          "enum": [
+                                            "small",
+                                            "medium",
+                                            "large"
+                                          ]
+                                        },
+                                        "icon": {
+                                          "type": "string",
+                                          "enum": [
+                                            "VK",
+                                            "Behance",
+                                            "Instagram",
+                                            "WhatsApp",
+                                            "Telegram",
+                                            "GitHub",
+                                            "OK",
+                                            "Habr",
+                                            "Pinterest",
+                                            "Website",
+                                            "Arrow",
+                                            "Send",
+                                            "Pen",
+                                            "Robot",
+                                            "CheckMark",
+                                            "Info",
+                                            "Yandex",
+                                            "Google",
+                                            "Chrome",
+                                            "VcRu",
+                                            "Eye",
+                                            "Fire",
+                                            "Briefcase",
+                                            "Clock",
+                                            "Update"
+                                          ]
                                         }
                                       }
                                     },
                                     "label": {
+                                      "type": "string"
+                                    },
+                                    "subtitle": {
                                       "type": "string"
                                     }
                                   }
@@ -3539,7 +3784,7 @@
                                         "id": {
                                           "type": "number"
                                         },
-                                        "label": {
+                                        "children": {
                                           "type": "string"
                                         },
                                         "href": {
@@ -3553,10 +3798,59 @@
                                             "_parent",
                                             "_top"
                                           ]
+                                        },
+                                        "color": {
+                                          "type": "string",
+                                          "enum": [
+                                            "primary",
+                                            "secondary",
+                                            "transparent"
+                                          ]
+                                        },
+                                        "size": {
+                                          "type": "string",
+                                          "enum": [
+                                            "small",
+                                            "medium",
+                                            "large"
+                                          ]
+                                        },
+                                        "icon": {
+                                          "type": "string",
+                                          "enum": [
+                                            "VK",
+                                            "Behance",
+                                            "Instagram",
+                                            "WhatsApp",
+                                            "Telegram",
+                                            "GitHub",
+                                            "OK",
+                                            "Habr",
+                                            "Pinterest",
+                                            "Website",
+                                            "Arrow",
+                                            "Send",
+                                            "Pen",
+                                            "Robot",
+                                            "CheckMark",
+                                            "Info",
+                                            "Yandex",
+                                            "Google",
+                                            "Chrome",
+                                            "VcRu",
+                                            "Eye",
+                                            "Fire",
+                                            "Briefcase",
+                                            "Clock",
+                                            "Update"
+                                          ]
                                         }
                                       }
                                     },
                                     "label": {
+                                      "type": "string"
+                                    },
+                                    "subtitle": {
                                       "type": "string"
                                     }
                                   }
@@ -4288,7 +4582,7 @@
                                         "id": {
                                           "type": "number"
                                         },
-                                        "label": {
+                                        "children": {
                                           "type": "string"
                                         },
                                         "href": {
@@ -4302,10 +4596,59 @@
                                             "_parent",
                                             "_top"
                                           ]
+                                        },
+                                        "color": {
+                                          "type": "string",
+                                          "enum": [
+                                            "primary",
+                                            "secondary",
+                                            "transparent"
+                                          ]
+                                        },
+                                        "size": {
+                                          "type": "string",
+                                          "enum": [
+                                            "small",
+                                            "medium",
+                                            "large"
+                                          ]
+                                        },
+                                        "icon": {
+                                          "type": "string",
+                                          "enum": [
+                                            "VK",
+                                            "Behance",
+                                            "Instagram",
+                                            "WhatsApp",
+                                            "Telegram",
+                                            "GitHub",
+                                            "OK",
+                                            "Habr",
+                                            "Pinterest",
+                                            "Website",
+                                            "Arrow",
+                                            "Send",
+                                            "Pen",
+                                            "Robot",
+                                            "CheckMark",
+                                            "Info",
+                                            "Yandex",
+                                            "Google",
+                                            "Chrome",
+                                            "VcRu",
+                                            "Eye",
+                                            "Fire",
+                                            "Briefcase",
+                                            "Clock",
+                                            "Update"
+                                          ]
                                         }
                                       }
                                     },
                                     "label": {
+                                      "type": "string"
+                                    },
+                                    "subtitle": {
                                       "type": "string"
                                     }
                                   }
@@ -4382,7 +4725,7 @@
                                         "id": {
                                           "type": "number"
                                         },
-                                        "label": {
+                                        "children": {
                                           "type": "string"
                                         },
                                         "href": {
@@ -4396,10 +4739,59 @@
                                             "_parent",
                                             "_top"
                                           ]
+                                        },
+                                        "color": {
+                                          "type": "string",
+                                          "enum": [
+                                            "primary",
+                                            "secondary",
+                                            "transparent"
+                                          ]
+                                        },
+                                        "size": {
+                                          "type": "string",
+                                          "enum": [
+                                            "small",
+                                            "medium",
+                                            "large"
+                                          ]
+                                        },
+                                        "icon": {
+                                          "type": "string",
+                                          "enum": [
+                                            "VK",
+                                            "Behance",
+                                            "Instagram",
+                                            "WhatsApp",
+                                            "Telegram",
+                                            "GitHub",
+                                            "OK",
+                                            "Habr",
+                                            "Pinterest",
+                                            "Website",
+                                            "Arrow",
+                                            "Send",
+                                            "Pen",
+                                            "Robot",
+                                            "CheckMark",
+                                            "Info",
+                                            "Yandex",
+                                            "Google",
+                                            "Chrome",
+                                            "VcRu",
+                                            "Eye",
+                                            "Fire",
+                                            "Briefcase",
+                                            "Clock",
+                                            "Update"
+                                          ]
                                         }
                                       }
                                     },
                                     "label": {
+                                      "type": "string"
+                                    },
+                                    "subtitle": {
                                       "type": "string"
                                     }
                                   }
@@ -4543,7 +4935,7 @@
                                         "id": {
                                           "type": "number"
                                         },
-                                        "label": {
+                                        "children": {
                                           "type": "string"
                                         },
                                         "href": {
@@ -4557,10 +4949,59 @@
                                             "_parent",
                                             "_top"
                                           ]
+                                        },
+                                        "color": {
+                                          "type": "string",
+                                          "enum": [
+                                            "primary",
+                                            "secondary",
+                                            "transparent"
+                                          ]
+                                        },
+                                        "size": {
+                                          "type": "string",
+                                          "enum": [
+                                            "small",
+                                            "medium",
+                                            "large"
+                                          ]
+                                        },
+                                        "icon": {
+                                          "type": "string",
+                                          "enum": [
+                                            "VK",
+                                            "Behance",
+                                            "Instagram",
+                                            "WhatsApp",
+                                            "Telegram",
+                                            "GitHub",
+                                            "OK",
+                                            "Habr",
+                                            "Pinterest",
+                                            "Website",
+                                            "Arrow",
+                                            "Send",
+                                            "Pen",
+                                            "Robot",
+                                            "CheckMark",
+                                            "Info",
+                                            "Yandex",
+                                            "Google",
+                                            "Chrome",
+                                            "VcRu",
+                                            "Eye",
+                                            "Fire",
+                                            "Briefcase",
+                                            "Clock",
+                                            "Update"
+                                          ]
                                         }
                                       }
                                     },
                                     "label": {
+                                      "type": "string"
+                                    },
+                                    "subtitle": {
                                       "type": "string"
                                     }
                                   }
@@ -5280,7 +5721,7 @@
                                         "id": {
                                           "type": "number"
                                         },
-                                        "label": {
+                                        "children": {
                                           "type": "string"
                                         },
                                         "href": {
@@ -5294,10 +5735,59 @@
                                             "_parent",
                                             "_top"
                                           ]
+                                        },
+                                        "color": {
+                                          "type": "string",
+                                          "enum": [
+                                            "primary",
+                                            "secondary",
+                                            "transparent"
+                                          ]
+                                        },
+                                        "size": {
+                                          "type": "string",
+                                          "enum": [
+                                            "small",
+                                            "medium",
+                                            "large"
+                                          ]
+                                        },
+                                        "icon": {
+                                          "type": "string",
+                                          "enum": [
+                                            "VK",
+                                            "Behance",
+                                            "Instagram",
+                                            "WhatsApp",
+                                            "Telegram",
+                                            "GitHub",
+                                            "OK",
+                                            "Habr",
+                                            "Pinterest",
+                                            "Website",
+                                            "Arrow",
+                                            "Send",
+                                            "Pen",
+                                            "Robot",
+                                            "CheckMark",
+                                            "Info",
+                                            "Yandex",
+                                            "Google",
+                                            "Chrome",
+                                            "VcRu",
+                                            "Eye",
+                                            "Fire",
+                                            "Briefcase",
+                                            "Clock",
+                                            "Update"
+                                          ]
                                         }
                                       }
                                     },
                                     "label": {
+                                      "type": "string"
+                                    },
+                                    "subtitle": {
                                       "type": "string"
                                     }
                                   }
@@ -6745,7 +7235,7 @@
                                                       "id": {
                                                         "type": "number"
                                                       },
-                                                      "label": {
+                                                      "children": {
                                                         "type": "string"
                                                       },
                                                       "href": {
@@ -6759,10 +7249,59 @@
                                                           "_parent",
                                                           "_top"
                                                         ]
+                                                      },
+                                                      "color": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "primary",
+                                                          "secondary",
+                                                          "transparent"
+                                                        ]
+                                                      },
+                                                      "size": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "small",
+                                                          "medium",
+                                                          "large"
+                                                        ]
+                                                      },
+                                                      "icon": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "VK",
+                                                          "Behance",
+                                                          "Instagram",
+                                                          "WhatsApp",
+                                                          "Telegram",
+                                                          "GitHub",
+                                                          "OK",
+                                                          "Habr",
+                                                          "Pinterest",
+                                                          "Website",
+                                                          "Arrow",
+                                                          "Send",
+                                                          "Pen",
+                                                          "Robot",
+                                                          "CheckMark",
+                                                          "Info",
+                                                          "Yandex",
+                                                          "Google",
+                                                          "Chrome",
+                                                          "VcRu",
+                                                          "Eye",
+                                                          "Fire",
+                                                          "Briefcase",
+                                                          "Clock",
+                                                          "Update"
+                                                        ]
                                                       }
                                                     }
                                                   },
                                                   "label": {
+                                                    "type": "string"
+                                                  },
+                                                  "subtitle": {
                                                     "type": "string"
                                                   }
                                                 }
@@ -7082,7 +7621,7 @@
                                                       "id": {
                                                         "type": "number"
                                                       },
-                                                      "label": {
+                                                      "children": {
                                                         "type": "string"
                                                       },
                                                       "href": {
@@ -7096,10 +7635,59 @@
                                                           "_parent",
                                                           "_top"
                                                         ]
+                                                      },
+                                                      "color": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "primary",
+                                                          "secondary",
+                                                          "transparent"
+                                                        ]
+                                                      },
+                                                      "size": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "small",
+                                                          "medium",
+                                                          "large"
+                                                        ]
+                                                      },
+                                                      "icon": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "VK",
+                                                          "Behance",
+                                                          "Instagram",
+                                                          "WhatsApp",
+                                                          "Telegram",
+                                                          "GitHub",
+                                                          "OK",
+                                                          "Habr",
+                                                          "Pinterest",
+                                                          "Website",
+                                                          "Arrow",
+                                                          "Send",
+                                                          "Pen",
+                                                          "Robot",
+                                                          "CheckMark",
+                                                          "Info",
+                                                          "Yandex",
+                                                          "Google",
+                                                          "Chrome",
+                                                          "VcRu",
+                                                          "Eye",
+                                                          "Fire",
+                                                          "Briefcase",
+                                                          "Clock",
+                                                          "Update"
+                                                        ]
                                                       }
                                                     }
                                                   },
                                                   "label": {
+                                                    "type": "string"
+                                                  },
+                                                  "subtitle": {
                                                     "type": "string"
                                                   }
                                                 }
@@ -7143,7 +7731,7 @@
                                                       "id": {
                                                         "type": "number"
                                                       },
-                                                      "label": {
+                                                      "children": {
                                                         "type": "string"
                                                       },
                                                       "href": {
@@ -7157,10 +7745,59 @@
                                                           "_parent",
                                                           "_top"
                                                         ]
+                                                      },
+                                                      "color": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "primary",
+                                                          "secondary",
+                                                          "transparent"
+                                                        ]
+                                                      },
+                                                      "size": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "small",
+                                                          "medium",
+                                                          "large"
+                                                        ]
+                                                      },
+                                                      "icon": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "VK",
+                                                          "Behance",
+                                                          "Instagram",
+                                                          "WhatsApp",
+                                                          "Telegram",
+                                                          "GitHub",
+                                                          "OK",
+                                                          "Habr",
+                                                          "Pinterest",
+                                                          "Website",
+                                                          "Arrow",
+                                                          "Send",
+                                                          "Pen",
+                                                          "Robot",
+                                                          "CheckMark",
+                                                          "Info",
+                                                          "Yandex",
+                                                          "Google",
+                                                          "Chrome",
+                                                          "VcRu",
+                                                          "Eye",
+                                                          "Fire",
+                                                          "Briefcase",
+                                                          "Clock",
+                                                          "Update"
+                                                        ]
                                                       }
                                                     }
                                                   },
                                                   "label": {
+                                                    "type": "string"
+                                                  },
+                                                  "subtitle": {
                                                     "type": "string"
                                                   }
                                                 }
@@ -8285,7 +8922,7 @@
                                                       "id": {
                                                         "type": "number"
                                                       },
-                                                      "label": {
+                                                      "children": {
                                                         "type": "string"
                                                       },
                                                       "href": {
@@ -8299,10 +8936,59 @@
                                                           "_parent",
                                                           "_top"
                                                         ]
+                                                      },
+                                                      "color": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "primary",
+                                                          "secondary",
+                                                          "transparent"
+                                                        ]
+                                                      },
+                                                      "size": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "small",
+                                                          "medium",
+                                                          "large"
+                                                        ]
+                                                      },
+                                                      "icon": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "VK",
+                                                          "Behance",
+                                                          "Instagram",
+                                                          "WhatsApp",
+                                                          "Telegram",
+                                                          "GitHub",
+                                                          "OK",
+                                                          "Habr",
+                                                          "Pinterest",
+                                                          "Website",
+                                                          "Arrow",
+                                                          "Send",
+                                                          "Pen",
+                                                          "Robot",
+                                                          "CheckMark",
+                                                          "Info",
+                                                          "Yandex",
+                                                          "Google",
+                                                          "Chrome",
+                                                          "VcRu",
+                                                          "Eye",
+                                                          "Fire",
+                                                          "Briefcase",
+                                                          "Clock",
+                                                          "Update"
+                                                        ]
                                                       }
                                                     }
                                                   },
                                                   "label": {
+                                                    "type": "string"
+                                                  },
+                                                  "subtitle": {
                                                     "type": "string"
                                                   }
                                                 }
@@ -8352,7 +9038,7 @@
                                                       "id": {
                                                         "type": "number"
                                                       },
-                                                      "label": {
+                                                      "children": {
                                                         "type": "string"
                                                       },
                                                       "href": {
@@ -8366,10 +9052,59 @@
                                                           "_parent",
                                                           "_top"
                                                         ]
+                                                      },
+                                                      "color": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "primary",
+                                                          "secondary",
+                                                          "transparent"
+                                                        ]
+                                                      },
+                                                      "size": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "small",
+                                                          "medium",
+                                                          "large"
+                                                        ]
+                                                      },
+                                                      "icon": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "VK",
+                                                          "Behance",
+                                                          "Instagram",
+                                                          "WhatsApp",
+                                                          "Telegram",
+                                                          "GitHub",
+                                                          "OK",
+                                                          "Habr",
+                                                          "Pinterest",
+                                                          "Website",
+                                                          "Arrow",
+                                                          "Send",
+                                                          "Pen",
+                                                          "Robot",
+                                                          "CheckMark",
+                                                          "Info",
+                                                          "Yandex",
+                                                          "Google",
+                                                          "Chrome",
+                                                          "VcRu",
+                                                          "Eye",
+                                                          "Fire",
+                                                          "Briefcase",
+                                                          "Clock",
+                                                          "Update"
+                                                        ]
                                                       }
                                                     }
                                                   },
                                                   "label": {
+                                                    "type": "string"
+                                                  },
+                                                  "subtitle": {
                                                     "type": "string"
                                                   }
                                                 }
@@ -8670,7 +9405,7 @@
                                                       "id": {
                                                         "type": "number"
                                                       },
-                                                      "label": {
+                                                      "children": {
                                                         "type": "string"
                                                       },
                                                       "href": {
@@ -8684,10 +9419,59 @@
                                                           "_parent",
                                                           "_top"
                                                         ]
+                                                      },
+                                                      "color": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "primary",
+                                                          "secondary",
+                                                          "transparent"
+                                                        ]
+                                                      },
+                                                      "size": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "small",
+                                                          "medium",
+                                                          "large"
+                                                        ]
+                                                      },
+                                                      "icon": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "VK",
+                                                          "Behance",
+                                                          "Instagram",
+                                                          "WhatsApp",
+                                                          "Telegram",
+                                                          "GitHub",
+                                                          "OK",
+                                                          "Habr",
+                                                          "Pinterest",
+                                                          "Website",
+                                                          "Arrow",
+                                                          "Send",
+                                                          "Pen",
+                                                          "Robot",
+                                                          "CheckMark",
+                                                          "Info",
+                                                          "Yandex",
+                                                          "Google",
+                                                          "Chrome",
+                                                          "VcRu",
+                                                          "Eye",
+                                                          "Fire",
+                                                          "Briefcase",
+                                                          "Clock",
+                                                          "Update"
+                                                        ]
                                                       }
                                                     }
                                                   },
                                                   "label": {
+                                                    "type": "string"
+                                                  },
+                                                  "subtitle": {
                                                     "type": "string"
                                                   }
                                                 }
@@ -9419,7 +10203,7 @@
                                                       "id": {
                                                         "type": "number"
                                                       },
-                                                      "label": {
+                                                      "children": {
                                                         "type": "string"
                                                       },
                                                       "href": {
@@ -9433,10 +10217,59 @@
                                                           "_parent",
                                                           "_top"
                                                         ]
+                                                      },
+                                                      "color": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "primary",
+                                                          "secondary",
+                                                          "transparent"
+                                                        ]
+                                                      },
+                                                      "size": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "small",
+                                                          "medium",
+                                                          "large"
+                                                        ]
+                                                      },
+                                                      "icon": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "VK",
+                                                          "Behance",
+                                                          "Instagram",
+                                                          "WhatsApp",
+                                                          "Telegram",
+                                                          "GitHub",
+                                                          "OK",
+                                                          "Habr",
+                                                          "Pinterest",
+                                                          "Website",
+                                                          "Arrow",
+                                                          "Send",
+                                                          "Pen",
+                                                          "Robot",
+                                                          "CheckMark",
+                                                          "Info",
+                                                          "Yandex",
+                                                          "Google",
+                                                          "Chrome",
+                                                          "VcRu",
+                                                          "Eye",
+                                                          "Fire",
+                                                          "Briefcase",
+                                                          "Clock",
+                                                          "Update"
+                                                        ]
                                                       }
                                                     }
                                                   },
                                                   "label": {
+                                                    "type": "string"
+                                                  },
+                                                  "subtitle": {
                                                     "type": "string"
                                                   }
                                                 }
@@ -9513,7 +10346,7 @@
                                                       "id": {
                                                         "type": "number"
                                                       },
-                                                      "label": {
+                                                      "children": {
                                                         "type": "string"
                                                       },
                                                       "href": {
@@ -9527,10 +10360,59 @@
                                                           "_parent",
                                                           "_top"
                                                         ]
+                                                      },
+                                                      "color": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "primary",
+                                                          "secondary",
+                                                          "transparent"
+                                                        ]
+                                                      },
+                                                      "size": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "small",
+                                                          "medium",
+                                                          "large"
+                                                        ]
+                                                      },
+                                                      "icon": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "VK",
+                                                          "Behance",
+                                                          "Instagram",
+                                                          "WhatsApp",
+                                                          "Telegram",
+                                                          "GitHub",
+                                                          "OK",
+                                                          "Habr",
+                                                          "Pinterest",
+                                                          "Website",
+                                                          "Arrow",
+                                                          "Send",
+                                                          "Pen",
+                                                          "Robot",
+                                                          "CheckMark",
+                                                          "Info",
+                                                          "Yandex",
+                                                          "Google",
+                                                          "Chrome",
+                                                          "VcRu",
+                                                          "Eye",
+                                                          "Fire",
+                                                          "Briefcase",
+                                                          "Clock",
+                                                          "Update"
+                                                        ]
                                                       }
                                                     }
                                                   },
                                                   "label": {
+                                                    "type": "string"
+                                                  },
+                                                  "subtitle": {
                                                     "type": "string"
                                                   }
                                                 }
@@ -9674,7 +10556,7 @@
                                                       "id": {
                                                         "type": "number"
                                                       },
-                                                      "label": {
+                                                      "children": {
                                                         "type": "string"
                                                       },
                                                       "href": {
@@ -9688,10 +10570,59 @@
                                                           "_parent",
                                                           "_top"
                                                         ]
+                                                      },
+                                                      "color": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "primary",
+                                                          "secondary",
+                                                          "transparent"
+                                                        ]
+                                                      },
+                                                      "size": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "small",
+                                                          "medium",
+                                                          "large"
+                                                        ]
+                                                      },
+                                                      "icon": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "VK",
+                                                          "Behance",
+                                                          "Instagram",
+                                                          "WhatsApp",
+                                                          "Telegram",
+                                                          "GitHub",
+                                                          "OK",
+                                                          "Habr",
+                                                          "Pinterest",
+                                                          "Website",
+                                                          "Arrow",
+                                                          "Send",
+                                                          "Pen",
+                                                          "Robot",
+                                                          "CheckMark",
+                                                          "Info",
+                                                          "Yandex",
+                                                          "Google",
+                                                          "Chrome",
+                                                          "VcRu",
+                                                          "Eye",
+                                                          "Fire",
+                                                          "Briefcase",
+                                                          "Clock",
+                                                          "Update"
+                                                        ]
                                                       }
                                                     }
                                                   },
                                                   "label": {
+                                                    "type": "string"
+                                                  },
+                                                  "subtitle": {
                                                     "type": "string"
                                                   }
                                                 }
@@ -9920,7 +10851,7 @@
                                                       "id": {
                                                         "type": "number"
                                                       },
-                                                      "label": {
+                                                      "children": {
                                                         "type": "string"
                                                       },
                                                       "href": {
@@ -9934,10 +10865,59 @@
                                                           "_parent",
                                                           "_top"
                                                         ]
+                                                      },
+                                                      "color": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "primary",
+                                                          "secondary",
+                                                          "transparent"
+                                                        ]
+                                                      },
+                                                      "size": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "small",
+                                                          "medium",
+                                                          "large"
+                                                        ]
+                                                      },
+                                                      "icon": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "VK",
+                                                          "Behance",
+                                                          "Instagram",
+                                                          "WhatsApp",
+                                                          "Telegram",
+                                                          "GitHub",
+                                                          "OK",
+                                                          "Habr",
+                                                          "Pinterest",
+                                                          "Website",
+                                                          "Arrow",
+                                                          "Send",
+                                                          "Pen",
+                                                          "Robot",
+                                                          "CheckMark",
+                                                          "Info",
+                                                          "Yandex",
+                                                          "Google",
+                                                          "Chrome",
+                                                          "VcRu",
+                                                          "Eye",
+                                                          "Fire",
+                                                          "Briefcase",
+                                                          "Clock",
+                                                          "Update"
+                                                        ]
                                                       }
                                                     }
                                                   },
                                                   "label": {
+                                                    "type": "string"
+                                                  },
+                                                  "subtitle": {
                                                     "type": "string"
                                                   }
                                                 }
@@ -14702,15 +15682,6 @@
         ],
         "type": "object",
         "properties": {
-          "logo": {
-            "type": "string"
-          },
-          "links": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/UiLinkComponent"
-            }
-          },
           "_softDeletedAt": {
             "type": "string",
             "format": "date-time"
@@ -14720,6 +15691,18 @@
           },
           "_softDeletedByType": {
             "type": "string"
+          },
+          "logo": {
+            "type": "string"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UiLinkComponent"
+            }
+          },
+          "contactButton": {
+            "$ref": "#/components/schemas/UiCustomLinkComponent"
           },
           "locale": {
             "type": "string"
@@ -14739,15 +15722,6 @@
             ],
             "type": "object",
             "properties": {
-              "logo": {
-                "type": "string"
-              },
-              "links": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/UiLinkComponent"
-                }
-              },
               "_softDeletedAt": {
                 "type": "string",
                 "format": "date-time"
@@ -14757,6 +15731,18 @@
               },
               "_softDeletedByType": {
                 "type": "string"
+              },
+              "logo": {
+                "type": "string"
+              },
+              "links": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/UiLinkComponent"
+                }
+              },
+              "contactButton": {
+                "$ref": "#/components/schemas/UiCustomLinkComponent"
               },
               "locale": {
                 "type": "string"
@@ -14886,6 +15872,16 @@
           "links"
         ],
         "properties": {
+          "_softDeletedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "_softDeletedById": {
+            "type": "integer"
+          },
+          "_softDeletedByType": {
+            "type": "string"
+          },
           "logo": {
             "type": "string"
           },
@@ -14894,6 +15890,9 @@
             "items": {
               "$ref": "#/components/schemas/UiLinkComponent"
             }
+          },
+          "contactButton": {
+            "$ref": "#/components/schemas/UiCustomLinkComponent"
           },
           "createdAt": {
             "type": "string",
@@ -15188,16 +16187,6 @@
                 }
               }
             }
-          },
-          "_softDeletedAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "_softDeletedById": {
-            "type": "integer"
-          },
-          "_softDeletedByType": {
-            "type": "string"
           },
           "localizations": {
             "type": "object",
@@ -16566,7 +17555,7 @@
               "id": {
                 "type": "number"
               },
-              "label": {
+              "children": {
                 "type": "string"
               },
               "href": {
@@ -16580,10 +17569,59 @@
                   "_parent",
                   "_top"
                 ]
+              },
+              "color": {
+                "type": "string",
+                "enum": [
+                  "primary",
+                  "secondary",
+                  "transparent"
+                ]
+              },
+              "size": {
+                "type": "string",
+                "enum": [
+                  "small",
+                  "medium",
+                  "large"
+                ]
+              },
+              "icon": {
+                "type": "string",
+                "enum": [
+                  "VK",
+                  "Behance",
+                  "Instagram",
+                  "WhatsApp",
+                  "Telegram",
+                  "GitHub",
+                  "OK",
+                  "Habr",
+                  "Pinterest",
+                  "Website",
+                  "Arrow",
+                  "Send",
+                  "Pen",
+                  "Robot",
+                  "CheckMark",
+                  "Info",
+                  "Yandex",
+                  "Google",
+                  "Chrome",
+                  "VcRu",
+                  "Eye",
+                  "Fire",
+                  "Briefcase",
+                  "Clock",
+                  "Update"
+                ]
               }
             }
           },
           "label": {
+            "type": "string"
+          },
+          "subtitle": {
             "type": "string"
           }
         }
@@ -20123,7 +21161,7 @@
                                                     "id": {
                                                       "type": "number"
                                                     },
-                                                    "label": {
+                                                    "children": {
                                                       "type": "string"
                                                     },
                                                     "href": {
@@ -20137,10 +21175,59 @@
                                                         "_parent",
                                                         "_top"
                                                       ]
+                                                    },
+                                                    "color": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "primary",
+                                                        "secondary",
+                                                        "transparent"
+                                                      ]
+                                                    },
+                                                    "size": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "small",
+                                                        "medium",
+                                                        "large"
+                                                      ]
+                                                    },
+                                                    "icon": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "VK",
+                                                        "Behance",
+                                                        "Instagram",
+                                                        "WhatsApp",
+                                                        "Telegram",
+                                                        "GitHub",
+                                                        "OK",
+                                                        "Habr",
+                                                        "Pinterest",
+                                                        "Website",
+                                                        "Arrow",
+                                                        "Send",
+                                                        "Pen",
+                                                        "Robot",
+                                                        "CheckMark",
+                                                        "Info",
+                                                        "Yandex",
+                                                        "Google",
+                                                        "Chrome",
+                                                        "VcRu",
+                                                        "Eye",
+                                                        "Fire",
+                                                        "Briefcase",
+                                                        "Clock",
+                                                        "Update"
+                                                      ]
                                                     }
                                                   }
                                                 },
                                                 "label": {
+                                                  "type": "string"
+                                                },
+                                                "subtitle": {
                                                   "type": "string"
                                                 }
                                               }
@@ -20371,7 +21458,7 @@
                                                     "id": {
                                                       "type": "number"
                                                     },
-                                                    "label": {
+                                                    "children": {
                                                       "type": "string"
                                                     },
                                                     "href": {
@@ -20385,10 +21472,59 @@
                                                         "_parent",
                                                         "_top"
                                                       ]
+                                                    },
+                                                    "color": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "primary",
+                                                        "secondary",
+                                                        "transparent"
+                                                      ]
+                                                    },
+                                                    "size": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "small",
+                                                        "medium",
+                                                        "large"
+                                                      ]
+                                                    },
+                                                    "icon": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "VK",
+                                                        "Behance",
+                                                        "Instagram",
+                                                        "WhatsApp",
+                                                        "Telegram",
+                                                        "GitHub",
+                                                        "OK",
+                                                        "Habr",
+                                                        "Pinterest",
+                                                        "Website",
+                                                        "Arrow",
+                                                        "Send",
+                                                        "Pen",
+                                                        "Robot",
+                                                        "CheckMark",
+                                                        "Info",
+                                                        "Yandex",
+                                                        "Google",
+                                                        "Chrome",
+                                                        "VcRu",
+                                                        "Eye",
+                                                        "Fire",
+                                                        "Briefcase",
+                                                        "Clock",
+                                                        "Update"
+                                                      ]
                                                     }
                                                   }
                                                 },
                                                 "label": {
+                                                  "type": "string"
+                                                },
+                                                "subtitle": {
                                                   "type": "string"
                                                 }
                                               }
@@ -20432,7 +21568,7 @@
                                                     "id": {
                                                       "type": "number"
                                                     },
-                                                    "label": {
+                                                    "children": {
                                                       "type": "string"
                                                     },
                                                     "href": {
@@ -20446,10 +21582,59 @@
                                                         "_parent",
                                                         "_top"
                                                       ]
+                                                    },
+                                                    "color": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "primary",
+                                                        "secondary",
+                                                        "transparent"
+                                                      ]
+                                                    },
+                                                    "size": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "small",
+                                                        "medium",
+                                                        "large"
+                                                      ]
+                                                    },
+                                                    "icon": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "VK",
+                                                        "Behance",
+                                                        "Instagram",
+                                                        "WhatsApp",
+                                                        "Telegram",
+                                                        "GitHub",
+                                                        "OK",
+                                                        "Habr",
+                                                        "Pinterest",
+                                                        "Website",
+                                                        "Arrow",
+                                                        "Send",
+                                                        "Pen",
+                                                        "Robot",
+                                                        "CheckMark",
+                                                        "Info",
+                                                        "Yandex",
+                                                        "Google",
+                                                        "Chrome",
+                                                        "VcRu",
+                                                        "Eye",
+                                                        "Fire",
+                                                        "Briefcase",
+                                                        "Clock",
+                                                        "Update"
+                                                      ]
                                                     }
                                                   }
                                                 },
                                                 "label": {
+                                                  "type": "string"
+                                                },
+                                                "subtitle": {
                                                   "type": "string"
                                                 }
                                               }
@@ -20621,7 +21806,7 @@
                                                     "id": {
                                                       "type": "number"
                                                     },
-                                                    "label": {
+                                                    "children": {
                                                       "type": "string"
                                                     },
                                                     "href": {
@@ -20635,10 +21820,59 @@
                                                         "_parent",
                                                         "_top"
                                                       ]
+                                                    },
+                                                    "color": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "primary",
+                                                        "secondary",
+                                                        "transparent"
+                                                      ]
+                                                    },
+                                                    "size": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "small",
+                                                        "medium",
+                                                        "large"
+                                                      ]
+                                                    },
+                                                    "icon": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "VK",
+                                                        "Behance",
+                                                        "Instagram",
+                                                        "WhatsApp",
+                                                        "Telegram",
+                                                        "GitHub",
+                                                        "OK",
+                                                        "Habr",
+                                                        "Pinterest",
+                                                        "Website",
+                                                        "Arrow",
+                                                        "Send",
+                                                        "Pen",
+                                                        "Robot",
+                                                        "CheckMark",
+                                                        "Info",
+                                                        "Yandex",
+                                                        "Google",
+                                                        "Chrome",
+                                                        "VcRu",
+                                                        "Eye",
+                                                        "Fire",
+                                                        "Briefcase",
+                                                        "Clock",
+                                                        "Update"
+                                                      ]
                                                     }
                                                   }
                                                 },
                                                 "label": {
+                                                  "type": "string"
+                                                },
+                                                "subtitle": {
                                                   "type": "string"
                                                 }
                                               }
@@ -20688,7 +21922,7 @@
                                                     "id": {
                                                       "type": "number"
                                                     },
-                                                    "label": {
+                                                    "children": {
                                                       "type": "string"
                                                     },
                                                     "href": {
@@ -20702,10 +21936,59 @@
                                                         "_parent",
                                                         "_top"
                                                       ]
+                                                    },
+                                                    "color": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "primary",
+                                                        "secondary",
+                                                        "transparent"
+                                                      ]
+                                                    },
+                                                    "size": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "small",
+                                                        "medium",
+                                                        "large"
+                                                      ]
+                                                    },
+                                                    "icon": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "VK",
+                                                        "Behance",
+                                                        "Instagram",
+                                                        "WhatsApp",
+                                                        "Telegram",
+                                                        "GitHub",
+                                                        "OK",
+                                                        "Habr",
+                                                        "Pinterest",
+                                                        "Website",
+                                                        "Arrow",
+                                                        "Send",
+                                                        "Pen",
+                                                        "Robot",
+                                                        "CheckMark",
+                                                        "Info",
+                                                        "Yandex",
+                                                        "Google",
+                                                        "Chrome",
+                                                        "VcRu",
+                                                        "Eye",
+                                                        "Fire",
+                                                        "Briefcase",
+                                                        "Clock",
+                                                        "Update"
+                                                      ]
                                                     }
                                                   }
                                                 },
                                                 "label": {
+                                                  "type": "string"
+                                                },
+                                                "subtitle": {
                                                   "type": "string"
                                                 }
                                               }
@@ -20769,7 +22052,7 @@
                                                     "id": {
                                                       "type": "number"
                                                     },
-                                                    "label": {
+                                                    "children": {
                                                       "type": "string"
                                                     },
                                                     "href": {
@@ -20783,10 +22066,59 @@
                                                         "_parent",
                                                         "_top"
                                                       ]
+                                                    },
+                                                    "color": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "primary",
+                                                        "secondary",
+                                                        "transparent"
+                                                      ]
+                                                    },
+                                                    "size": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "small",
+                                                        "medium",
+                                                        "large"
+                                                      ]
+                                                    },
+                                                    "icon": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "VK",
+                                                        "Behance",
+                                                        "Instagram",
+                                                        "WhatsApp",
+                                                        "Telegram",
+                                                        "GitHub",
+                                                        "OK",
+                                                        "Habr",
+                                                        "Pinterest",
+                                                        "Website",
+                                                        "Arrow",
+                                                        "Send",
+                                                        "Pen",
+                                                        "Robot",
+                                                        "CheckMark",
+                                                        "Info",
+                                                        "Yandex",
+                                                        "Google",
+                                                        "Chrome",
+                                                        "VcRu",
+                                                        "Eye",
+                                                        "Fire",
+                                                        "Briefcase",
+                                                        "Clock",
+                                                        "Update"
+                                                      ]
                                                     }
                                                   }
                                                 },
                                                 "label": {
+                                                  "type": "string"
+                                                },
+                                                "subtitle": {
                                                   "type": "string"
                                                 }
                                               }
@@ -20938,7 +22270,7 @@
                                                     "id": {
                                                       "type": "number"
                                                     },
-                                                    "label": {
+                                                    "children": {
                                                       "type": "string"
                                                     },
                                                     "href": {
@@ -20952,10 +22284,59 @@
                                                         "_parent",
                                                         "_top"
                                                       ]
+                                                    },
+                                                    "color": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "primary",
+                                                        "secondary",
+                                                        "transparent"
+                                                      ]
+                                                    },
+                                                    "size": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "small",
+                                                        "medium",
+                                                        "large"
+                                                      ]
+                                                    },
+                                                    "icon": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "VK",
+                                                        "Behance",
+                                                        "Instagram",
+                                                        "WhatsApp",
+                                                        "Telegram",
+                                                        "GitHub",
+                                                        "OK",
+                                                        "Habr",
+                                                        "Pinterest",
+                                                        "Website",
+                                                        "Arrow",
+                                                        "Send",
+                                                        "Pen",
+                                                        "Robot",
+                                                        "CheckMark",
+                                                        "Info",
+                                                        "Yandex",
+                                                        "Google",
+                                                        "Chrome",
+                                                        "VcRu",
+                                                        "Eye",
+                                                        "Fire",
+                                                        "Briefcase",
+                                                        "Clock",
+                                                        "Update"
+                                                      ]
                                                     }
                                                   }
                                                 },
                                                 "label": {
+                                                  "type": "string"
+                                                },
+                                                "subtitle": {
                                                   "type": "string"
                                                 }
                                               }
@@ -21032,7 +22413,7 @@
                                                     "id": {
                                                       "type": "number"
                                                     },
-                                                    "label": {
+                                                    "children": {
                                                       "type": "string"
                                                     },
                                                     "href": {
@@ -21046,10 +22427,59 @@
                                                         "_parent",
                                                         "_top"
                                                       ]
+                                                    },
+                                                    "color": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "primary",
+                                                        "secondary",
+                                                        "transparent"
+                                                      ]
+                                                    },
+                                                    "size": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "small",
+                                                        "medium",
+                                                        "large"
+                                                      ]
+                                                    },
+                                                    "icon": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "VK",
+                                                        "Behance",
+                                                        "Instagram",
+                                                        "WhatsApp",
+                                                        "Telegram",
+                                                        "GitHub",
+                                                        "OK",
+                                                        "Habr",
+                                                        "Pinterest",
+                                                        "Website",
+                                                        "Arrow",
+                                                        "Send",
+                                                        "Pen",
+                                                        "Robot",
+                                                        "CheckMark",
+                                                        "Info",
+                                                        "Yandex",
+                                                        "Google",
+                                                        "Chrome",
+                                                        "VcRu",
+                                                        "Eye",
+                                                        "Fire",
+                                                        "Briefcase",
+                                                        "Clock",
+                                                        "Update"
+                                                      ]
                                                     }
                                                   }
                                                 },
                                                 "label": {
+                                                  "type": "string"
+                                                },
+                                                "subtitle": {
                                                   "type": "string"
                                                 }
                                               }
@@ -21094,7 +22524,7 @@
                                                     "id": {
                                                       "type": "number"
                                                     },
-                                                    "label": {
+                                                    "children": {
                                                       "type": "string"
                                                     },
                                                     "href": {
@@ -21108,10 +22538,59 @@
                                                         "_parent",
                                                         "_top"
                                                       ]
+                                                    },
+                                                    "color": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "primary",
+                                                        "secondary",
+                                                        "transparent"
+                                                      ]
+                                                    },
+                                                    "size": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "small",
+                                                        "medium",
+                                                        "large"
+                                                      ]
+                                                    },
+                                                    "icon": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "VK",
+                                                        "Behance",
+                                                        "Instagram",
+                                                        "WhatsApp",
+                                                        "Telegram",
+                                                        "GitHub",
+                                                        "OK",
+                                                        "Habr",
+                                                        "Pinterest",
+                                                        "Website",
+                                                        "Arrow",
+                                                        "Send",
+                                                        "Pen",
+                                                        "Robot",
+                                                        "CheckMark",
+                                                        "Info",
+                                                        "Yandex",
+                                                        "Google",
+                                                        "Chrome",
+                                                        "VcRu",
+                                                        "Eye",
+                                                        "Fire",
+                                                        "Briefcase",
+                                                        "Clock",
+                                                        "Update"
+                                                      ]
                                                     }
                                                   }
                                                 },
                                                 "label": {
+                                                  "type": "string"
+                                                },
+                                                "subtitle": {
                                                   "type": "string"
                                                 }
                                               }
@@ -21261,7 +22740,7 @@
                                                     "id": {
                                                       "type": "number"
                                                     },
-                                                    "label": {
+                                                    "children": {
                                                       "type": "string"
                                                     },
                                                     "href": {
@@ -21275,10 +22754,59 @@
                                                         "_parent",
                                                         "_top"
                                                       ]
+                                                    },
+                                                    "color": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "primary",
+                                                        "secondary",
+                                                        "transparent"
+                                                      ]
+                                                    },
+                                                    "size": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "small",
+                                                        "medium",
+                                                        "large"
+                                                      ]
+                                                    },
+                                                    "icon": {
+                                                      "type": "string",
+                                                      "enum": [
+                                                        "VK",
+                                                        "Behance",
+                                                        "Instagram",
+                                                        "WhatsApp",
+                                                        "Telegram",
+                                                        "GitHub",
+                                                        "OK",
+                                                        "Habr",
+                                                        "Pinterest",
+                                                        "Website",
+                                                        "Arrow",
+                                                        "Send",
+                                                        "Pen",
+                                                        "Robot",
+                                                        "CheckMark",
+                                                        "Info",
+                                                        "Yandex",
+                                                        "Google",
+                                                        "Chrome",
+                                                        "VcRu",
+                                                        "Eye",
+                                                        "Fire",
+                                                        "Briefcase",
+                                                        "Clock",
+                                                        "Update"
+                                                      ]
                                                     }
                                                   }
                                                 },
                                                 "label": {
+                                                  "type": "string"
+                                                },
+                                                "subtitle": {
                                                   "type": "string"
                                                 }
                                               }
