@@ -2293,6 +2293,40 @@ export interface ApiTitleWithButtonsTitleWithButtons
   };
 }
 
+export interface ApiVkPixelVkPixel extends Schema.SingleType {
+  collectionName: 'vk_pixels';
+  info: {
+    singularName: 'vk-pixel';
+    pluralName: 'vk-pixels';
+    displayName: 'VK Pixel';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    _softDeletedAt: Attribute.DateTime & Attribute.Private;
+    _softDeletedById: Attribute.Integer & Attribute.Private;
+    _softDeletedByType: Attribute.String & Attribute.Private;
+    vkPixel: Attribute.BigInteger;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::vk-pixel.vk-pixel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::vk-pixel.vk-pixel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiWorkLargeWorkLarge extends Schema.CollectionType {
   collectionName: 'works_large';
   info: {
@@ -2512,6 +2546,7 @@ declare module '@strapi/types' {
       'api::team.team': ApiTeamTeam;
       'api::text-content-big.text-content-big': ApiTextContentBigTextContentBig;
       'api::title-with-buttons.title-with-buttons': ApiTitleWithButtonsTitleWithButtons;
+      'api::vk-pixel.vk-pixel': ApiVkPixelVkPixel;
       'api::work-large.work-large': ApiWorkLargeWorkLarge;
       'api::work-mini.work-mini': ApiWorkMiniWorkMini;
       'api::yandex-metrika.yandex-metrika': ApiYandexMetrikaYandexMetrika;
