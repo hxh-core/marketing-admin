@@ -867,7 +867,27 @@
                                  "metaDescription",
                                  "metaKeywords",
                                  "locale"
-                              ]
+                              ],
+                              "populate": {
+                                 "author": {
+                                    "fields": [
+                                       "name",
+                                       "job",
+                                       "url",
+                                       "id"
+                                    ],
+                                    "populate": {}
+                                 },
+                                 "article": {
+                                    "fields": [
+                                       "title",
+                                       "createdAt",
+                                       "updatedAt",
+                                       "id",
+                                       "publishedAt"
+                                    ]
+                                 }
+                              }
                            },
                            "author": {
                               "fields": [
@@ -925,6 +945,33 @@
                                              "updatedAt",
                                              "locale",
                                              "metaDescription"
+                                          ],
+                                          "populate": {
+                                             "author": {
+                                                "fields": [
+                                                   "name",
+                                                   "job",
+                                                   "url",
+                                                   "id"
+                                                ]
+                                             },
+                                             "article": {
+                                                "fields": [
+                                                   "title",
+                                                   "createdAt",
+                                                   "updatedAt",
+                                                   "id",
+                                                   "publishedAt"
+                                                ]
+                                             }
+                                          }
+                                       },
+                                       "author": {
+                                          "fields": [
+                                             "name",
+                                             "job",
+                                             "url",
+                                             "id"
                                           ]
                                        }
                                     }
@@ -972,6 +1019,23 @@
                   }
                }
             }
+         },
+         "author": {
+            "fields": [
+               "name",
+               "job",
+               "url",
+               "id"
+            ]
+         },
+         "article": {
+            "fields": [
+               "title",
+               "createdAt",
+               "updatedAt",
+               "id",
+               "publishedAt"
+            ]
          }
       },
       "fields": [
@@ -1086,7 +1150,8 @@
                "createdAt",
                "updatedAt",
                "id",
-               "publishedAt"
+               "publishedAt",
+               "url"
             ],
             "populate": {
                "photo": {

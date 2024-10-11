@@ -1030,6 +1030,12 @@ export interface ApiAuthorsAuthors extends Schema.CollectionType {
       'oneToMany',
       'api::articles.articles'
     >;
+    url: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1749,6 +1755,16 @@ export interface ApiPagePage extends Schema.CollectionType {
           localized: true;
         };
       }>;
+    author: Attribute.Relation<
+      'api::page.page',
+      'oneToOne',
+      'api::authors.authors'
+    >;
+    article: Attribute.Relation<
+      'api::page.page',
+      'oneToOne',
+      'api::articles.articles'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

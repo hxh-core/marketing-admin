@@ -133,6 +133,17 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::authors.authors"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::articles.articles",
+      "inversedBy": "page"
     }
   }
 }
